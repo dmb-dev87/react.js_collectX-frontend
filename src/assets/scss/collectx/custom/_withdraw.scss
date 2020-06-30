@@ -1,0 +1,322 @@
+.withdraw {
+
+  .titlepad{
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        color: #ffffff;
+        vertical-align: middle;
+        margin-top: 30px;
+        margin-left: 15px;
+        text-align: left;
+        font-size: 47px;
+        font-weight: bold;
+      }
+
+      button {
+        margin-right: 70px;
+        margin-top: 5px;
+        width: 156px;
+        height: 50px;
+        background: #24204A 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 10px #00000029;
+        border: 2px solid #42DDB3;
+        border-radius: 25px;
+        opacity: 1;
+
+        img {
+          width: 26px;
+          height: 28px;
+          margin-left: 4px;
+          margin-right: 10px;
+        }
+
+        text {
+          font-size: 20px;
+          font-weight:600;   
+          color: #ffffff;
+        }
+      }
+  }
+
+  .estimated {
+    margin: 0;
+
+    p {
+      font-weight: 500;
+      font-size: 17px;
+      color: #ffffff;
+    }
+
+    h2.amount {
+      display: inline-block;
+      font-size: 38px;
+      font-weight: 600;
+      color: #42DDB3;
+    }
+  
+    h4 {
+      display: inline-block;
+      margin-top: 16px;
+      margin-left: 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  
+  .payment {
+    
+  }
+
+  .usd {  
+    border: 1px solid #FFFFFF26;
+    border-radius: 25px;
+    background: #11112F 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+
+    .sec {
+      padding: 30px 30px 0px 30px;
+      display: flex;
+      align-items: center;
+      
+      img {
+        height: 60px;
+        width: 60px;
+      }
+      
+      h2 {
+        color: #ffffff;
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 30px;
+        margin: 0 0 0 10px;
+      }
+
+      h3 {
+        color: #707082;
+        vertical-align: middle;
+        font-weight: 400;
+        font-size: 30px;
+        margin: 0 0 0 10px;
+      }
+    }
+    
+    .usd-visa {
+      padding: 30px 30px 0px 30px;
+      display: flex;
+      align-items: center;
+
+      .card-text {  
+        margin-left: 20px;
+        h3 {
+          font-weight: 1000;
+          margin-left: 0px;
+          margin-bottom: 5px;
+          color: #ffffff;
+        }
+
+        p {
+          margin-top: -10px;
+          margin-left: 0px;
+        }
+      }
+
+      .type-item {
+        margin-left: auto;
+      }
+    }
+
+    .usd-amount {
+      margin-top: 30px;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #34344e;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      h4 {
+        // margin-left: 24px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      h5 {
+        // margin-right: 28px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #7953E2;
+      }
+    }
+
+    .usd-minimum {
+      margin: 15px 15px 0 15px;
+      align-items: center;
+      justify-content: space-between;
+      
+      .minimum-left {
+        display: flex;
+        align-items: center;
+      }
+      
+      .minimum-right {
+        display: flex;
+        align-items: center;
+      }
+
+      h4 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      h5 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+    }
+
+    .usd-trans {
+      margin: 0 15px;
+      display: block;
+
+      div {
+        margin-top: 25px;
+      }
+
+      h4 {
+        font-size: 20px;
+        display: inline-block;
+        margin: 0;
+      }
+
+      h5 {
+        font-size: 20px;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0;
+      }
+    }
+
+    .btn-submit {
+      @include btn-styles(#7953E2, #7953E2);
+      width: 100%;
+      height: 40px;
+      margin: 30px;
+      background: #7953E2 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 10px #00000029;
+      border-radius: 25px;
+      opacity: 0.4;
+      
+   }
+  }
+  
+  .paymentmethods {
+    background: #11112F 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 20px #00000029;
+    border: 1px solid #FFFFFF26;
+    border-radius: 25px;
+
+    .sec {
+      padding: 30px 30px 0px 30px;
+      display: flex;
+      align-items: center;
+      
+      h2 {
+        color: #ffffff;
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 30px;
+        margin: 0;
+      }
+    }
+
+    .description {
+      padding: 20px 30px 0px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    h2 {
+      color: #ffffff;
+      vertical-align: middle;
+      font-weight: 600;      
+      margin-left: 20px;
+      margin-top: 30px;
+      font-size: 30px;
+    }
+
+    .visa-card {
+      padding: 30px 30px 0px 30px;
+      display: flex;
+      align-items: center;
+
+      .card-text {  
+        margin-left: 20px;
+        h3 {
+          font-weight: 1000;
+          margin-left: 0px;
+          margin-bottom: 5px;
+          color: #ffffff;
+        }
+
+        p {
+          margin-top: -10px;
+          margin-left: 0px;
+        }
+      }          
+    }
+
+    .hbs-card {
+      padding: 30px 30px 0px 30px;
+      display: flex;
+      align-items: center;
+
+      .card-text {
+        margin-left: 20px;
+
+        h3 {
+          font-weight: 1000;
+          margin-left: 0px;
+          margin-bottom: 5px;
+          color: #ffffff;
+        }
+
+        p {
+          margin-top: -10px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+
+  .btn-add {
+    @include btn-styles(#7953E2 0%, #42DDB3 100%);
+    background: transparent linear-gradient(270deg, #7953E2 0%, #42DDB3 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 10px #00000029;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 30px;
+    border-radius: 100px;
+    height: 35px;
+    width: 96px;
+    height: 65px;
+    width: calc(100% - 20px);
+  }
+
+  .btn-edit {
+    @include btn-styles(#3A2B77, #3A2B77);
+    background: #3A2B77 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    height: 35px;
+    width: 96px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+    margin-left: auto;
+  }
+}

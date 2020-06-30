@@ -1,0 +1,268 @@
+.balance  {
+  .content {
+    .header {
+      padding-top: 31px;
+      margin-bottom: 37px;
+    }
+    .header {
+      h2 {
+        color: #ffffff;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 47px;
+        font-weight: bold;
+      }
+    }
+    .estimate-balance {
+      text-align: left;
+      font: Medium 14px/18px Montserrat;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+    }
+  
+    .header-button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .header .header-button .shape1 {     
+      width: 124px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background: #24204A 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 10px #00000029;
+      border: 2px solid #42DDB3;
+      border-radius: 25px;
+      opacity: 1;
+    }
+    .header .header-button .shape2 {
+      width: 142px;
+      height: 40px;
+      margin-left: 15px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background: #24204A 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 10px #00000029;
+      border: 2px solid #7953E2;
+      border-radius: 25px;
+      opacity: 1;
+    }
+  
+    .label-total {
+      font-size: 25px;
+      font-weight: 600;
+      text-align: left;    
+      letter-spacing: 0px;
+      color: #42DDB3;
+      opacity: 1;
+      padding-right: 10px;
+      font-family: Montserrat;
+    }
+  
+    .label-total-unit {
+      text-align: left;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 600;    
+    }
+    
+    .header {
+      .search {
+        position: relative;
+        width: 142px;
+        margin-right: 0px;
+        margin-left: auto; 
+        .input {
+          position: absolute;
+          padding-left: 36px;
+          height: auto;
+          background: #0E0E26 0% 0% no-repeat padding-box;
+          box-shadow: 0px 3px 6px #0B0B0B29;
+          // border: 2px solid #29232326;
+          border: 2px solid #FFFFFF26;
+          border-radius: 25px;
+          opacity: 1;
+          color: #FFFFFF;
+        }
+        .icon-search {
+          position: absolute;
+          width: 13px;
+          top: 12px;
+          left: 15px;
+          text-align: left;
+          font: Medium 14px/18px Montserrat;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          opacity: 1;
+        }
+      }
+    }
+  
+    .btn-none {
+      border: none;    
+      background: transparent;
+      outline:none;
+      font: 14px/18px Montserrat;
+      text-align: left;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  
+    .btn-none.left-space {
+      padding-left: 30px;
+    }
+  
+    .icon-sort-up::before {
+      content: '▲';
+      font-size: 7px;
+      position: absolute;
+      top: 37px;
+    }
+    .icon-sort-down::before {
+      content: '▼';
+      position: absolute;
+      top: 44px;
+      font-size: 7px;
+    }
+  
+    .icon-deposit-down::before {
+      content: '⤓';
+      font-style: normal;
+      left: 17px;
+      position: absolute;
+      top: 7px;
+      padding-right: 18px;
+    }
+    .icon-withdraw-up::before {
+      content: '⤒';
+      font-style: normal;
+      left: 15px;
+      position: absolute;
+      top: 12px;
+      padding-right: 18px;
+    }
+    .icon-deposit-ellipse {    
+      position: absolute;
+      background: #60D0B2;
+      width: 15px;
+      height: 4px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 11px;
+      left: 13px;
+      top: 23px;
+    }
+    .icon-withdraw-ellipse {
+      position: absolute;
+      background: #7953E2;
+      width: 15px;
+      height: 4px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 11px;
+      left: 12px;
+      top: 10px;
+    }
+    
+    
+    .withdraw-deposit-font {
+      text-align: left;
+      font: Bold 15px/47px Montserrat;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      padding-left: 20px;
+    }
+  
+    .btn-circle {        
+      height: 25px;
+      width: 25px;
+      background: #24204A 0% 0% no-repeat padding-box;
+      border-radius: 20px;
+      opacity: 1;
+      border: none;
+      outline: none;
+      padding-right: 0px;
+    }
+    .tim-icons.icon-align-center.menu {
+      color: #7953E2;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 20px;
+      padding-left: 0px;
+    }
+  
+    .card-plain.card {
+      background: #0E0E26 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #0B0B0B29;
+      opacity: 1;
+    }
+    .tr-field-bgcolor {
+      background: #11112F 0% 0% no-repeat padding-box;    
+      opacity: 1;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  
+    .table-border {
+      margin-bottom: 0px;
+    }
+    .table-responsive {
+      padding-bottom: 0px;
+      border-radius: 0 0 25px 25px;
+    }
+    .card-plain .card-body {
+      padding: 0px;
+    }
+    .search-icon {
+      padding-right: 15px;
+    }
+    .tbody-font-style {
+      text-align: left;    
+      letter-spacing: 0px;    
+      color: #FFFFFF;
+      opacity: 1;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .td-a-trade {
+      color: #42DDB3;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      opacity: 1; /* Firefox */
+    }
+    .table > tbody > tr > td {
+      color: rgba(255, 255, 255, 1.7) !important;
+    }
+    .td-detail {
+      color: #7953E2;
+    }
+    .td-custom-padding {
+      padding-left: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .right-space {
+      padding-right: 15px;
+    }
+    .th-padding {
+      padding: 0px;
+    }
+  
+  }  
+}

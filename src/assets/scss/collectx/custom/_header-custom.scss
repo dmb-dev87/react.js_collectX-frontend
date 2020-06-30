@@ -1,0 +1,212 @@
+.referandearn {
+    padding: 67px 0px 0px 260px !important;
+
+    .header {
+        height: 300px;
+        width: 100%;
+        border-bottom-right-radius: 25px;
+        margin-right: 15px;
+        margin-left: 15px;
+
+        > h2 {
+            margin-top: 50px;
+            margin-left: 40px;
+            font-weight: 700;
+            color: #131232;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        > h4 {
+            margin-top: 10px;
+            margin-left: 40px;
+            font-weight: 700;
+            color: #131232;
+            font-size: 20px;
+        }
+    }
+
+    .gradient_background {
+        background-image: linear-gradient(to right, #43d9b4 , #7854e1);
+    }
+
+    #referred_users {
+        padding-left: 40px;
+        padding-right: 30px;
+        width: 1200px;
+
+        .card-header {
+            position: relative;
+            .earnings {
+                position: absolute;
+                right: 20px;
+                top: 0;
+                color: white;
+                font-weight: 600;
+                
+                font-size: 20px;
+            }
+        }
+
+        .card-body {
+            .earnings {
+                position: absolute;
+                right: 20px;
+                top: 0;
+                color: white;
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+
+        #referred_users_list {
+            height: 40px;
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+    }
+
+    .card {
+        border: 1px solid #8080804f;
+        border-radius: 16px;    
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #11112f;
+        padding-bottom: 30px;
+
+        .card-title {
+            margin-bottom: 0px;
+            font-size: 36px;
+        }
+
+        .card-title::after {
+            display: none;
+        }
+
+        .card-body {
+            padding: 15px 15px 0;
+        }
+
+        .card-text {
+            color: white;
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+    }
+    
+
+    #card_overflow {
+        margin-top: -180px;
+        padding-left: 40px;
+        padding-right: 30px;
+        width: 1200px;
+
+        .card {         
+            .amount_earned {
+                margin-top: 39px;
+
+                h4 {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+
+                button {
+                    margin-top: 20px;
+                    height: 44px;
+                    width: 200px;
+                    border-radius: 20px;
+                    border: 1px solid #434f75;
+                    background-color: #203372;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 16px;                    
+                }
+            }
+
+            .unique_link {
+                margin-top: 50px;
+
+                h4 {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+
+                .unique_url {
+                    margin-top: 20px;
+                    position: relative;
+                    border: 2px solid #9a97973b;
+                    border-radius: 20px;
+                    padding-left: 10px;
+                    
+                    button {
+                        position: absolute;
+                        right: -2px;
+                        height: 44px;
+                        top: -2px;
+                        width: 120px;
+                        border-radius: 20px;
+                        border: none;
+                        color: white;
+                        font-weight: 600;
+                        font-size: 16px;
+                        background-image: linear-gradient(to right, #43d9b4 , #7854e1);
+                    }
+
+                    p {
+                        line-height: 40px;
+                        margin-bottom: 0px;
+                        color: white;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            #stats_custom {
+                h4 {
+                    font-weight: 600;                    
+                    padding-bottom: 16px;
+                    font-size: 20px;
+                }
+
+                #border_round {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    border: 2px solid white;
+                    text-align: center;
+                    border-radius: 20px;
+                    width: 160px;
+                }
+            }
+        }        
+    }
+}
+
+.dashboard {
+    padding: 110px 30px 30px 290px !important;
+
+    .dashboard-banner {        
+        width: 747px;
+        .card-body {
+            padding: 0px !important;
+        }
+    }
+
+    .dashboard-banner-bellow {
+        width: 762px;
+
+        > div {
+            padding: 0px;
+            padding-left: 15px;
+        }
+
+        .portfolio .card-body  {
+            padding: 0px;
+            img {                
+               width: 100%;
+               padding-bottom: 20px;
+            }
+        }
+    }
+}

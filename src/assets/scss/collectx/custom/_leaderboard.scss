@@ -1,0 +1,107 @@
+.leaderboard {
+    padding: 67px 0px 0px 260px !important;
+
+    .header {
+        height: 300px;
+        width: 100%;
+        border-bottom-right-radius: 25px;
+        margin-right: 15px;
+        margin-left: 15px;
+
+        > h2 {
+            margin-top: 50px;
+            margin-left: 40px;
+            font-weight: 800;
+            color: #131232;
+            margin-bottom: 10px;
+            font-size: 47px;
+        }
+
+        > h4 {
+            margin-top: 10px;
+            margin-left: 40px;
+            font-weight: 600;
+            color: #131232;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    .gradient_background {
+        background-image: linear-gradient(to right, #43d9b4 , #7854e1);
+    }
+
+    #leaderboard_list {
+        margin-top: -180px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .card {
+        background-color: #11112f;
+    }
+
+    .card-plain .card-header {
+        .card-title {
+            font-size: 39px;
+            font-weight: bold;
+        }
+    }
+
+    .card-plain .card-body
+    {
+        button {
+            @include btn-styles(#42DDB3 0%, #7953E2 100%);
+            position: relative;
+            width: 100%;
+            height: 69px;
+            padding-left: 10px;
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            background: transparent linear-gradient(91deg, #42DDB3 0%, #7953E2 100%) 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 20px #00000033;
+            border-radius: 25px;
+        }
+
+        .user_item {
+            margin: 15px 0px;
+            position: relative;
+            border-radius: 10px;
+            padding-left: 10px;
+            height: 69px;
+            background-color: #17173e;
+
+            .user-info {
+                .img-avatar {
+                    height: 49px;
+                    width: 49px;
+                    border: 3px solid #ffffff;
+                    border-radius: 50em;
+                    margin: 10px 0px;
+                }
+
+                span {
+                    color: #ffffff;
+                    margin-left: 15px;
+                    font-size: 19px;
+                    font-weight: bold;
+                }
+
+                .user-value {
+                    position: absolute;
+                    right: 10px;
+                    margin-top: 5px;
+                    display: inline-block;
+    
+                    p {
+                        text-align: right;
+                        font-weight: bold;
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+}

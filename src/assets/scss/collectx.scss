@@ -1,0 +1,95 @@
+// Core
+
+@import "collectx/custom/functions";
+@import "collectx/bootstrap/functions";
+
+@import "collectx/custom/variables";
+@import "collectx/bootstrap/variables";
+
+@import "collectx/custom/mixins";
+@import "collectx/bootstrap/mixins";
+
+ // Bootstrap components
+
+@import "collectx/bootstrap/root";
+@import "collectx/bootstrap/reboot";
+@import "collectx/bootstrap/type";
+@import "collectx/bootstrap/images";
+@import "collectx/bootstrap/code";
+@import "collectx/bootstrap/grid";
+@import "collectx/bootstrap/tables";
+@import "collectx/bootstrap/forms";
+@import "collectx/bootstrap/buttons";
+@import "collectx/bootstrap/transitions";
+@import "collectx/bootstrap/dropdown";
+@import "collectx/bootstrap/button-group";
+@import "collectx/bootstrap/input-group";
+@import "collectx/bootstrap/custom-forms";
+@import "collectx/bootstrap/nav";
+@import "collectx/bootstrap/navbar";
+@import "collectx/bootstrap/card";
+@import "collectx/bootstrap/breadcrumb";
+@import "collectx/bootstrap/pagination";
+@import "collectx/bootstrap/badge";
+@import "collectx/bootstrap/jumbotron";
+@import "collectx/bootstrap/alert";
+@import "collectx/bootstrap/progress";
+@import "collectx/bootstrap/media";
+@import "collectx/bootstrap/list-group";
+@import "collectx/bootstrap/close";
+@import "collectx/bootstrap/modal";
+@import "collectx/bootstrap/tooltip";
+@import "collectx/bootstrap/popover";
+@import "collectx/bootstrap/carousel";
+@import "collectx/bootstrap/utilities";
+@import "collectx/bootstrap/print";
+
+ // Custom components
+
+ @import "collectx/custom/alerts.scss";
+ @import "collectx/custom/badges.scss";
+ @import "collectx/custom/buttons.scss";
+ @import "collectx/custom/dropdown.scss";
+ @import "collectx/custom/footer.scss";
+ @import "collectx/custom/forms.scss";
+ @import "collectx/custom/images.scss";
+ @import "collectx/custom/header-custom.scss";
+ @import "collectx/custom/modal.scss";
+ @import "collectx/custom/navbar.scss";
+ @import "collectx/custom/type.scss";
+ @import "collectx/custom/tables";
+ @import "collectx/custom/checkboxes-radio";
+ @import "collectx/custom/fixed-plugin";
+ @import "collectx/custom/sidebar-and-main-panel.scss";
+ @import "collectx/custom/misc.scss";
+ @import "collectx/custom/input-group.scss";
+ @import "collectx/custom/_security.scss";
+ @import "collectx/custom/_withdraw.scss";
+ @import "collectx/custom/leaderboard.scss";
+ @import "collectx/custom/login";
+ @import "collectx/custom/deposit.scss";
+ @import "collectx/custom/balance.scss";
+ @import "collectx/custom/discussion";
+
+
+ // Vendor / Plugins
+
+@import "collectx/custom/vendor/plugin-perfect-scrollbar.scss";
+@import "collectx/custom/vendor/plugin-react-notification-alert.scss";
+
+// light mode
+
+@import "collectx/custom/white-content.scss";
+
+// Cards
+
+@import 'collectx/custom/card';
+@import "collectx/custom/cards/card-chart";
+@import "collectx/custom/cards/card-map";
+@import "collectx/custom/cards/card-user";
+@import "collectx/custom/cards/card-task";
+@import "collectx/custom/cards/card-plain";
+@import "collectx/custom/assets";
+
+// React differences
+@import "collectx/react-differences/react-differences";
