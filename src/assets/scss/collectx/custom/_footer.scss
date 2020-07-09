@@ -13,7 +13,8 @@
     
     .tim-imgs {
       font-size: 40px !important;
-      margin-right: 30px;
+      margin-right: 15px;
+      margin-left: 15px;
       width: 34px;
       height: 34px;
     }
@@ -70,6 +71,14 @@
   font-weight: bold;
   line-height: 18px;
   color: white;
+
+  .line {
+    margin-top: 20px;
+    width: 140px;
+    height: 4px;
+    background: transparent linear-gradient(270deg, #7953E2 0%, #42DDB3 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+  }
 }
 
 .footer-menu dt{
@@ -104,6 +113,7 @@
 
 @media screen and (max-width: 991px){
   .footer {
+    
     padding-left: 0px;
 
     .copyright {
@@ -146,6 +156,22 @@
       display: block;
       margin-bottom: 5px;
       float: none;
+    }
+
+    .angery {
+      grid-template-columns: none;
+      padding: 0px;
+      display: block;
+      .line { 
+        display: none;
+      }
+
+      > div { 
+        padding-bottom: 20px;
+        dt { 
+          margin-top: 5px;
+        }
+      }
     }
   }
 }

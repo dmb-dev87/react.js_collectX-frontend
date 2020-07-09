@@ -16,7 +16,6 @@ class ChatItem extends React.Component {
   }
 
   render() {
-    console.log('++++++++++++', this.props);
     return (
       <Row className="chat-item"> 
         <div>

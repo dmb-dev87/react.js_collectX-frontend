@@ -7,6 +7,7 @@ import Register from "views/Login/Register";
 import AssetsRoutes from "layouts/Admin/AssetsRoutes";
 import SpotWalletRoutes from "layouts/Admin/SpotWalletRoutes";
 import Discussion from "views/Discussion";
+import Home from "views/Home.js";
 
 var routes = [
   {
@@ -97,7 +98,7 @@ var routes = [
   {
     path: "/home",
     name: "Home",
-    component: Dashboard,
+    component: Home,
     layout: "/home"
   },
   {

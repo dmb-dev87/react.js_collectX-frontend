@@ -10,6 +10,7 @@ import PaymentMethods from "../components/Deposit/PaymentMethods";
 import {
   Row,
   Col,
+  Button,
 } from "reactstrap";
 
 // core components
@@ -28,10 +29,11 @@ class Deposit extends React.Component {
           }
           <Row xl="12" className="withdraw">
             <h2>Deposit</h2>
-            <button>
-              <img src={require("assets/img/deposit/arrow.png")} />
-              Withdraw
-            </button>
+            <Button className="shape2">
+              <i className="icon-withdraw-up" />
+              <i className="icon-withdraw-ellipse" />
+              <span className="withdraw-deposit-font">Withdraw</span>
+            </Button>
           </Row>
           <Row className="head">
             <div>

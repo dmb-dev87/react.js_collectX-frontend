@@ -33,7 +33,6 @@
     #referred_users {
         padding-left: 40px;
         padding-right: 30px;
-        width: 1200px;
 
         .card-header {
             position: relative;
@@ -43,15 +42,23 @@
                 top: 0;
                 color: white;
                 font-weight: 600;
-                
                 font-size: 20px;
             }
         }
 
         .card-body {
+            .user_name {
+                position: absolute;
+                left: 65px;
+                top: 0;
+                color: white;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
             .earnings {
                 position: absolute;
-                right: 20px;
+                right: -15px;
                 top: 0;
                 color: white;
                 font-weight: 600;
@@ -61,8 +68,13 @@
 
         #referred_users_list {
             height: 40px;
-            margin-bottom: 4px;
-            margin-top: 4px;
+            margin: 24px 30px 24px 15px;
+            position: relative;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 
@@ -99,7 +111,6 @@
         margin-top: -180px;
         padding-left: 40px;
         padding-right: 30px;
-        width: 1200px;
 
         .card {         
             .amount_earned {
@@ -114,12 +125,29 @@
                     margin-top: 20px;
                     height: 44px;
                     width: 200px;
-                    border-radius: 20px;
+                    border-radius: 50px;
                     border: 1px solid #434f75;
                     background-color: #203372;
-                    color: white;
-                    font-weight: 600;
-                    font-size: 16px;                    
+                    position: relative;
+
+                    div {
+                        background-color: #476FF5;
+                        border-radius: 50px;
+                        font-size: 23px;
+                        color: white;
+                        font-weight: 600;
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 7px;
+                        right: 10px;
+                        color: white;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -183,30 +211,60 @@
     }
 }
 
-.dashboard {
-    padding: 110px 30px 30px 290px !important;
-
-    .dashboard-banner {        
-        width: 747px;
-        .card-body {
-            padding: 0px !important;
-        }
+@media only screen and (max-width: 800px) {
+    .main-panel > .content.referandearn {
+        padding: 50px 0px 0px 0px !important;
+    }
+    .referandearn #card_overflow {
+        margin-top: -150px;
+        padding: 0px 10px;
     }
 
-    .dashboard-banner-bellow {
-        width: 762px;
+    .referandearn .header > h4, .referandearn .header > h2 {
+        margin-left: 20px;
+    }
 
-        > div {
-            padding: 0px;
-            padding-left: 15px;
-        }
+    .referandearn #card_overflow .card #stats_custom h4 {
+        font-size: 18px;
+    }
 
-        .portfolio .card-body  {
-            padding: 0px;
-            img {                
-               width: 100%;
-               padding-bottom: 20px;
-            }
-        }
+    .referandearn #card_overflow .card #stats_custom #border_round {
+        width: 140px;
+    }
+    .referandearn #card_overflow .card .unique_link .unique_url p {
+        font-size: 12px;
+    }
+
+    .referandearn #card_overflow .card .unique_link .unique_url button {
+        width: 80px;
+    }
+
+    .referandearn #referred_users {
+        padding: 0px 10px;
+    }
+
+    .referandearn #referred_users .card-header {
+        padding: 20px 5px;
+    }
+
+    // .referandearn .card .card-body { 
+    //     padding: 20px 0px;
+    // }
+
+    #referred_users .card-plain .card-header .card-title {
+        font-size: 20px;
+    }
+    #referred_users .card-plain .card-header .earnings {
+        font-size: 16px;
+    }
+
+    .referandearn #referred_users .card-body .user_name {
+        font-size: 16px;
+        top: 10px;
+    }
+
+    .referandearn #referred_users .card-body .earnings {
+        font-size: 16px;
+        top: 10px;
     }
 }

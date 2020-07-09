@@ -104,7 +104,6 @@ class ChartCard extends React.Component{
           pointRadius: 10,
           fill: true,
           backgroundColor: gradientFill,
-          // backgroundColor: "transparent linear-gradient(169deg, #7953E2 0%, #11112F 100%) 0% 0% no-repeat padding-box",
           borderWidth: 7,
           data: data
         }]
@@ -129,30 +128,13 @@ class ChartCard extends React.Component{
       }
     });
 
-    let draw1 = Chart.controllers.line.prototype.draw;
-    Chart.controllers.line = Chart.controllers.line.extend({
-      draw: function() {
-        draw1.apply(this, arguments);
-        let ctx = this.chart.chart.ctx;
-        let _stroke = ctx.stroke;
-        ctx.stroke = function() {
-            ctx.save();
-            ctx.shadowColor = '#42DDB3';
-            ctx.shadowBlur = 15;
-            ctx.shadowOffsetX = 0;
-            ctx.shadowOffsetY = 0;
-            _stroke.apply(this, arguments)
-            ctx.restore();
-        }
-      }
-    });
-
     this.setState({con_data});
   }
 
   render(){
 
     const { con_data } = this.state;
+    const { type } = this.props;
 
     return(
       <Card className="card-plain card-chart">
@@ -176,9 +158,13 @@ class ChartCard extends React.Component{
         </CardHeader>
         <CardBody className="card-body-no-padding">
           <Line data={con_data} options={options} width={100} height={100} />
-          <div className="btn-karma-type1">Instant Buy</div>
-          <div className="btn-karma-type2">Instant Sell</div>
-          <div className="btn-karma-type3-bg"><div className="btn-karma-type3">Live market</div></div>
+          {
+            type ? <>
+              <button className="btn-karma-type1">Instant Buy</button>
+              <button className="btn-karma-type2">Instant Sell</button>
+              <div className="btn-karma-type3-bg"><div className="btn-karma-type3">Live market</div></div>
+              </> : <button className="btn-karma-type4">1.39 MJR</button>
+          }
         </CardBody>
       </Card>
     );

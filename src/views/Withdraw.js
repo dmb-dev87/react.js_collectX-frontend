@@ -9,6 +9,7 @@ import WithdrawPaymentMethods from "../components/Withdraw/WithdrawPaymentMethod
 import {
   Row,
   Col,
+  Button,
 } from "reactstrap";
 
 // core components
@@ -27,10 +28,11 @@ class Withdraw extends React.Component {
           }
           <Row className="titlepad">
             <h2>Withdraw</h2>
-            <button>
-              <img src={require("assets/img/withdraw/path.png")} />
-              <text>Deposit</text>
-            </button>
+            <Button className="shape1">
+              <i className="icon-deposit-down" />
+              <i className="icon-deposit-ellipse" />
+              <span className="withdraw-deposit-font">Deposit</span>
+            </Button>
           </Row>
           <Row className="estimated">
             <div>

@@ -15,7 +15,8 @@ class Footer extends React.Component {
             <div className="footer-content">
               <div className="angery">
                 <div className="footer-menu">
-                  <h5>CollectX<br /> Exchange</h5>
+                  <img alt="..." src={require("assets/img/collectx-logo.svg")} style={{width: '160px'}} />
+                  <div class="line"></div>
                 </div>
                 <div>
                   <dl className="footer-menu">
@@ -49,7 +50,7 @@ class Footer extends React.Component {
                 <div>
                   <dl className="footer-menu">
                     <h1>Community</h1>
-                    <dt><img className="tim-imgs" src={require("assets/img/socials/karma.png")}></img><img className="tim-imgs" src={require("assets/img/socials/twitter.svg")}></img><img className="tim-imgs" src={require("assets/img/socials/facebook.svg")}></img><img className="tim-imgs" src={require("assets/img/socials/telegram.svg")}></img></dt>
+                    <dt><img className="tim-imgs" src={require("assets/img/logo/logo-karma.svg")}></img><img className="tim-imgs" src={require("assets/img/socials/twitter.svg")}></img><img className="tim-imgs" src={require("assets/img/socials/facebook.svg")}></img><img className="tim-imgs" src={require("assets/img/socials/telegram.svg")}></img></dt>
                   </dl>
                 </div>
               </div>

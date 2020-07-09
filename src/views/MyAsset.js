@@ -10,7 +10,7 @@ import ChartCard from "../components/Assets/ChartCard";
 
 // reactstrap components
 import {
-  Row,
+  Row, Col,
 } from "reactstrap";
 
 // core components
@@ -47,14 +47,12 @@ class MyAsset extends React.Component {
           myAssets.map((myAsset, key) => {
             return (
               <Row>
-                <div className="row-card-grid">
-                  <div className="image-row-card">
-                    <ImageCard image={myAsset.imageCard.image} title={myAsset.imageCard.title} name={myAsset.imageCard.name} content={myAsset.imageCard.content} />
-                  </div>
-                  <div className="chart-row-card">
-                    <ChartCard data={myAsset.chartCard.data} />
-                  </div>
-                </div>
+                <Col xl="4" lg="12"> 
+                  <ImageCard image={myAsset.imageCard.image} title={myAsset.imageCard.title} name={myAsset.imageCard.name} content={myAsset.imageCard.content} />
+                </Col>
+                <Col xl="8" lg="12"> 
+                  <ChartCard data={myAsset.chartCard.data} />
+                </Col>
               </Row>
             );
           })

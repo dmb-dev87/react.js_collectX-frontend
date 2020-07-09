@@ -20,9 +20,13 @@ class LogoImage extends React.Component {
   render() {
     return (
       <div className="logo-content">
+        <div className="logo">
+          <img alt="..." src={require("assets/img/collectx.svg")} style={{width: '250px'}} />
+        </div>
         <div className="description">
           <h1>CollectX</h1>
           <h2>Fractional Ownership Of Rare Collectibles A New Asset Class</h2>
+          <div className="line"></div>
         </div>
       </div>
       );

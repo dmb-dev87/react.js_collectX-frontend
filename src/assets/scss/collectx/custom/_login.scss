@@ -3,6 +3,10 @@ $bg-img: url('../../../img/login/background.png');
   padding: 84px 0px 0px 0px !important;
   height: 100%;
 
+  input:-internal-autofill-selected{ 
+    background: transparent !important;
+  }
+
   #form-part {
     height: 100%;
     display: flex;
@@ -26,9 +30,16 @@ $bg-img: url('../../../img/login/background.png');
       position: relative;
     }
 
+    .logo {
+      position: absolute;
+      top: 180px;
+      width: 100%;
+      text-align: center;
+    }
+
     .description {
       position: absolute;
-      top: 50%;
+      top: 390px;
       width: 100%;
       text-align: center;
 
@@ -50,6 +61,14 @@ $bg-img: url('../../../img/login/background.png');
         color: #FFFFFF;
         opacity: 1;
       }
+    }
+
+    .line {
+      width: 86px;
+      height: 21px;
+      background: transparent linear-gradient(270deg, #895EFF 0%, #60D0B2 100%) 0% 0% no-repeat padding-box;
+      border-radius: 100px;
+      margin: auto;
     }
   }
   

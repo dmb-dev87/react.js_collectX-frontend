@@ -21,7 +21,7 @@ class USD extends React.Component {
           </p>
         </Row>
         <Row className="amount">
-          <h2>$9193.84</h2>
+          <h2>$9,193.84</h2>
           <h4>USD</h4>
         </Row>
         <Row>

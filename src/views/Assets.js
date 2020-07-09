@@ -52,28 +52,26 @@ class Assets extends React.Component {
         <div className={this.props.fluid ? "content-fluid assets" : "content assets"}>
           { 
             this.props.isExploresLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
-          }
+          }                    
           <Row>
-            <Col className="header-MJ">
-
-            </Col>
-          </Row>
-                    
-          <Row>
-            <div className="row-card-grid">
+            <Col xl="4" lg="12">
               <div className="image-row-card">
                 <ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Machael Jordan"} content={"Rookie Card"}></ImageCard>
-                </div>
-              <div className="chart-row-card">
-                <ChartCard data={[542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]} />
               </div>
-            </div>
+            </Col>
+            <Col xl="8" lg="12">
+              <div className="chart-row-card">
+                <ChartCard data={[390, 400, 420, 400, 430, 453, 492, 540, 568, 610, 700, 630]} />
+              </div>
+            </Col>
           </Row>
           <Row>
-              <div className="assets-row-card-grid">
-                <AssetSpecCard />
-                <GalleryCard />
-              </div>
+            <Col xl="6" lg="12">              
+              <AssetSpecCard />
+            </Col>
+            <Col xl="6" lg="12">              
+              <GalleryCard />
+            </Col>
           </Row>
         </div>
       </>

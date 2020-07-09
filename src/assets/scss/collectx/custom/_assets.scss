@@ -1,13 +1,4 @@
 .assets {
-
-    @media screen and (min-width: 992px){
-        padding: 67px 0px 0px 300px !important;
-    }
-
-    @media screen and (max-width: 991px){
-        padding: 67px 0px 0px 50px !important;
-    }
-
     .header {
         height: 140px;
         width: 100%;
@@ -23,45 +14,16 @@
         }
 
         h3 {
-            margin-top: 20px;
-            font-weight: 600;
+            margin-top: -15px;
             margin-left: 15px;
             color: white;
-            font-size: 28px;
+            font-size: 26px;
         }
     }
 
     .header-MJ{
         height: 70px;
         width: 100%;
-    }
-
-    .row-card-grid {
-        margin-top: -10px;
-        width: 100%;
-        display: flex;
-    }
-
-    .assets-row-card-grid {
-        margin-top: -10px;
-        width: 100%;
-        margin-right: 30px;
-        display: flex;
-    }
-
-    .image-row-card {
-        width: 22%;
-    }
-    .chart-row-card {
-        padding-left: 30px;
-        padding-right: 40px;
-        width: 78%;
-
-        > div {
-            border-radius: 20px;
-            height: 500px;
-            width: 100%;
-        }
     }
 
     .card-image {
@@ -94,7 +56,6 @@
                     color: white;
                     margin: 0;
                     font-weight: 600;
-                    font-size: 1.2vw;
                 }
             }
         }
@@ -166,7 +127,8 @@
 
     .asset-spec-card {
         margin-right: 20px;
-        width: 35%;
+        border: 1px solid #FFFFFF26;
+
         .spec-field {
             margin-left: -5px;
             text-align: left;
@@ -198,6 +160,200 @@
 
     .gallery-card {
         margin-right: 10px;
+        border: 1px solid #FFFFFF26;
+        
+        .asset-gallery-img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        .row{            
+            > .col-xl-6 { 
+                padding:0px;
+                padding-right: 15px;
+            }
+
+            >.col-xl-6:first-child {                
+                padding-right: 0px;
+                padding-left: 15px;
+
+                img {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.assets-mjr-trade {
+
+    margin-top: 70px;
+    padding: 50px 0px 30px 50px !important;
+    display: block;
+
+    .header-MJR {
+        height: 140px;
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: -40px;
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 0;
+            font-weight: 600;
+            color: white;
+        }
+
+        h1::after {
+            content: "";
+            width: 90px;
+            height: 4px;
+            position: absolute;
+            top: 40px;
+            left: 15px;
+            background: transparent linear-gradient(90deg, #7953E2 0%, #42DDB3 100%) 0% 0% no-repeat padding-box;
+            border-radius: 10px;
+        }
+
+        .sub-title {
+            color: #8B8B8B;
+            font-weight: 550;
+        }
+
+        .sub-field {
+            padding-left: 50px;
+            color: white;
+            font-weight: 550;
+            font-size: 1.1vw;
+            display: flex;
+        }
+
+        .sub-value {
+            padding-left: 10px;
+            color: #60D0B2;
+            font-weight: 550;
+            font-size: 1.1vw;
+        }
+
+        .sub-value-small {
+            margin-top: -10px;
+            padding-left: 10px;
+            color: #60D0B2;
+            font-weight: 550;
+            font-size: 1vw;
+        }
+        .sub-value-small-desc {
+            padding-left: 10px;
+            color: #8B8B8B;
+            font-weight: 550;
+            font-size: 1vw;
+        }
+
+        .mjr-title {
+            width: 100px;
+        }
+    }
+
+    .recent-orders-card {
+        width: 100%;
+        height: 600px;
+        min-width: 300px;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 15px;
+
+        h3 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+    }
+
+    .orders-table {
+        width: 100%;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: 600;
+
+        th {
+            font-size: 20px;
+            color: white;
+        }
+
+        .success {
+            color: #42DDB3;
+        }
+        .normal {
+            color: #7953E2;
+        }
+        .text-align-right {
+            text-align: right;
+        }
+    }
+
+    .orders-table-card {
+        height: 100%;
+        min-width: 400px;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 15px;
+    }
+
+    .mjr-chart-card {
+        min-width: 500px;
+        height: 470px;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 15px;
+    }
+
+    .order-price-card {
+        height: 650px;
+        min-width: 500px;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 15px;
+    }
+
+    .header-MJ{
+        height: 70px;
+        width: 100%;
+    }
+
+    .card-image {
+        align-items: center;
+        height: 470px;
+        border-radius: 20px;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 15px;
+        background-color: #11112F 0% 0% no-repeat padding-box;
+
+        .card-image-body {
+            margin-top: 20px;
+            text-align: center;
+            width: 80%;
+
+            .card-image-div-image {
+                height: 300px;
+                margin-bottom: 30px;
+                display: flex;
+                > img {
+                    margin: auto;
+                    max-height: 300px;
+                    box-shadow: 0px 3px 20px #FFFFFF33;
+                }
+            }
+
+            .card-image-div-description {
+                height: 100px;
+
+                > h2 {
+                    color: white;
+                    margin: 0;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    
+    .gallery-card {
+        margin-right: 10px;
         width: 65%;
         
         .image-collection {
@@ -205,7 +361,99 @@
         }
         
         .asset-gallery-img {
-            padding-right: 0px;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
         }
     }
+
+    .recent-order {
+        margin-right: 10px;
+        width: 65%;
+        
+        .image-collection {
+            width: 100%;
+        }
+        
+        .asset-gallery-img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+
+    .price-table {
+        margin-right: 10px;
+        width: 65%;
+        
+        .image-collection {
+            width: 100%;
+        }
+        
+        .asset-gallery-img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+
+    .order-price {
+        margin-right: 10px;
+        width: 65%;
+        
+        .image-collection {
+            width: 100%;
+        }
+        
+        .asset-gallery-img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+
+    .time-price-chart {
+        margin-right: 10px;
+        width: 65%;
+        
+        .image-collection {
+            width: 100%;
+        }
+        
+        .asset-gallery-img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+
+    .mjr-trade {
+        margin-left: -250px;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+    }
+
+    .right-content {
+        margin-right: 20px;
+    }
+
+    .center-content {
+        margin-right: 20px;
+    }
+
+    .left-content {
+        height: 100%;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 1460px) {
+ 
+}
+
+@media only screen and (max-width: 1200px) {
+    
 }

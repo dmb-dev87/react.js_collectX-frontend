@@ -10,7 +10,7 @@
         margin-top: 30px;
         margin-left: 15px;
         text-align: left;
-        font-size: 47px;
+        font-size: 38px;
         font-weight: bold;
       }
 
@@ -38,6 +38,10 @@
           color: #ffffff;
         }
       }
+
+      >div { 
+        margin-top: 0px;
+      }
   }
 
   .estimated {
@@ -45,13 +49,13 @@
 
     p {
       font-weight: 500;
-      font-size: 17px;
+      font-size: 14px;
       color: #ffffff;
     }
 
     h2.amount {
       display: inline-block;
-      font-size: 38px;
+      font-size: 30px;
       font-weight: 600;
       color: #42DDB3;
     }
@@ -60,13 +64,47 @@
       display: inline-block;
       margin-top: 16px;
       margin-left: 10px;
-      font-size: 18px;
-      font-weight: 600;
+      font-size: 14px;
+      color: white;
     }
   }
-  
-  .payment {
-    
+
+  .titlepad {
+    .shape1 {
+      width: 124px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background: #24204A 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 10px #00000029;
+      border: 2px solid #42DDB3;
+      border-radius: 25px;
+      opacity: 1;
+      font-size: 16px;
+      padding-left: 60px;
+
+      .icon-deposit-ellipse { 
+        position: absolute;
+        background: #60D0B2;
+        width: 15px;
+        height: 4px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 11px;
+        left: 13px;
+        top: 23px;
+      }
+      .icon-deposit-down::before {
+        content: '⤓';
+        font-style: normal;
+        left: 17px;
+        position: absolute;
+        top: 5px;
+        padding-right: 18px;
+        font-weight: 400;
+      }
+    }
   }
 
   .usd {  
@@ -81,23 +119,23 @@
       align-items: center;
       
       img {
-        height: 60px;
-        width: 60px;
+        height: 49px;
+        width: 49px;
       }
       
       h2 {
         color: #ffffff;
         vertical-align: middle;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 24px;
         margin: 0 0 0 10px;
       }
 
       h3 {
         color: #707082;
         vertical-align: middle;
-        font-weight: 400;
-        font-size: 30px;
+        font-weight: 600;
+        font-size: 24px;
         margin: 0 0 0 10px;
       }
     }
@@ -107,12 +145,24 @@
       display: flex;
       align-items: center;
 
+      img { 
+        height: 44px;
+        width: 60px;
+      }
+
+      .type-item {
+        height: 22px;
+        width: 22px;
+      }
+
       .card-text {  
         margin-left: 20px;
         h3 {
-          font-weight: 1000;
+          font-weight: 600;
           margin-left: 0px;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
+          padding-top: 4px;
+          font-size: 20px;
           color: #ffffff;
         }
 
@@ -137,13 +187,14 @@
 
       h4 {
         // margin-left: 24px;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 600;
+        color: white;
       }
 
       h5 {
         // margin-right: 28px;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 600;
         color: #7953E2;
       }
@@ -165,7 +216,8 @@
       }
 
       h4 {
-        font-size: 18px;
+        font-size: 14px;
+        color: white;
         margin: 0;
       }
 
@@ -181,21 +233,27 @@
       margin: 0 15px;
       display: block;
 
+      div:first-child {
+        margin-top: 35px;
+      }
+
       div {
-        margin-top: 25px;
+        margin-top: 15px;
       }
 
       h4 {
-        font-size: 20px;
+        font-size: 16px;
         display: inline-block;
         margin: 0;
+        color:white;
       }
 
       h5 {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 600;
         display: inline-block;
         margin: 0;
+        color:white;
       }
     }
 
@@ -210,6 +268,15 @@
       opacity: 0.4;
       
    }
+  }
+
+  .payment {
+    button {
+      font-size: 24px;
+    }
+    .usd button {
+      font-size: 16px;
+    }
   }
   
   .paymentmethods {
@@ -227,16 +294,17 @@
         color: #ffffff;
         vertical-align: middle;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 32px;
         margin: 0;
       }
     }
 
     .description {
       padding: 20px 30px 0px 30px;
-      font-size: 18px;
-      font-weight: 600;
-      color: #ffffff;
+      p {
+        font-size: 16px;
+        color: #ffffff;
+      }
     }
 
     h2 {
@@ -245,7 +313,7 @@
       font-weight: 600;      
       margin-left: 20px;
       margin-top: 30px;
-      font-size: 30px;
+      font-size: 24px;
     }
 
     .visa-card {
@@ -253,12 +321,22 @@
       display: flex;
       align-items: center;
 
+      button {
+        font-size: 16px !important;
+      }
+
+      img {
+        height: 44px;
+      }
+
       .card-text {  
         margin-left: 20px;
         h3 {
-          font-weight: 1000;
+          font-weight: 600;
           margin-left: 0px;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
+          padding-top: 4px;
+          font-size: 20px;
           color: #ffffff;
         }
 
@@ -274,13 +352,23 @@
       display: flex;
       align-items: center;
 
+      button {
+        font-size: 16px !important;
+      }
+
+      img {
+        height: 44px;
+      }
+
       .card-text {
         margin-left: 20px;
 
         h3 {
-          font-weight: 1000;
+          font-weight: 600;
           margin-left: 0px;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
+          padding-top: 4px;
+          font-size: 20px;
           color: #ffffff;
         }
 
@@ -318,5 +406,16 @@
     font-size: 16px;
     padding: 0;
     margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .withdraw .titlepad .shape1 {
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .payment>div { 
+    margin-top: 10px;
   }
 }

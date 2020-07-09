@@ -1,31 +1,12 @@
 import React from "react";
 import {connect} from 'react-redux';
-// nodejs library that concatenates classes
-import classNames from "classnames";
 import {startGetExplores} from "../actions/explore";
 import Loading from "../components/Utils/Loader"
-import ImageCard from "../components/Assets/ImageCard";
-import ChartCard from "../components/Assets/ChartCard";
+import StampCard from "../components/Explore/StampCard";
 
 // reactstrap components
 import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Label,
-  FormGroup,
-  Input,
-  Table,
-  Row,
-  Col,
-  UncontrolledTooltip
+  Row, Col, Button
 } from "reactstrap";
 
 // core components
@@ -44,37 +25,51 @@ class Explore extends React.Component {
       explores: nextProps.explores
     })
   }
+
   render() {
+    
     const { explores } = this.state;
+
     return (
       <>
-        <div className={this.props.fluid ? "content-fluid assets" : "content assets"}>
+        <div className={this.props.fluid ? "content-fluid explore" : "content explore"}>
           { 
             this.props.isExploresLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
           }
-          <Row>
-            <div className="header">
-              <h2>Explore</h2>
-              <h3>Discover Rare Collectibles On CollectX</h3>
-              <div className="btn-karma-drop">Trending<b className="caret d-none d-lg-block d-xl-block custom-pos"></b></div>
-            </div>
+          <Row className="header">
+            <h2>Explore</h2>
           </Row>
+          <Row className="description">
+              <h3>Discover Rare Collectibles On CollectX</h3>
+              <div className="btn-drop">
+                Highest Price
+                <b className="caret d-none d-lg-block d-xl-block custom-pos"></b>
+              </div>
+          </Row>
+          <Row className="button-group">
+            <Button>All Collections</Button>
+            <Button>NBA</Button>
+            <Button>MLB</Button>
+            <Button>NFL</Button>
+            <Button>Pokeman</Button>
+            <Button>Stamps</Button>
+          </Row>
+          <Row className="card-list">
           {
             explores.map((explore, key) => {
               return (
-                <Row key={key}>
-                  <div className="row-card-grid">
-                    <div className="image-row-card">
-                      <ImageCard image={explore.imageCard.image} title={explore.imageCard.title} name={explore.imageCard.name} content={explore.imageCard.content}></ImageCard>
-                    </div>
-                    <div className="chart-row-card">
-                    <ChartCard data={explore.chartCard.data} />
-                    </div>
+                <Col lg="5ths" className="row-card-grid">
+                  <div className="image-row-card">
+                    <StampCard image={explore.image} title={explore.title} percent={explore.percent} content={explore.content}></StampCard>
                   </div>
-                </Row>
+                </Col>
               );
             })
           }
+          </Row>
+          <Row className="bottom">
+            <Button>See More Assets</Button>
+          </Row>
         </div>
       </>
     );

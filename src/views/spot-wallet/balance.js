@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import classNames from "classnames"
 import { startGetBalance } from "../../actions/balance"
 import Loading from "../../components/Utils/Loader"
+
 //reactstrap components
 import {
   Button,
@@ -92,7 +93,7 @@ class Balance extends React.Component {
                 </Row>
               </Col>
 
-              <Col md="12">
+              <Col md="12" className="card-plain-responsive">
                 <Card className="card-plain">
                   <CardBody>
                     <Table className="table-border" responsive>

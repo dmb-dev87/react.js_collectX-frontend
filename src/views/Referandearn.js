@@ -85,11 +85,11 @@ class Dashboard extends React.Component {
                             </CardHeader>
                             <CardBody>
                                 <Row id="stats_custom">                                
-                                    <Col xl="6" lg="6">
+                                    <Col xl="6" lg="6" xs="6">
                                         <CardText tag="h4">Referral Level</CardText>
                                         <CardText tag="h4" id="border_round">Level 1</CardText>
                                     </Col>                                
-                                    <Col xl="6" lg="6">
+                                    <Col xl="6" lg="6" xs="6">
                                         <CardText tag="h4">Total Invites</CardText>
                                         <CardText tag="h4" id="border_round">3 Friends</CardText>
                                     </Col>
@@ -97,7 +97,10 @@ class Dashboard extends React.Component {
                                 <Row>
                                     <Col className="text-left amount_earned">
                                         <CardText tag="h4">Amount Earned</CardText>
-                                        <button>$2,381.22 USD</button>
+                                        <button>
+                                            <div>$</div>
+                                            <span>$2,381.22 USD</span>
+                                        </button>
                                     </Col>
                                 </Row>
                             </CardBody>
@@ -116,23 +119,20 @@ class Dashboard extends React.Component {
                                 </Row>
                             </CardHeader>
                             <CardBody>
-                                <Row id="referred_users_list">                                
-                                    <Col xl="12" lg="12">
-                                        <CardText tag="h4">Ben O'hansen</CardText>
-                                        <p className="earnings">$1,114.21 USD</p>
-                                    </Col>             
+                                <Row id="referred_users_list">                                                                    
+                                    <img src={require("assets/img/avatars/l11.png")} />  
+                                    <p className="user_name">Ben O'hansen</p>
+                                    <p className="earnings">$1,114.21 USD</p>
                                 </Row>
-                                <Row id="referred_users_list">                                
-                                    <Col xl="12" lg="12">
-                                        <CardText tag="h4">Ben O'hansen</CardText>
-                                        <p className="earnings">$1,114.21 USD</p>
-                                    </Col>             
+                                <Row id="referred_users_list">                                                                    
+                                    <img src={require("assets/img/avatars/l12.png")} />  
+                                    <p className="user_name">Eva Rigalo</p>
+                                    <p className="earnings">$828.39 USD</p>
                                 </Row>
-                                <Row id="referred_users_list">                                
-                                    <Col xl="12" lg="12">
-                                        <CardText tag="h4">Ben O'hansen</CardText>
-                                        <p className="earnings">$1,114.21 USD</p>
-                                    </Col>             
+                                <Row id="referred_users_list">                                                                    
+                                    <img src={require("assets/img/avatars/l13.png")} />  
+                                    <p className="user_name">Quez Peterson</p>
+                                    <p className="earnings">$174.49 USD</p>
                                 </Row>
                             </CardBody>
                         </Card>

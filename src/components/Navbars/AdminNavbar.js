@@ -1,6 +1,8 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+import { connect } from 'react-redux';
+import { startGetMarkets } from "../../actions/markets"
 
 // reactstrap components
 import {
@@ -17,20 +19,30 @@ import {
   NavLink,
   Nav,
   Container,
-  Modal
+  Modal,
+  Row,
+  Col,
+  Table
 } from "reactstrap";
 
 class AdminNavbar extends React.Component {
   constructor(props) {
     super(props);
+    this.props.startGetMarkets();
     this.state = {
       collapseOpen: false,
       modalSearch: false,
-      color: "bg-dark"
+      color: "bg-dark",
+      markets: [],
     };
   }
   componentDidMount() {
     window.addEventListener("resize", this.updateColor);
+  }
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      markets: nextProps.markets
+    })
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateColor);
@@ -93,15 +105,62 @@ class AdminNavbar extends React.Component {
                 </button>
               </div>
               <NavbarBrand href="#" onClick={e => e.preventDefault()}>
-                <img alt="..." src={require("assets/img/logo.png")} />
-                <div>
-                  <h2>CollectX</h2>
-                  <h4>Exchange</h4>
-                </div>
-                <div className="markets">
-                  <h2>Markets</h2>
-                  <div className="triangle-down"></div>
-                </div>
+                <img alt="..." src={require("assets/img/collectx-logo.svg")} style={{width: '150px'}} />
+                <Collapse navbar isOpen={this.state.collapseOpen}>
+                  <Nav navbar>
+                    <UncontrolledDropdown nav>
+                      <DropdownToggle
+                        caret
+                        color="default"
+                        data-toggle="dropdown"
+                        nav
+                      >
+                        <div className="markets">
+                          <h2>Markets</h2>
+                          <div className="triangle-down"></div>
+                        </div>
+                      </DropdownToggle>
+                      <DropdownMenu className="dropdown-navbar" right tag="ul">
+                        <NavLink tag="li" style={{padding: 0}}>
+                          <DropdownItem className="nav-item">
+                            <Row>
+                              <img className="img-icon" src={require("assets/img/markets-icon.png")} ></img>
+                              <h2 className="unit-icon">USD</h2>
+                            </Row>
+                          </DropdownItem>
+                        </NavLink>
+                        <NavLink tag="li" style={{padding: 0}}>
+                          <DropdownItem className="nav-item table-body">
+                            <Table className="table-border custom_scroll" responsive>
+                              <thead>
+                                <tr>
+                                  <td>Pair</td>
+                                  <td>Price</td>
+                                  <td>Change</td>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {
+                                  this.state.markets.map((item, index) => (
+                                    <tr className="tr-field-bgcolor">
+                                      <td><h2>{item.pair}</h2></td>
+                                      <td><h2>{item.price}</h2></td>
+                                      {(index % 2 == 0) ?
+                                        <td><h2 className="color-green">{item.change}</h2></td>
+                                        :
+                                        <td><h2 className="color-red">{item.change}</h2></td>
+                                      }
+                                    </tr>
+                                  ))
+                                }
+                              </tbody>
+                            </Table>
+                          </DropdownItem>
+                        </NavLink>
+                      </DropdownMenu>
+                    </UncontrolledDropdown>
+                  </Nav>
+                </Collapse>
               </NavbarBrand>
             </div>
             <button
@@ -176,7 +235,7 @@ class AdminNavbar extends React.Component {
                       <img alt="..." src={require("assets/img/a1.png")} />
                       <div>
                         <h2>Welcome back</h2>
-                        <h4>Dallas Rushing</h4>
+                        <h2>Dallas Rushing</h2>
                       </div>
                     </div>
                     <p className="d-lg-none">Log out</p>
@@ -222,4 +281,15 @@ class AdminNavbar extends React.Component {
   }
 }
 
-export default AdminNavbar;
+const mapStateToProps = (state) => {
+  return {
+    markets: state.markets.markets,
+  };
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  startGetMarkets: () => dispatch(startGetMarkets()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminNavbar);
+// export default AdminNavbar;

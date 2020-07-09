@@ -15,6 +15,7 @@ import Dashboard from "views/Dashboard";
 import Login from "views/Login/Login";
 import Register from "views/Login/Register";
 import Icons from "views/Icons";
+import Home from "views/Home";
 
 var ps;
 
@@ -69,9 +70,9 @@ class Admin extends React.Component {
           case 'Register':
             return <Register fluid="fluid" />;
           case 'Home':
-            return <Dashboard fluid="fluid" />;
+            return <Home fluid="fluid" />;
           default:
-            return <Dashboard fluid="fluid" />;
+            return <Home fluid="fluid" />;
         }
       }
     }
@@ -106,7 +107,7 @@ class Admin extends React.Component {
             />
             {this.getComponent(this.props.location.pathname)}
             {// we don't want the Footer to be rendered on map page
-            this.props.location.pathname.indexOf("maps") !== -1 ? null : (
+            this.props.location.pathname.indexOf("MJRTrade") !== -1 ? null : (
               <Footer fluid />
             )}
           </div>

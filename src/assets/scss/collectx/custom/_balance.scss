@@ -9,15 +9,16 @@
         color: #ffffff;
         vertical-align: middle;
         text-align: left;
-        font-size: 47px;
+        font-size: 38px;
         font-weight: bold;
       }
     }
     .estimate-balance {
       text-align: left;
-      font: Medium 14px/18px Montserrat;
+      font-size: 14px;
       letter-spacing: 0px;
-      color: #FFFFFF;
+      color: #FFFFFF;      
+      font-weight: 400;
       opacity: 1;
     }
   
@@ -53,7 +54,7 @@
     }
   
     .label-total {
-      font-size: 25px;
+      font-size: 30px;
       font-weight: 600;
       text-align: left;    
       letter-spacing: 0px;
@@ -68,9 +69,8 @@
       letter-spacing: 0px;
       color: #FFFFFF;
       opacity: 1;
-      font-family: Montserrat;
       font-size: 14px;
-      font-weight: 600;    
+      font-weight: 400;    
     }
     
     .header {
@@ -142,6 +142,7 @@
       position: absolute;
       top: 7px;
       padding-right: 18px;
+      font-weight: 400;
     }
     .icon-withdraw-up::before {
       content: '⤒';
@@ -150,6 +151,7 @@
       position: absolute;
       top: 12px;
       padding-right: 18px;
+      font-weight: 400;
     }
     .icon-deposit-ellipse {    
       position: absolute;
@@ -221,6 +223,8 @@
     .table-responsive {
       padding-bottom: 0px;
       border-radius: 0 0 25px 25px;
+      overflow-x: auto !important;
+      overflow-y: hidden;
     }
     .card-plain .card-body {
       padding: 0px;
@@ -265,4 +269,38 @@
     }
   
   }  
+}
+
+@media only screen and (max-width: 800px) {
+  .balance {
+    .content {
+      .header-button { 
+        justify-content: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .header{
+        h2 {
+          margin-bottom: 10px;
+        }
+        .search { 
+          margin-bottom: 10px;
+          margin-top: 20px;
+        }
+      } 
+    }
+  }
+
+  .ps__rail-x {
+    display: none !important;
+  }
+
+  .card-plain-responsive { 
+    padding-left: 0px;
+    padding-right: 0px;
+    i {
+      display: none;
+    }
+  }
+  
 }
