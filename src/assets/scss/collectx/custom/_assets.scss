@@ -1,4 +1,12 @@
 .assets {
+    @media screen and (min-width: 992px) {
+        padding: 98px 30px 30px 290px !important;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 98px 10px 0px 10px !important;
+    }
+
     .header {
         height: 140px;
         width: 100%;
@@ -21,7 +29,7 @@
         }
     }
 
-    .header-MJ{
+    .header-MJ {
         height: 70px;
         width: 100%;
     }
@@ -30,8 +38,8 @@
         align-items: center;
         height: 470px;
         border-radius: 20px;
-        border: 1px solid #FFFFFF1A;
-        background-color: #11112F 0% 0% no-repeat padding-box;
+        border: 1px solid #ffffff1a;
+        background-color: #11112f 0% 0% no-repeat padding-box;
 
         .card-image-body {
             margin-top: 20px;
@@ -45,30 +53,31 @@
                 > img {
                     margin: auto;
                     max-height: 300px;
-                    box-shadow: 0px 3px 20px #FFFFFF33;
+                    box-shadow: 0px 3px 20px #ffffff33;
                 }
             }
 
             .card-image-div-description {
                 height: 100px;
+                margin-top: -10px;
 
                 > h2 {
                     color: white;
                     margin: 0;
                     font-weight: 600;
+                    font-size: 20px;
                 }
             }
         }
     }
 
     .card-chart {
-
         height: 470px !important;
-        border: 1px solid #FFFFFF26;
-        
+        border: 1px solid #ffffff26;
+
         .card-chart-header {
             padding: 20px 30px 10px 30px;
-            
+
             .card-chart-title-left {
                 font-size: 35px;
                 float: left;
@@ -92,14 +101,14 @@
             }
 
             .font-color-darkGray {
-                color: #FFFFFF;
+                color: #ffffff;
                 opacity: 40%;
             }
 
             .font-color-line {
-                color: #60D0B2;
+                color: #60d0b2;
             }
-            
+
             .font-color-market {
                 color: white;
 
@@ -109,7 +118,7 @@
             }
 
             .font-color-price {
-                color: #42DDB3;
+                color: #42ddb3;
 
                 top: 120px;
                 left: 10px;
@@ -127,7 +136,7 @@
 
     .asset-spec-card {
         margin-right: 20px;
-        border: 1px solid #FFFFFF26;
+        border: 1px solid #ffffff26;
 
         .spec-field {
             margin-left: -5px;
@@ -135,7 +144,8 @@
             font-size: 20px;
             font-weight: 600;
             letter-spacing: 0px;
-            color: #FFFFFF;
+            line-height: 35px;
+            color: #ffffff;
         }
 
         .spec-value {
@@ -160,12 +170,19 @@
 
     .gallery-card {
         margin-right: 10px;
-        border: 1px solid #FFFFFF26;
-        
+        border: 1px solid #ffffff26;
+
+        .image-collection {
+            display: grid;
+            grid-template-columns: auto auto;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 15px;
+        }
+
         .asset-gallery-img {
-            max-width: 100%;
-            max-height: 100%;
-            display: block;
+            width: 100%;
+            height: 100%;
         }
 
         .row{            
@@ -187,7 +204,6 @@
 }
 
 .assets-mjr-trade {
-
     margin-top: 70px;
     padding: 50px 0px 30px 50px !important;
     display: block;
@@ -210,14 +226,14 @@
             width: 90px;
             height: 4px;
             position: absolute;
-            top: 40px;
-            left: 15px;
-            background: transparent linear-gradient(90deg, #7953E2 0%, #42DDB3 100%) 0% 0% no-repeat padding-box;
+            top: 160px;
+            left: 60px;
+            background: transparent linear-gradient(90deg, #7953e2 0%, #42ddb3 100%) 0% 0% no-repeat padding-box;
             border-radius: 10px;
         }
 
         .sub-title {
-            color: #8B8B8B;
+            color: #8b8b8b;
             font-weight: 550;
         }
 
@@ -231,7 +247,7 @@
 
         .sub-value {
             padding-left: 10px;
-            color: #60D0B2;
+            color: #60d0b2;
             font-weight: 550;
             font-size: 1.1vw;
         }
@@ -239,13 +255,13 @@
         .sub-value-small {
             margin-top: -10px;
             padding-left: 10px;
-            color: #60D0B2;
+            color: #60d0b2;
             font-weight: 550;
             font-size: 1vw;
         }
         .sub-value-small-desc {
             padding-left: 10px;
-            color: #8B8B8B;
+            color: #8b8b8b;
             font-weight: 550;
             font-size: 1vw;
         }
@@ -258,8 +274,7 @@
     .recent-orders-card {
         width: 100%;
         height: 600px;
-        min-width: 300px;
-        border: 1px solid #FFFFFF1A;
+        border: 1px solid #ffffff1a;
         border-radius: 15px;
 
         h3 {
@@ -280,10 +295,10 @@
         }
 
         .success {
-            color: #42DDB3;
+            color: #42ddb3;
         }
         .normal {
-            color: #7953E2;
+            color: #7953e2;
         }
         .text-align-right {
             text-align: right;
@@ -292,26 +307,164 @@
 
     .orders-table-card {
         height: 100%;
-        min-width: 400px;
-        border: 1px solid #FFFFFF1A;
+        border: 1px solid #ffffff1a;
         border-radius: 15px;
+
+        img {
+            width: 150px;
+            margin-left: 20px;
+        }
+        input {
+            right: 20px;
+            position: absolute;
+            background: #11112f;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            color: white;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: display;
+            margin: 0;
+        }
     }
 
     .mjr-chart-card {
-        min-width: 500px;
         height: 470px;
-        border: 1px solid #FFFFFF1A;
+        border: 1px solid #ffffff1a;
         border-radius: 15px;
     }
 
     .order-price-card {
-        height: 650px;
-        min-width: 500px;
-        border: 1px solid #FFFFFF1A;
+        height: 100%;
+        border: 1px solid #ffffff1a;
         border-radius: 15px;
+
+        .content {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        .btn-order-price-buy {
+            min-width: 240px;
+            height: 40px;
+            float: right;
+            background: #60d0b2 0% 0% no-repeat padding-box;
+            border-radius: 15px;
+            opacity: 1;
+        }
+
+        .btn-order-price-sell {
+            min-width: 240px;
+            height: 40px;
+            float: right;
+            background: #7953e2 0% 0% no-repeat padding-box;
+            border-radius: 15px;
+            opacity: 1;
+        }
+
+        .mmr-input {
+            margin: 10px 0px 10px 0px;
+            width: 100%;
+            height: 27px;
+            border: 2px solid #ffffff;
+            border-radius: 15px;
+            color: white;
+            padding-top: 1px;
+            font-size: 13px;
+            float: right;
+
+            display: grid;
+            grid-template-columns: auto 40px;
+
+            input {
+                width: 100%;
+                height: 100%;
+                border: 1px solid #11112f;
+                border-radius: 15px;
+                background-color: #11112f;
+                color: white;
+                font-size: 13px;
+
+                padding-left: 10px;
+            }
+
+            input:focus {
+                outline: none;
+            }
+            input::before {
+                content: "Amonut";
+                font-size: 20px;
+            }
+        }
+
+        h6 {
+            padding-top: 3px;
+            font-size: 15px;
+            color: white;
+            float: left;
+        }
+
+        h5 {
+            font-size: 17px;
+        }
+
+        table {
+            margin-right: 20px;
+
+            tr {
+                height: 60px;
+            }
+        }
+
+        .align-right {
+            float: right !important;
+        }
+
+        .content {
+            margin-left: 10px;
+        }
+
+        .slidecontainer {
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+            // background-color: #ffffff;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: linear-gradient(-90deg, #7953e2 0%, #42ddb3 100%);
+            outline: none;
+            opacity: 1;
+            -webkit-transition: 0.2s;
+            transition: opacity 0.2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(#42ddb3 0%, #7953e2 100%);
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(#42ddb3 0%, #7953e2 100%);
+            cursor: pointer;
+        }
     }
 
-    .header-MJ{
+    .header-MJ {
         height: 70px;
         width: 100%;
     }
@@ -320,9 +473,9 @@
         align-items: center;
         height: 470px;
         border-radius: 20px;
-        border: 1px solid #FFFFFF1A;
+        border: 1px solid #ffffff1a;
         border-radius: 15px;
-        background-color: #11112F 0% 0% no-repeat padding-box;
+        background-color: #11112f 0% 0% no-repeat padding-box;
 
         .card-image-body {
             margin-top: 20px;
@@ -336,7 +489,7 @@
                 > img {
                     margin: auto;
                     max-height: 300px;
-                    box-shadow: 0px 3px 20px #FFFFFF33;
+                    box-shadow: 0px 3px 20px #ffffff33;
                 }
             }
 
@@ -351,30 +504,15 @@
             }
         }
     }
-    
-    .gallery-card {
-        margin-right: 10px;
-        width: 65%;
-        
-        .image-collection {
-            width: 100%;
-        }
-        
-        .asset-gallery-img {
-            max-width: 100%;
-            max-height: 100%;
-            display: block;
-        }
-    }
 
     .recent-order {
         margin-right: 10px;
         width: 65%;
-        
+
         .image-collection {
             width: 100%;
         }
-        
+
         .asset-gallery-img {
             max-width: 100%;
             max-height: 100%;
@@ -385,11 +523,11 @@
     .price-table {
         margin-right: 10px;
         width: 65%;
-        
+
         .image-collection {
             width: 100%;
         }
-        
+
         .asset-gallery-img {
             max-width: 100%;
             max-height: 100%;
@@ -400,11 +538,11 @@
     .order-price {
         margin-right: 10px;
         width: 65%;
-        
+
         .image-collection {
             width: 100%;
         }
-        
+
         .asset-gallery-img {
             max-width: 100%;
             max-height: 100%;
@@ -415,11 +553,11 @@
     .time-price-chart {
         margin-right: 10px;
         width: 65%;
-        
+
         .image-collection {
             width: 100%;
         }
-        
+
         .asset-gallery-img {
             max-width: 100%;
             max-height: 100%;
@@ -448,6 +586,88 @@
         height: 100%;
         margin-right: 20px;
     }
+
+    .can-toggle {
+        position: relative;
+        margin-top: -15px;
+        margin-left: -15px;
+      }
+      .can-toggle input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:before {
+        content: attr(data-unchecked);
+        left: 0;
+      }
+      .can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
+        content: attr(data-checked);
+      }
+      .can-toggle label .can-toggle__switch:before {
+        content: attr(data-checked);
+        position: absolute;
+        top: 0;
+        text-align: center;
+      }
+      .can-toggle label .can-toggle__switch:after {
+        content: attr(data-unchecked);
+        position: absolute;
+        z-index: 5;
+        text-align: center;
+        background: #543B9B 0% 0% no-repeat padding-box;
+        border: 2px solid #7953E2;
+        color: white;
+        border-radius: 15px;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .can-toggle label .can-toggle__switch {
+        -webkit-transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+                transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+        background-color: #7953E21A;
+      }
+      .can-toggle label .can-toggle__switch:before {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .can-toggle label .can-toggle__switch:after {
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+        transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+        color: white;
+      }
+      .can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
+        -webkit-transform: translate3d(135px, 0, 0);
+                transform: translate3d(135px, 0, 0);
+      }
+      .can-toggle label {
+        font-size: 14px;
+      }
+      .can-toggle label .can-toggle__switch {
+        height: 45px;
+        width: 268px;
+        border: 1px solid #7953E2;
+        border-radius: 15px;
+      }
+      .can-toggle label .can-toggle__switch:before {
+        left: 120px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 41px;
+        width: 133px;
+        padding: 0 12px;
+        border-radius: 15px;
+      }
+      .can-toggle label .can-toggle__switch:after {
+        top: 0px;
+        left: 0px;
+        border-radius: 2px;
+        width: 133px;
+        line-height: 41px;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 15px;
+      }    
 }
 
 @media only screen and (max-width: 1460px) {
@@ -456,4 +676,22 @@
 
 @media only screen and (max-width: 1200px) {
     
+}
+
+@media only screen and (max-width: 800px) {
+    .assets .header h3 {
+        font-size: 18px;
+    }
+
+    .main-panel .header {
+        margin-bottom: 30px;
+    }
+
+    .card-plain .card-header .card-title::after {
+        bottom: 120px;
+    }
+
+    .assets .card-chart .card-chart-header .card-chart-title-left {
+        font-size: 22px;
+    }
 }

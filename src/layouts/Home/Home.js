@@ -16,6 +16,7 @@ import Login from "views/Login/Login";
 import Register from "views/Login/Register";
 import Icons from "views/Icons";
 import Home from "views/Home";
+import AssetMJRTrade from "views/AssetMJRTrade";
 
 var ps;
 
@@ -65,10 +66,8 @@ class Admin extends React.Component {
         ) !== -1
       ) {
         switch (routes[i].name) {
-          case 'Login':
-            return <Login fluid="fluid" />;
-          case 'Register':
-            return <Register fluid="fluid" />;
+          case 'AssetMJRTrade':
+            return <AssetMJRTrade fluid="fluid" />;
           case 'Home':
             return <Home fluid="fluid" />;
           default:
@@ -91,6 +90,7 @@ class Admin extends React.Component {
     return "Brand";
   };
   render() {
+    console.log("+++++++++++++", this.props.location.pathname);
     return (
       <>
         <div className="wrapper">
@@ -106,10 +106,10 @@ class Admin extends React.Component {
               sidebarOpened={this.state.sidebarOpened}
             />
             {this.getComponent(this.props.location.pathname)}
-            {// we don't want the Footer to be rendered on map page
+            {/* {// we don't want the Footer to be rendered on map page
             this.props.location.pathname.indexOf("MJRTrade") !== -1 ? null : (
               <Footer fluid />
-            )}
+            )} */}
           </div>
         </div>
       </>

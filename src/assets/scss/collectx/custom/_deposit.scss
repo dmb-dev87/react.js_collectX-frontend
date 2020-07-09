@@ -288,7 +288,20 @@
     margin-left: 15px;
   }
 
-  .withdraw>h2 {
-    width: 100%;
+  .deposit .paymentmethods .visa-card .card-text, .deposit .paymentmethods .hbs-card .card-text {
+    margin-left: 10px;
+  }
+
+  .deposit .paymentmethods .visa-card .card-text h3, .deposit .paymentmethods .hbs-card .card-text h3 {
+    font-size: 16px;
+  }
+
+  .deposit .paymentmethods .visa-card .card-text p, .deposit .paymentmethods .hbs-card .card-text p {
+    font-size: 14px;
+  }
+
+  .deposit .paymentmethods .visa-card button, .deposit .paymentmethods .hbs-card button {
+    font-size: 12px !important;
+    width: 60px;
   }
 }

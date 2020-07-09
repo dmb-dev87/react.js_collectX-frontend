@@ -4,7 +4,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // reactstrap components
-import { Container,
+import {
+  Container,
   Row,
   Nav,
   NavItem,
@@ -18,18 +19,20 @@ import { Container,
 
 class OrdersTableCard extends React.Component {
   render() {
-    const {image, title, name, content} = this.props;
+    const { image, title, name, content } = this.props;
     return (
       <Card className="card-plain orders-table-card">
         <CardHeader >
-        <Row>
-        </Row>
+          <Row>
+            <img alt="..." src={require("assets/img/headbutton.jpg")} />
+            <input type="text" type="number" />
+          </Row>
         </CardHeader>
         <CardBody>
           <table className="orders-table">
             <tr>
               <th>Price(USD)</th>
-              <th className="text-align-right">Amount</th> 
+              <th className="text-align-right">Amount</th>
               <th className="text-align-right">TOTAL</th>
             </tr>
             <tr className="normal">
@@ -69,7 +72,7 @@ class OrdersTableCard extends React.Component {
           <table className="orders-table">
             <tr>
               <th>Last Price</th>
-              <th className="text-align-right"></th> 
+              <th className="text-align-right"></th>
               <th className="text-align-right">$126.318</th>
             </tr>
             <tr className="success">

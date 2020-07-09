@@ -37,7 +37,6 @@ class Discussion extends React.Component {
   }
 
   toggleTopic = (_id) => {
-    document.documentElement.classList.toggle("nav-open");
     this.setState({ topic_id: _id });
   };
 

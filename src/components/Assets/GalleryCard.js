@@ -29,22 +29,12 @@ class GalleryCard extends React.Component {
         </Row>
         </CardHeader>
         <CardBody>
-            <Row>
-              <Col xl="6" lg="6" md="6" xs="6">                
-                <img className="asset-gallery-img" src={require("assets/img/asset-gallery-lt.png")} />
-              </Col>
-              <Col xl="6" lg="6" md="6" xs="6">                
-                <img className="asset-gallery-img"src={require("assets/img/asset-gallery-rt.png")} />
-              </Col>
-            </Row>
-            <Row>
-              <Col xl="6" lg="6" md="6" xs="6">                
-                <img className="asset-gallery-img" src={require("assets/img/asset-gallery-lb.png")} />
-              </Col>
-              <Col xl="6" lg="6" md="6" xs="6">                
-                <img className="asset-gallery-img"src={require("assets/img/asset-gallery-rb.png")} />
-              </Col>
-            </Row>
+          <div className="image-collection">
+              <div ><img className="asset-gallery-img" src={require("assets/img/asset-gallery-lt.png")} /></div>
+              <div ><img className="asset-gallery-img"src={require("assets/img/asset-gallery-rt.png")} /></div>
+              <div><img className="asset-gallery-img"src={require("assets/img/asset-gallery-lb.png")} /></div>
+              <div><img className="asset-gallery-img"src={require("assets/img/asset-gallery-rb.png")} /></div>
+          </div>
         </CardBody>
       </Card>
     );

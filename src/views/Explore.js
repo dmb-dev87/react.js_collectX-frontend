@@ -40,11 +40,15 @@ class Explore extends React.Component {
             <h2>Explore</h2>
           </Row>
           <Row className="description">
+            <Col>
               <h3>Discover Rare Collectibles On CollectX</h3>
+            </Col>
+            <Col>
               <div className="btn-drop">
                 Highest Price
                 <b className="caret d-none d-lg-block d-xl-block custom-pos"></b>
               </div>
+            </Col>
           </Row>
           <Row className="button-group">
             <Button>All Collections</Button>

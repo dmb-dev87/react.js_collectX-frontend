@@ -8,6 +8,8 @@ import AssetsRoutes from "layouts/Admin/AssetsRoutes";
 import SpotWalletRoutes from "layouts/Admin/SpotWalletRoutes";
 import Discussion from "views/Discussion";
 import Home from "views/Home.js";
+import AssetMJRTrade from "views/AssetMJRTrade";
+
 
 var routes = [
   {
@@ -24,7 +26,7 @@ var routes = [
         path: "/my-assets",
         name: "My Assets",
         layout: "/admin"
-      }
+      },
     ],
     component: AssetsRoutes,
     navicon_assets: true,    
@@ -114,6 +116,12 @@ var routes = [
     icon: "tim-icons icon-atom",
     component: Register,
     layout: "/Login"
+  },
+  {
+    path: "/MJRTrade",
+    name: "AssetMJRTrade",
+    component: AssetMJRTrade,
+    layout: "/Home"
   },
 ];
 

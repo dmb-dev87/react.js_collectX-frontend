@@ -226,11 +226,11 @@
   }
 }
 
-.btn-secondary:not(:disabled):not(.disabled):active,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-secondary.dropdown-toggle {
-    color: $white;
-}
+// .btn-secondary:not(:disabled):not(.disabled):active,
+// .btn-secondary:not(:disabled):not(.disabled).active,
+// .show > .btn-secondary.dropdown-toggle {
+//     color: $white;
+// }
 
 .btn-group label.btn.active {
     transform: translateY(0);
@@ -347,6 +347,7 @@
   opacity: 1;
   
   padding-top: 5px;
+  padding-right: 10px;
   text-align: center;
   font-size: 18px;
   color: #FFFFFF;
@@ -357,6 +358,14 @@
   top: 110px;
   right: 45px;
   position: absolute;
+
+  .icon-sort-down::after {
+    content: '▼';
+    position: absolute;
+    top: 12px;
+    font-size: 10px;
+    padding-left: 5px;
+  }
 }
 
 .custom-pos {

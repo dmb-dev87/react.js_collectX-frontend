@@ -46,19 +46,18 @@ class History extends React.Component {
                   <TabList>
                     <Tab>Deposit</Tab>
                     <Tab>Withdraw</Tab>
-                    <Tab disabled className="empty-tab"></Tab>
                     <Tab disabled className="react-tabs__tab--selected fiat">Fiat</Tab>
                   </TabList>
                 </Col>
-                <Col xl="7" lg="12" sm="12">
+                <Col xl="7" lg="12" sm="12" className="search-button-container">
                   <Row className="search-button">                    
                     <div className="search-title">
-                    <img alt='...' src={btnSearch}/>
-                    Search History</div>                        
+                      <img alt='...' src={btnSearch}/>
+                      Search History</div>                        
                   </Row>
                 </Col>                
               </Row>
-              <Row>
+              <Row className="table-row">
                 <Col md="12">
                   <TabPanel>
                     <div id="table">
