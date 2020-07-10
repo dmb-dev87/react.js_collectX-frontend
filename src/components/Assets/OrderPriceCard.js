@@ -54,100 +54,102 @@ class OrderPriceCard extends React.Component {
           </div>
         </CardHeader>
         <CardBody className="content">
-          <table>
-            <tr>
-              <td><h5 className="title">Buy MMR</h5></td>
-              <td ><h6 className="align-right">$1,2584.15</h6></td>
-            </tr>
-            { this.state.orderprice ?
-              <tr>
-                <td><h6>Price: </h6></td>
-                <td >
+          <Row>
+            <Col lg="6" md="12" sm="12">
+              <Row>
+                <Col className="col-6"><h5 className="title">Buy MMR</h5></Col>
+                <Col className="col-6"><h6 className="align-right">$1,2584.15</h6></Col>
+              </Row>
+              { this.state.orderprice ?
+                <Row>
+                  <Col className="col-3"><h6>Price: </h6></Col>
+                  <Col className="col-9">
+                    <div className="mmr-input">
+                      <input type="text" />MMR
+                    </div>
+                  </Col>
+                </Row>
+                : null
+              }
+              <Row>
+                <Col className="col-3"><h6>Amount: </h6></Col>
+                <Col className="col-9">
+                  <div className="mmr-input">
+                    <input type="text" />USD
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col></Col>
+                <Col className="col-9">
+                  <div className="slidecontainer">
+                    <input class="slider" type="range" min="1" max="100" id="myRange" onInput={() => this.onInput()}/>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="col-3"><h6>Total: </h6></Col>
+                <Col className="col-9">
+                  <div className="mmr-input">
+                    <input type="text" />USD
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="col-3"></Col>
+                <Col className="col-9">
+                  <Button className="btn-order-price-buy">Buy</Button>
+                </Col>
+              </Row>
+            </Col>
+            <Col lg="6" md="12" sm="12">
+              <Row>
+                <Col className="col-6"><h5 className="title">Sell MMR</h5></Col>
+                <Col className="col-6"><h6 className="align-right">64 MMR</h6></Col>
+              </Row>
+              {this.state.orderprice?
+                <Row>
+                  <Col className="col-3"><h6>Price: </h6></Col>
+                  <Col className="col-9">
+                    <div className="mmr-input">
+                      <input type="text" />MMR
+                    </div>
+                  </Col>
+                </Row>
+                : null
+              }
+              <Row>
+                <Col className="col-3"><h6>Amount: </h6></Col>
+                <Col className="col-9">
+                  <div className="mmr-input">
+                    <input type="text" />USD
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="col-3"></Col>
+                <Col className="col-9">
+                  <div className="slidecontainer">
+                    <input type="range" min="1" max="100" class="slider" id="myRange" />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="col-3"><h6>Total: </h6></Col>
+                <Col className="col-9">
                   <div className="mmr-input">
                     <input type="text" />MMR
                   </div>
-                </td>
-              </tr>
-              : null
-            }
-            <tr>
-              <td><h6>Amount: </h6></td>
-              <td >
-                <div className="mmr-input">
-                  <input type="text" />USD
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td >
-                <div className="slidecontainer">
-                  <input class="slider" type="range" min="1" max="100" id="myRange" onInput={() => this.onInput()}/>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>Total: </h6></td>
-              <td >
-                <div className="mmr-input">
-                  <input type="text" />USD
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td >
-                <Button className="btn-order-price-buy">Buy</Button>
-              </td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <td><h5 className="title">Sell MMR</h5></td>
-              <td ><h6 className="align-right">64 MMR</h6></td>
-            </tr>
-            {this.state.orderprice?
-              <tr>
-                <td><h6>Price: </h6></td>
-                <td >
-                  <div className="mmr-input">
-                    <input type="text" />MMR
-                  </div>
-                </td>
-              </tr>
-              : null
-            }
-            <tr>
-              <td><h6>Amount: </h6></td>
-              <td >
-                <div className="mmr-input">
-                  <input type="text" />USD
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td >
-                <div className="slidecontainer">
-                  <input type="range" min="1" max="100" class="slider" id="myRange" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td><h6>Total: </h6></td>
-              <td >
-                <div className="mmr-input">
-                  <input type="text" />MMR
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td >
-                <Button className="btn-order-price-sell">Sell</Button>
-              </td>
-            </tr>
-          </table>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="col-3"></Col>
+                <Col className="col-9">
+                  <Button className="btn-order-price-sell">Sell</Button>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
         </CardBody>
       </Card>
     );

@@ -32,7 +32,10 @@
     padding: 24px
   }
   .table > tbody > tr > td {
-    color: rgba(255, 255, 255, 1) !important;
+    color: white !important;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px;
   }
   .table a {
     color: #ffffff;
@@ -48,11 +51,15 @@
   }
   .sort-field {
     display: flex;
+    .sort-buttons {
+      padding-top: 4px;
+    }
   }
   .btn.btn-link {
     padding: 0em;
     font-size: 7px;
     color: white;
+    margin-top: -2px;
   }
   .search-button.row {
     position: absolute;

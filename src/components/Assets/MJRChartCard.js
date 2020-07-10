@@ -21,10 +21,7 @@ class MJRChartCard extends React.Component {
     const {image, title, name, content} = this.props;
     return (
       <Card className="card-plain mjr-chart-card">
-        <CardHeader >
-        </CardHeader>
-        <CardBody>
-        </CardBody>
+        <img src={require("assets/img/mjrtrade.png")} />
       </Card>
     );
   }

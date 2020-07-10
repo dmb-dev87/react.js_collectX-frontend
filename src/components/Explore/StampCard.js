@@ -10,8 +10,10 @@ import { Container,
   CardBody,
   Button,
   CardTitle,
-  Col
+  Col,
 } from "reactstrap";
+
+import { Link } from "react-router-dom";
 
 class StampCard extends React.Component {
   render() {
@@ -27,11 +29,15 @@ class StampCard extends React.Component {
             <h2>{title}</h2>
           </div>
           <div className="card-image-div-btn">
-            {percent < 0 ?
-              <Button className="negotive">{percent}%</Button> :
-              <Button className="positive">+{percent}%</Button>
-            }
-            <Button>Detail</Button>
+            <Link to="/MJRTrade">
+              {percent < 0 ?
+                <Button className="negotive">{percent}%</Button> :
+                <Button className="positive">+{percent}%</Button>
+              }
+            </Link>
+            <Link to="/assets">
+              <Button>Detail</Button>
+            </Link>
           </div>
         </CardBody>
       </Card>

@@ -1,6 +1,8 @@
 .discussion {
   padding: 67px 0px 0px 260px !important;
 
+  height: 100%;
+
   ::placeholder {
     color: white;
     opacity: 1;
@@ -21,16 +23,26 @@
   #list-panel {    
     padding: 10px 0px 0px 0px;
 
+    .topiclist::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+
     .topiclist {
       background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
-      height: calc(100vh - 134px);
+      height: calc(100vh - 77px);
       border: 1px solid #8080804f;
       top: 0;
       background-size: cover;
       background-position: center center;
       display: block;
+      overflow-y: scroll;
       box-shadow: none;
       transition: 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+
+      .topiclist-wrapper {        
+        height: 150vh;
+      }
 
       .topiclist-title {
         width: 100%;
@@ -216,7 +228,7 @@
     .chat-right {
       width: 10%;
       background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
-      height: calc(100vh - 134px);
+      height: calc(100vh - 77px);
       border: 1px solid #8080804f;
       top: 0;
       background-size: cover;
@@ -232,7 +244,7 @@
     .chat-panel {
       // position: relative;
       background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
-      height: calc(100vh - 134px);
+      height: calc(100vh - 77px);
       border: 1px solid #8080804f;
       top: 0;
       background-size: cover;

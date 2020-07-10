@@ -12,23 +12,8 @@ import RecentOrdersCard from "../components/Assets/RecentOrdersCard";
 
 // reactstrap components
 import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Label,
-  FormGroup,
-  Input,
-  Table,
   Row,
   Col,
-  UncontrolledTooltip
 } from "reactstrap";
 
 // core components
@@ -52,38 +37,50 @@ class AssetMJRTrade extends React.Component {
       <>
         <div className="content-fluid assets-mjr-trade">
           <Row className="header-MJR">
-            <h1 className="mjr-title">MJR</h1>
-            <Col> <div className="sub-field">Last Price:<div className="sub-value">$126.318</div> </div></Col>
-            <Col> <div className="sub-field">24h High:<div className="sub-value">$128.941</div></div></Col>
-            <Col> <div className="sub-field">24h Low:<div className="sub-value">$121.349</div></div></Col>
-            <Col> <div className="sub-field">24h Vol:<div className="sub-value">$95,281.45</div></div></Col>
-            <Col> <div className="sub-field">24h Vol:<div className="sub-value">$95,281.45</div></div></Col>
-            <Col> <div className="sub-value-small">$95,281.45</div><div className="sub-value-small-desc">MARKET CAP</div></Col>
+            <Col lg="2">
+              <Row className="mjr-title">
+                <h1>MJR </h1>
+                <h2> / USD</h2>
+              </Row>
+            </Col>            
+            <Col lg="8">
+              <Row>
+                <div className="sub-field">Last Price:<span className="sub-value">$126.318</span></div>           
+                <div className="sub-field">24h High:<span className="sub-value">$128.941</span></div>
+                <div className="sub-field">24h Low:<span className="sub-value">$121.349</span></div>
+                <div className="sub-field">24h Vol:<span className="sub-value">$95,281.45</span></div>
+                <div className="sub-field">24h Vol:<span className="sub-value">$95,281.45</span></div>
+              </Row>              
+            </Col>
+            <Col lg="2"> 
+              <Row className="sub-value-small">$126,318.94</Row>
+              <Row className="sub-value-small-desc">MARKET CAP</Row>
+            </Col>
           </Row>
 
-          <Row className="content">
+          <Row>
             <Col sm="3" lg="3" xl="3">
               <div >
-                <div className="image-row-card">
+                <div className="image-row-card">                  
                   <ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Machael Jordan"} content={"Rookie Card"}></ImageCard>
                 </div>
                 <div className="image-row-card">
                   <RecentOrdersCard></RecentOrdersCard>
                 </div>
               </div>
-            </Col>
-            
+            </Col>            
             <Col sm="5" lg="5" xl="5">
-              <div >
-                <div className="image-row-card">
+              <Row>
+                <Col>
                   <MJRChartCard ></MJRChartCard>
-                </div>
-                <div className="image-row-card">
+                </Col>
+              </Row>
+              <Row>
+                <Col>
                   <OrderPriceCard></OrderPriceCard>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </Col>
-            
             <Col sm="4" lg="4" xl="4">
                 <OrdersTableCard></OrdersTableCard>
             </Col>

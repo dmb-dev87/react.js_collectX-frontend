@@ -209,27 +209,36 @@
     display: block;
 
     .header-MJR {
-        height: 140px;
-        width: 100%;
         margin-left: 10px;
-        margin-bottom: -40px;
+        margin-bottom: 15px;
 
-        h1 {
-            font-size: 38px;
-            margin-bottom: 0;
-            font-weight: 600;
-            color: white;
-        }
+        .mjr-title {
+            position: relative;
 
-        h1::after {
-            content: "";
-            width: 90px;
-            height: 4px;
-            position: absolute;
-            top: 160px;
-            left: 60px;
-            background: transparent linear-gradient(90deg, #7953e2 0%, #42ddb3 100%) 0% 0% no-repeat padding-box;
-            border-radius: 10px;
+            > h1 {
+                font-size: 38px;
+                margin-bottom: 0;
+                font-weight: 600;
+                color: white;
+            }
+
+            h1::after {
+                content: "";
+                width: 84px;
+                height: 4px;
+                position: absolute;
+                top: 40px;
+                left: 0px;
+                background: transparent linear-gradient(90deg, #7953e2 0%, #42ddb3 100%) 0% 0% no-repeat padding-box;
+                border-radius: 10px;
+            }
+
+            > h2 {
+                font-size: 24px;
+                margin: 10px;
+                font-weight: 600;
+                color: #8B8B8B;
+            }
         }
 
         .sub-title {
@@ -238,66 +247,73 @@
         }
 
         .sub-field {
-            padding-left: 50px;
+            padding: unset;
+            text-align: right;
             color: white;
             font-weight: 550;
-            font-size: 1.1vw;
-            display: flex;
+            font-size: 20px;
+            margin-right: 30px;
+            margin-top: 10px;
         }
 
         .sub-value {
+            text-align: left;
+            padding: unset;
             padding-left: 10px;
             color: #60d0b2;
-            font-weight: 550;
-            font-size: 1.1vw;
         }
 
         .sub-value-small {
-            margin-top: -10px;
-            padding-left: 10px;
             color: #60d0b2;
             font-weight: 550;
-            font-size: 1vw;
+            font-size: 20px;
         }
         .sub-value-small-desc {
-            padding-left: 10px;
             color: #8b8b8b;
             font-weight: 550;
-            font-size: 1vw;
-        }
-
-        .mjr-title {
-            width: 100px;
+            font-size: 18px;
         }
     }
 
     .recent-orders-card {
         width: 100%;
-        height: 600px;
         border: 1px solid #ffffff1a;
         border-radius: 15px;
 
         h3 {
-            font-size: 25px;
+            font-size: 16px;
             font-weight: 600;
+            margin-bottom: 0px;
         }
     }
 
     .orders-table {
         width: 100%;
         border-radius: 15px;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
 
+        tr {
+            margin: 5px 0px;
+        }
+
         th {
-            font-size: 20px;
+            font-size: 14px;
             color: white;
+            font-weight: 300;
+            padding: 4px 0px;
+        }
+
+        td {
+            font-size: 16px;
+            padding: 4px 0px;
         }
 
         .success {
             color: #42ddb3;
         }
         .normal {
+            font-size: 16px;
             color: #7953e2;
         }
         .text-align-right {
@@ -306,17 +322,20 @@
     }
 
     .orders-table-card {
-        height: 100%;
         border: 1px solid #ffffff1a;
         border-radius: 15px;
+        position: relative;
+
+        .col-4 {
+            text-align: right;
+        }
 
         img {
             width: 150px;
-            margin-left: 20px;
         }
+
         input {
-            right: 20px;
-            position: absolute;
+            width: 80px;
             background: #11112f;
             border: 1px solid #ffffff;
             border-radius: 5px;
@@ -331,7 +350,6 @@
     }
 
     .mjr-chart-card {
-        height: 470px;
         border: 1px solid #ffffff1a;
         border-radius: 15px;
     }
@@ -347,7 +365,7 @@
         }
 
         .btn-order-price-buy {
-            min-width: 240px;
+            min-width: 100%;
             height: 40px;
             float: right;
             background: #60d0b2 0% 0% no-repeat padding-box;
@@ -356,7 +374,7 @@
         }
 
         .btn-order-price-sell {
-            min-width: 240px;
+            min-width: 100%;
             height: 40px;
             float: right;
             background: #7953e2 0% 0% no-repeat padding-box;
@@ -400,7 +418,7 @@
         }
 
         h6 {
-            padding-top: 3px;
+            padding-top: 12px;
             font-size: 15px;
             color: white;
             float: left;
@@ -419,6 +437,7 @@
         }
 
         .align-right {
+            padding-top: 3px;
             float: right !important;
         }
 
@@ -430,7 +449,6 @@
             width: 100%;
             height: 100%;
             padding-top: 20px;
-            // background-color: #ffffff;
         }
 
         .slider {
@@ -494,8 +512,6 @@
             }
 
             .card-image-div-description {
-                height: 100px;
-
                 > h2 {
                     color: white;
                     margin: 0;
@@ -589,8 +605,8 @@
 
     .can-toggle {
         position: relative;
-        margin-top: -15px;
-        margin-left: -15px;
+        margin-top: -25px;
+        margin-left: -25px;
       }
       .can-toggle input[type="checkbox"] {
         opacity: 0;
@@ -601,13 +617,19 @@
       .can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:before {
         content: attr(data-unchecked);
         left: 0;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-right: unset;
       }
       .can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
-        content: attr(data-checked);
+        content: attr(data-checked);        
       }
       .can-toggle label .can-toggle__switch:before {
-        content: attr(data-checked);
+        content: attr(data-checked);        
         position: absolute;
+        border: 2px solid #7953E2;
         top: 0;
         text-align: center;
       }
@@ -646,17 +668,20 @@
       .can-toggle label .can-toggle__switch {
         height: 45px;
         width: 268px;
-        border: 1px solid #7953E2;
+        border: 2px solid #7953E2;
         border-radius: 15px;
       }
       .can-toggle label .can-toggle__switch:before {
-        left: 120px;
+        left: 135px;
         font-size: 13px;
         font-weight: 600;
         line-height: 41px;
         width: 133px;
         padding: 0 12px;
         border-radius: 15px;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+        border-left: unset;        
       }
       .can-toggle label .can-toggle__switch:after {
         top: 0px;
@@ -671,11 +696,15 @@
 }
 
 @media only screen and (max-width: 1460px) {
- 
+    .sub-value-small {
+        margin-top: 0px;
+    }
 }
 
-@media only screen and (max-width: 1200px) {
-    
+@media only screen and (max-width: 800px) {
+    .sub-value-small {
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -687,9 +716,9 @@
         margin-bottom: 30px;
     }
 
-    .card-plain .card-header .card-title::after {
-        bottom: 120px;
-    }
+    // .card-plain .card-header .card-title::after {
+    //     bottom: 120px;
+    // }
 
     .assets .card-chart .card-chart-header .card-chart-title-left {
         font-size: 22px;

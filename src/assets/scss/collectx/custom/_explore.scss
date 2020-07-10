@@ -65,6 +65,7 @@
       border-radius: 25px;
       opacity: 1;
       padding: 5px 20px;
+      padding-right: 30px;
       text-align: center;
       font-size: 18px;
       font-weight: 600;
@@ -153,8 +154,8 @@
       .card-image-div-btn {
         margin-top: 12px;
 
-        > button {
-          padding: unset;
+        > a >button {
+          padding: 0px 5px;
           width: calc(50% - 8px);
           height: 32px;
           border: none;
@@ -191,5 +192,29 @@
 @media only screen and (max-width: 1200px) {
   .btn-drop {
     right: 30px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .description div:nth-child(2) {
+    height: 80px;
+    .btn-drop {
+      left: 15px;
+      right: unset;
+    }
+  }
+
+  .description div:nth-child(1) {
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .explore .button-group {
+    padding-left: 15px;
+  }
+
+  .explore .col-lg-5ths {
+    width: 100%;
   }
 }

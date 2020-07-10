@@ -167,13 +167,13 @@
     .icon-withdraw-ellipse {
       position: absolute;
       background: #7953E2;
-      width: 15px;
+      width: 16px;
       height: 4px;
       border-radius: 50%;
       text-align: center;
       line-height: 11px;
-      left: 12px;
-      top: 10px;
+      left: 11px;
+      top: 9px;
     }
     
     
@@ -251,7 +251,9 @@
       opacity: 1; /* Firefox */
     }
     .table > tbody > tr > td {
-      color: rgba(255, 255, 255, 1.7) !important;
+      color: white !important;
+      font-weight: 600;
+      padding: 16px;
     }
     .td-detail {
       color: #7953E2;
