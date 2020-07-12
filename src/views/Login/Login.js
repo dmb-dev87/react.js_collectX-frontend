@@ -28,7 +28,7 @@ class Login extends React.Component {
     return (
       <>
         <div className="content-fluid login">
-          <Row style={{height: "100%"}}>
+          <Row>
             <Col xl="5" id="form-part">
               <LoginForm title='Log In' />
             </Col>

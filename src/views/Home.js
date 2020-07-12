@@ -6,6 +6,7 @@ import {startGetNews, startGetActiveMarkets} from "../actions/general";
 import Loading from "../components/Utils/Loader"
 import News from "../components/Dashboard/News"
 import ActiveMarkets from "../components/Dashboard/ActiveMarkets"
+import HomeChartCard from "../components/Assets/HomeChartCard";
 
 // reactstrap components
 import {
@@ -55,32 +56,23 @@ class Home extends React.Component {
             this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
           }
           <Row>
-            <Col className="dashboard-left">
+            <Col className="dashboard-left" xl="8" lg="12" >
               <Row>
                 <Col lg="12">
                   <Card className="card-plain dashboard-banner">
                     <CardBody>
-                      <img src={require("assets/img/dashboard-banner.png")}></img>
+                      <img src={require("assets/img/dashboard-banner.png")}></img>                      
                     </CardBody>
                   </Card>
                 </Col>
               </Row>
-              <Row className="dashboard-banner-bellow">
-                <Col xl="6" lg="12">
-                  <Card className="card-plain portfolio">
-                    <CardHeader>
-                      <Row>
-                        <Col className="text-left">
-                          <CardTitle tag="h2">Portfolio</CardTitle>
-                        </Col>
-                      </Row>
-                    </CardHeader>
-                    <CardBody>
-                      <img src={require("assets/img/dashboard-chart.png")}></img>
-                    </CardBody>
-                  </Card>
+              <Row className="dashboard-banner-bellow" xl="4" lg="12">
+                <Col xl="5" lg="12">
+                    <div className="chart-row-card">
+                      <HomeChartCard data={[390, 400, 410, 430, 470, 500, 530, 560, 590, 610, 640, 670]} />
+                    </div>
                 </Col>
-                <Col xl="6" lg="12">
+                <Col xl="7" lg="12">
                   <ActiveMarkets activeMarkets={this.state.activeMarkets} />
                 </Col>
               </Row>

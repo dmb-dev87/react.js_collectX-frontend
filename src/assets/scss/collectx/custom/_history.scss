@@ -29,32 +29,80 @@
     color: #FFFFFF;
     opacity: 1;
     font-weight: 500;
-    padding: 24px
+    padding: 12px 7px;
   }
+
   .table > tbody > tr > td {
     color: white !important;
     font-weight: 600;
     font-size: 16px;
     padding: 16px;
   }
+
   .table a {
     color: #ffffff;
     text-decoration: underline;
+    font-weight: 600;
   }
-  .card-plain {
-    
+
+  .card-plain {    
     background-color: #0e102e;
     border-radius: 20px;
   }
+
   .tim-icons {
     padding-right: 10px;
   }
+
   .sort-field {
     display: flex;
     .sort-buttons {
       padding-top: 4px;
     }
   }
+
+  .btn-none {
+    border: none;    
+    background: transparent;
+    outline:none;
+    font: 14px/18px Montserrat;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: relative;
+  }
+
+  .btn-none.left-space {
+    padding-left: 30px;
+  }
+
+  .icon-sort-up {
+    border-color: white transparent;
+    border-style: solid;
+    border-width: 0px 4px 4px 4px;
+    height: 0px;
+    width: 0px;
+
+    position: absolute;
+    right: -10px;
+    top: 28px;
+  }
+  
+  .icon-sort-down {
+    border-color: white transparent;
+    border-style: solid;
+    border-width: 4px 4px 0px 4px;
+    height: 0px;
+    width: 0px;
+
+    position: absolute;
+    right: -10px;
+    top: 35px;
+  }
+
   .btn.btn-link {
     padding: 0em;
     font-size: 7px;

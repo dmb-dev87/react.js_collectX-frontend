@@ -106,10 +106,9 @@ class Admin extends React.Component {
               sidebarOpened={this.state.sidebarOpened}
             />
             {this.getComponent(this.props.location.pathname)}
-            {/* {// we don't want the Footer to be rendered on map page
-            this.props.location.pathname.indexOf("MJRTrade") !== -1 ? null : (
-              <Footer fluid />
-            )} */}
+            
+            <Footer fluid />
+            
           </div>
         </div>
       </>

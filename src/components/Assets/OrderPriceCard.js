@@ -6,20 +6,12 @@ import Slider from 'rc-slider'
 
 // reactstrap components
 import {
-  Container,
   Row,
-  Nav,
-  NavItem,
-  NavLink,
   Card,
   CardHeader,
   CardBody,
-  CardTitle,
   Col,
   Button,
-  InputGroup,
-  InputGroupAddon,
-  Input,
 } from "reactstrap";
 
 class OrderPriceCard extends React.Component {

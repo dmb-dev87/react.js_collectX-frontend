@@ -25,13 +25,6 @@
         border-radius: 25px;
         opacity: 1;
 
-        img {
-          width: 26px;
-          height: 28px;
-          margin-left: 4px;
-          margin-right: 10px;
-        }
-
         text {
           font-size: 20px;
           font-weight:600;   
@@ -71,7 +64,7 @@
 
   .titlepad {
     .shape1 {
-      width: 124px;
+      width: 140px;
       height: 40px;
       align-items: center;
       justify-content: center;
@@ -84,25 +77,19 @@
       font-size: 16px;
       padding-left: 60px;
 
-      .icon-deposit-ellipse { 
-        position: absolute;
-        background: #60D0B2;
-        width: 15px;
-        height: 4px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 11px;
-        left: 13px;
-        top: 23px;
+      .withdraw-deposit-font {
+        text-align: left;
+            font: Bold 15px/47px Montserrat;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            padding-left: 10px;
+            padding-right: 10px;
       }
-      .icon-deposit-down::before {
-        content: '⤓';
-        font-style: normal;
-        left: 17px;
-        position: absolute;
-        top: 5px;
-        padding-right: 18px;
-        font-weight: 400;
+
+      .arrow_icon {
+        width: 20px;
+        margin-left: -10px;
       }
     }
   }

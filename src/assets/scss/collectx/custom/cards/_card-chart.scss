@@ -1,5 +1,223 @@
 .card-chart {
   overflow: hidden;
+  height: 470px !important;
+        border: 1px solid #ffffff26;
+
+        .card-chart-header {
+            padding: 20px 30px 10px 30px;
+
+            .card-chart-title-left {
+                font-size: 35px;
+                float: left;
+            }
+
+            .card-chart-title-sub {
+                margin-left: 20px;
+                font-size: 45px;
+                float: left;
+            }
+
+            .card-chart-title-right {
+                font-size: 20px;
+                float: right;
+                margin-left: 20px;
+                font-weight: bold;
+            }
+
+            .font-color-wight {
+                color: white;
+            }
+
+            .font-color-darkGray {
+                color: #ffffff;
+                opacity: 40%;
+            }
+
+            .font-color-line {
+                color: #60d0b2;
+            }
+
+            .font-color-market {
+                color: white;
+
+                top: 90px;
+                left: 10px;
+                position: absolute;
+            }
+
+            .font-color-price {
+                color: #42ddb3;
+
+                top: 120px;
+                left: 10px;
+                position: absolute;
+            }
+        }
+
+        .card-body-no-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-bottom: 0 !important;
+            padding-top: 0 !important;
+        }
+
+  .card-header{
+    .card-title{
+      i{
+        font-size: 16px;
+        margin-right: 5px;
+        margin-bottom: 3px;
+      }
+    }
+    .card-category{
+      margin-bottom: 5px;
+    }
+  }
+    .card-body{
+      padding-left: 5px;
+      padding-right: 5px;
+      .tab-space{
+        padding: 0;
+      }
+    }
+  .table{
+    margin-bottom: 0;
+
+    td{
+      border-top: none;
+      border-bottom: 1px solid rgba($white,0.1);
+    }
+  }
+
+  .card-progress {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .chart-area {
+    height: 220px;
+    width: 100%;
+  }
+  .card-footer {
+    margin-top: 15px;
+
+    .stats{
+      color: $dark-gray;
+    }
+  }
+
+  .dropdown{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    .btn{
+      margin: 0;
+    }
+  }
+
+  &.card-chart-pie{
+    .chart-area{
+      padding: 10px 0 25px;
+      height: auto;
+    }
+
+    .card-title{
+      margin-bottom: 10px;
+      i{
+        font-size: 1rem;
+      }
+    }
+
+  }
+
+}
+
+.home-card-chart {
+  >img {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  >p.logo-text {
+    position: absolute;
+    left: 80px;
+    top: 20px;
+    font-size: 28px;
+    color: white;
+    font-weight: 600;
+  }
+
+  >p.logo-price {
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    font-size: 20px;
+    color: #60D0B2;
+    font-weight: 600;
+  }
+      height: 470px !important;
+        border: 1px solid #ffffff26;
+
+        .card-chart-header {
+            padding: 20px 30px 10px 30px;
+
+            .card-chart-title-left {
+                font-size: 35px;
+                float: left;
+            }
+
+            .card-chart-title-sub {
+                margin-left: 20px;
+                font-size: 45px;
+                float: left;
+            }
+
+            .card-chart-title-right {
+                font-size: 20px;
+                float: right;
+                margin-left: 20px;
+                font-weight: bold;
+            }
+
+            .font-color-wight {
+                color: white;
+            }
+
+            .font-color-darkGray {
+                color: #ffffff;
+                opacity: 40%;
+            }
+
+            .font-color-line {
+                color: #60d0b2;
+            }
+
+            .font-color-market {
+                color: #FFFFFF;
+                opacity: 0.4;
+                top: 90px;
+                left: 10px;
+                position: absolute;
+                font-size: 20px;
+            }
+
+            .font-color-price {
+                color: white;
+                top: 130px;
+                left: 10px;
+                position: absolute;
+            }
+        }
+
+        .card-body-no-padding {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-bottom: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+  overflow: hidden;
   .card-header{
     .card-title{
       i{

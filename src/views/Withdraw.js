@@ -29,8 +29,7 @@ class Withdraw extends React.Component {
           <Row className="titlepad">
             <h2>Withdraw</h2>
             <Button className="shape1">
-              <i className="icon-deposit-down" />
-              <i className="icon-deposit-ellipse" />
+              <img src={ require("assets/img/deposit/arrow_down.png") } alt="ok" className="arrow_icon"/> 
               <span className="withdraw-deposit-font">Deposit</span>
             </Button>
           </Row>

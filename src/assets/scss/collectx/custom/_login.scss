@@ -1,7 +1,15 @@
 $bg-img: url('../../../img/login/background.png');
-.login {
+.login.content-fluid {
+  min-height: 100vh !important;
   padding: 84px 0px 0px 0px !important;
+}
+.login {
   height: 100%;
+
+  >div {
+    height: calc( 100vh - 84px );
+    margin: 0px;
+  }
 
   input:-internal-autofill-selected{ 
     background: transparent !important;

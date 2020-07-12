@@ -58,7 +58,7 @@ const options = {
   }
 };
 
-class ChartCard extends React.Component{
+class HomeChartCard extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -85,12 +85,12 @@ class ChartCard extends React.Component{
           label: "Active Users",
           borderColor: "#42DDB3",
           borderShadow: "0px 3px 20px #42DDB3",
-          pointBorderColor: "#FFF",
-          pointBackgroundColor: "#FFF",
+          pointBorderColor: "#00000000",
+          pointBackgroundColor: "#00000000",
           pointBorderWidth: 2,
-          pointHoverRadius: 4,
-          pointHoverBorderWidth: 1,
-          pointRadius: 10,
+          pointHoverRadius: 0,
+          pointHoverBorderWidth: 0,
+          pointRadius: 0,
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 7,
@@ -126,38 +126,24 @@ class ChartCard extends React.Component{
     const { type } = this.props;
 
     return(
-      <Card className="card-plain card-chart">
+      <Card className="card-plain home-card-chart">
+        <img src={ require("assets/img/collectx.svg") } /> 
+        <p className="logo-text">Collectx</p>
+        <p className="logo-price">+6.35%</p>
         <CardHeader className="card-chart-header">
           <Row>
-            <Col>
-              <CardTitle tag="h1" className="card-chart-title-left">Price History</CardTitle>
-            </Col>
-            <Col>
-              <h1 className="card-chart-title-right font-color-line">+2.48%</h1>
-              <h1 className="card-chart-title-right font-color-wight">08.28.20</h1>
-              <h1 className="card-chart-title-right font-color-darkGray">CollectX</h1>
-            </Col>
-          </Row>
-          <Row>
-              <h1 className="card-chart-title-right font-color-market">Market Cap</h1>
+            <h1 className="card-chart-title-right font-color-market">Inventory Market Cap</h1>
           </Row>
           <Row>
             <h1 className="card-chart-title-right font-color-price">$126,318.49</h1>
           </Row>
         </CardHeader>
         <CardBody className="card-body-no-padding">
-          <Line data={con_data} options={options} width={100} height={100} />
-          {
-            type ? <>
-              <button className="btn-karma-type1">Instant Buy</button>
-              <button className="btn-karma-type2">Instant Sell</button>
-              <div className="btn-karma-type3-bg"><div className="btn-karma-type3">Live market</div></div>
-              </> : <button className="btn-karma-type4">1.39 MJR</button>
-          }
+          <Line data={con_data} options={options} />
         </CardBody>
       </Card>
     );
   }
 }
 
-export default ChartCard;
+export default HomeChartCard;

@@ -1,10 +1,8 @@
 /*eslint-disable*/
 import React from "react";
-// used for making the prop types of this component
-import PropTypes from "prop-types";
 
 // reactstrap components
-import { Card, CardHeader, CardBody, CardTitle, CardText, Row, Col, NavItem, NavLink } from "reactstrap";
+import {Row, Col } from "reactstrap";
 
 class USD extends React.Component {
   render() {

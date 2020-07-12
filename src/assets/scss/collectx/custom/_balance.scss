@@ -116,66 +116,35 @@
       opacity: 1;
       padding-top: 24px;
       padding-bottom: 24px;
+      position: relative;
     }
   
     .btn-none.left-space {
       padding-left: 30px;
     }
   
-    .icon-sort-up::before {
-      content: '▲';
-      font-size: 7px;
+    .icon-sort-up {
+      border-color: white transparent;
+      border-style: solid;
+      border-width: 0px 4px 4px 4px;
+      height: 0px;
+      width: 0px;
+
       position: absolute;
-      top: 37px;
+      right: -10px;
+      top: 28px;
     }
-    .icon-sort-down::before {
-      content: '▼';
+    .icon-sort-down {
+      border-color: white transparent;
+      border-style: solid;
+      border-width: 4px 4px 0px 4px;
+      height: 0px;
+      width: 0px;
+
       position: absolute;
-      top: 44px;
-      font-size: 7px;
+      right: -10px;
+      top: 35px;
     }
-  
-    .icon-deposit-down::before {
-      content: '⤓';
-      font-style: normal;
-      left: 17px;
-      position: absolute;
-      top: 7px;
-      padding-right: 18px;
-      font-weight: 400;
-    }
-    .icon-withdraw-up::before {
-      content: '⤒';
-      font-style: normal;
-      left: 15px;
-      position: absolute;
-      top: 12px;
-      padding-right: 18px;
-      font-weight: 400;
-    }
-    .icon-deposit-ellipse {    
-      position: absolute;
-      background: #60D0B2;
-      width: 15px;
-      height: 4px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 11px;
-      left: 13px;
-      top: 23px;
-    }
-    .icon-withdraw-ellipse {
-      position: absolute;
-      background: #7953E2;
-      width: 16px;
-      height: 4px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 11px;
-      left: 11px;
-      top: 9px;
-    }
-    
     
     .withdraw-deposit-font {
       text-align: left;
@@ -183,7 +152,13 @@
       letter-spacing: 0px;
       color: #FFFFFF;
       opacity: 1;
-      padding-left: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .arrow_icon {
+      width: 20px;
+      margin-left: 8px;
     }
   
     .btn-circle {        
@@ -243,7 +218,7 @@
     }
     .td-a-trade {
       color: #42DDB3;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 16px;
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -257,6 +232,7 @@
     }
     .td-detail {
       color: #7953E2;
+      font-weight: 600;
     }
     .td-custom-padding {
       padding-left: 30px;

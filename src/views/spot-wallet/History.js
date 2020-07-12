@@ -142,47 +142,42 @@ const DepositTable = (props) => {
         <tr>
           <th width="20%">
             <div className="sort-field">
-              <div>Asset</div>
-              <div className="sort-buttons" onClick={() => requestSort('asset')}>
-                <div className="sort-ascending"><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+              <button type="button" className="btn-none left-space">Asset                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>
           </th>
           <th width="20%"> 
             <div className="sort-field">
-              <div>Status</div>
-              <div className="sort-buttons" onClick={() => requestSort('status')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+              <button type="button" className="btn-none">Status                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>
           </th>
           <th width="15%"> 
             <div className="sort-field">
-              <div>Amount</div>
-              <div className="sort-buttons" onClick={() => requestSort('amount')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+              <button type="button" className="btn-none">Amount                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>
           </th>
           <th width="15%"> 
-            <div className="sort-field">
-              <div>Date</div>
-              <div className="sort-buttons" onClick={() => requestSort('date')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+            <div className="sort-field">              
+              <button type="button" className="btn-none">Date                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>  
             </div>
           </th>
           <th width="30%"> 
-            <div className="sort-field">
-              <div>Transaction</div>
-              <div className="sort-buttons" onClick={() => requestSort('transaction')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+            <div className="sort-field">       
+              <button type="button" className="btn-none">Transaction                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>  
             </div>            
           </th>
         </tr>
@@ -221,47 +216,42 @@ const WithdrawTable = (props) => {
         <tr>
           <th width="20%">
             <div className="sort-field">
-              <div>Asset</div>
-              <div className="sort-buttons" onClick={() => requestSort('asset')}>
-                <div className="sort-ascending"><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+              <button type="button" className="btn-none left-space">Asset                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>
           </th>
           <th width="20%"> 
-            <div className="sort-field">
-              <div>Status</div>
-              <div className="sort-buttons" onClick={() => requestSort('status')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+            <div className="sort-field">              
+              <button type="button" className="btn-none left-space">Status                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
+            </div>
+          </th>
+          <th width="15%"> 
+            <div className="sort-field">          
+              <button type="button" className="btn-none left-space">Amount                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>
           </th>
           <th width="15%"> 
             <div className="sort-field">
-              <div>Amount</div>
-              <div className="sort-buttons" onClick={() => requestSort('amount')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
-            </div>
-          </th>
-          <th width="15%"> 
-            <div className="sort-field">
-              <div>Date</div>
-              <div className="sort-buttons" onClick={() => requestSort('date')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+              <button type="button" className="btn-none left-space">Date                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>
           </th>
           <th width="30%"> 
             <div className="sort-field">
-              <div>Address</div>
-              <div className="sort-buttons" onClick={() => requestSort('address')}>
-                <div><button className= "sort-field btn btn-link">▲</button></div>
-                <div><button className= "sort-field btn btn-link">▼</button></div>
-              </div>  
+              <button type="button" className="btn-none left-space">Address                      
+                <div className="icon-sort-up"> </div>
+                <div className="icon-sort-down"> </div>
+              </button>
             </div>            
           </th>
         </tr>

@@ -13,7 +13,7 @@ import AssetMJRTrade from "views/AssetMJRTrade";
 
 var routes = [
   {
-    path: "/explore",
+    path: "/assets",
     name: "Assets",
     img: require("assets/img/menus/assets.svg"),
     subRoutes: [

@@ -1,3 +1,11 @@
+.color-blue {
+    color: #7953E2 !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
 .assets {
     @media screen and (min-width: 992px) {
         padding: 98px 30px 30px 290px !important;
@@ -71,69 +79,6 @@
         }
     }
 
-    .card-chart {
-        height: 470px !important;
-        border: 1px solid #ffffff26;
-
-        .card-chart-header {
-            padding: 20px 30px 10px 30px;
-
-            .card-chart-title-left {
-                font-size: 35px;
-                float: left;
-            }
-
-            .card-chart-title-sub {
-                margin-left: 20px;
-                font-size: 45px;
-                float: left;
-            }
-
-            .card-chart-title-right {
-                font-size: 20px;
-                float: right;
-                margin-left: 20px;
-                font-weight: bold;
-            }
-
-            .font-color-wight {
-                color: white;
-            }
-
-            .font-color-darkGray {
-                color: #ffffff;
-                opacity: 40%;
-            }
-
-            .font-color-line {
-                color: #60d0b2;
-            }
-
-            .font-color-market {
-                color: white;
-
-                top: 90px;
-                left: 10px;
-                position: absolute;
-            }
-
-            .font-color-price {
-                color: #42ddb3;
-
-                top: 120px;
-                left: 10px;
-                position: absolute;
-            }
-        }
-
-        .card-body-no-padding {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            padding-bottom: 0 !important;
-            padding-top: 0 !important;
-        }
-    }
-
     .asset-spec-card {
         margin-right: 20px;
         border: 1px solid #ffffff26;
@@ -203,9 +148,12 @@
     }
 }
 
+.content-fluid.assets-mjr-trade  {
+    padding: 78px 50px 50px 50px !important;
+}
+
 .assets-mjr-trade {
     margin-top: 70px;
-    padding: 50px 0px 30px 50px !important;
     display: block;
 
     .header-MJR {
@@ -266,12 +214,14 @@
         .sub-value-small {
             color: #60d0b2;
             font-weight: 550;
-            font-size: 20px;
+            font-size: 16px;
+            margin-left: 15px;
         }
         .sub-value-small-desc {
             color: #8b8b8b;
             font-weight: 550;
-            font-size: 18px;
+            font-size: 16px;
+            margin-left: 15px;
         }
     }
 

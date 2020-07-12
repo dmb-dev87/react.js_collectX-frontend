@@ -30,8 +30,7 @@ class Deposit extends React.Component {
           <Row xl="12" className="withdraw">
             <h2>Deposit</h2>
             <Button className="shape2">
-              <i className="icon-withdraw-up" />
-              <i className="icon-withdraw-ellipse" />
+              <img src={ require("assets/img/deposit/arrow_up.png") } alt="ok" className="arrow_icon"/>
               <span className="withdraw-deposit-font">Withdraw</span>
             </Button>
           </Row>

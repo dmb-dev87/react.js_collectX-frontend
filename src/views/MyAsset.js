@@ -47,10 +47,10 @@ class MyAsset extends React.Component {
           myAssets.map((myAsset, key) => {
             return (
               <Row>
-                <Col xl="4" lg="12"> 
+                <Col xl="3" lg="12"> 
                   <ImageCard image={myAsset.imageCard.image} title={myAsset.imageCard.title} name={myAsset.imageCard.name} content={myAsset.imageCard.content} />
                 </Col>
-                <Col xl="8" lg="12"> 
+                <Col xl="9" lg="12"> 
                   <ChartCard data={myAsset.chartCard.data} />
                 </Col>
               </Row>

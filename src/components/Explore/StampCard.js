@@ -6,11 +6,8 @@ import PropTypes from "prop-types";
 // reactstrap components
 import { Container,
   Card,
-  CardHeader,
   CardBody,
   Button,
-  CardTitle,
-  Col,
 } from "reactstrap";
 
 import { Link } from "react-router-dom";
@@ -35,7 +32,7 @@ class StampCard extends React.Component {
                 <Button className="positive">+{percent}%</Button>
               }
             </Link>
-            <Link to="/assets">
+            <Link to="/assets/detail">
               <Button>Detail</Button>
             </Link>
           </div>

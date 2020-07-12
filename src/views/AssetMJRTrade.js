@@ -43,18 +43,17 @@ class AssetMJRTrade extends React.Component {
                 <h2> / USD</h2>
               </Row>
             </Col>            
-            <Col lg="8">
+            <Col lg="10">
               <Row>
                 <div className="sub-field">Last Price:<span className="sub-value">$126.318</span></div>           
                 <div className="sub-field">24h High:<span className="sub-value">$128.941</span></div>
-                <div className="sub-field">24h Low:<span className="sub-value">$121.349</span></div>
-                <div className="sub-field">24h Vol:<span className="sub-value">$95,281.45</span></div>
-                <div className="sub-field">24h Vol:<span className="sub-value">$95,281.45</span></div>
+                <div className="sub-field ">24h Low:<span className="sub-value color-blue">$121.349</span></div>
+                <div className="sub-field ">24h Vol:<span className="sub-value color-white">$95,281.45</span></div>
+                <Col>
+                  <Row className="sub-value-small">$126,318.94</Row>
+                  <Row className="sub-value-small-desc">MARKET CAP</Row>
+                </Col>
               </Row>              
-            </Col>
-            <Col lg="2"> 
-              <Row className="sub-value-small">$126,318.94</Row>
-              <Row className="sub-value-small-desc">MARKET CAP</Row>
             </Col>
           </Row>
 
@@ -69,7 +68,7 @@ class AssetMJRTrade extends React.Component {
                 </div>
               </div>
             </Col>            
-            <Col sm="5" lg="5" xl="5">
+            <Col sm="6" lg="6" xl="6">
               <Row>
                 <Col>
                   <MJRChartCard ></MJRChartCard>
@@ -81,7 +80,7 @@ class AssetMJRTrade extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col sm="4" lg="4" xl="4">
+            <Col sm="3" lg="3" xl="3">
                 <OrdersTableCard></OrdersTableCard>
             </Col>
           </Row>

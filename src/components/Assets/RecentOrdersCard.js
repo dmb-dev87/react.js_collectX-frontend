@@ -4,16 +4,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // reactstrap components
-import { Container,
-  Row,
-  Nav,
-  NavItem,
-  NavLink,
+import { 
   Card,
   CardHeader,
   CardBody,
-  CardTitle,
-  Col
 } from "reactstrap";
 
 class RecentOrders extends React.Component {

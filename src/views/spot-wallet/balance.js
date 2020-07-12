@@ -59,13 +59,11 @@ class Balance extends React.Component {
                   </Col>
                   <Col md="8" className="header-button">
                     <Button className="shape1">
-                      <i className="icon-deposit-down" />
-                      <i className="icon-deposit-ellipse" />
+                      <img src={ require("assets/img/deposit/arrow_down.png") } alt="ok" className="arrow_icon"/>
                       <span className="withdraw-deposit-font">Deposit</span>
                     </Button>
                     <Button className="shape2">
-                      <i className="icon-withdraw-up" />
-                      <i className="icon-withdraw-ellipse" />
+                      <img src={ require("assets/img/deposit/arrow_up.png") } alt="ok" className="arrow_icon"/>
                       <span className="withdraw-deposit-font">Withdraw</span>
                     </Button>
                   </Col>
@@ -82,8 +80,6 @@ class Balance extends React.Component {
                       </Col>
                       <Col md="3">
                         <Row className="search">
-                          
-                          {/* <i className="tim-icons icon-zoom-split fa-search" /> */}
                           <Input placeholder="Search Coins" className="input" />
                           <img src="/search.png" alt="logo" className="icon-search" />
                         </Row>
@@ -100,29 +96,34 @@ class Balance extends React.Component {
                       <thead className="text-primary">
                         <tr>
                           <th>
-                            <button type="button" className="btn-none left-space">Asset</button>
-                            <i className="icon-sort-up"/>
-                            <i className="icon-sort-down"/>
+                            <button type="button" className="btn-none left-space">Asset
+                              <div className="icon-sort-up"> </div>
+                              <div className="icon-sort-down"> </div>
+                            </button>
                           </th>
                           <th>
-                            <button type="button" className="btn-none">Asset Name</button>
-                            <i className="icon-sort-up"/>
-                            <i className="icon-sort-down"/>
+                            <button type="button" className="btn-none">Asset Name                            
+                              <div className="icon-sort-up"> </div>
+                              <div className="icon-sort-down"> </div>
+                            </button>
                           </th>
                           <th>
-                            <button type="button" className="btn-none">Balance</button>
-                            <i className="icon-sort-up"/>
-                            <i className="icon-sort-down"/>
+                            <button type="button" className="btn-none">Balance                       
+                              <div className="icon-sort-up"> </div>
+                              <div className="icon-sort-down"> </div>
+                            </button>
                           </th>
                           <th>
-                            <button type="button" className="btn-none">Value</button>
-                            <i className="icon-sort-up"/>
-                            <i className="icon-sort-down"/>
+                            <button type="button" className="btn-none">Value                     
+                              <div className="icon-sort-up"> </div>
+                              <div className="icon-sort-down"> </div>
+                            </button>
                           </th>
                           <th>
-                            <button type="button" className="btn-none">Action</button>
-                            <i className="icon-sort-up"/>
-                            <i className="icon-sort-down"/>
+                            <button type="button" className="btn-none">Action                     
+                              <div className="icon-sort-up"> </div>
+                              <div className="icon-sort-down"> </div>
+                            </button>
                           </th>
                           <th></th>
                           <th><button type="button" className="btn-circle"/></th>

@@ -11,23 +11,8 @@ import GalleryCard from "../components/Assets/GalleryCard";
 
 // reactstrap components
 import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Label,
-  FormGroup,
-  Input,
-  Table,
   Row,
   Col,
-  UncontrolledTooltip
 } from "reactstrap";
 
 // core components
@@ -61,7 +46,7 @@ class Assets extends React.Component {
             </Col>
             <Col xl="8" lg="12">
               <div className="chart-row-card">
-                <ChartCard data={[390, 400, 420, 400, 430, 453, 492, 540, 568, 610, 700, 630]} />
+                <ChartCard data={[500, 540, 500, 580, 600, 453, 492, 540, 568, 610, 700, 630]} />
               </div>
             </Col>
           </Row>
