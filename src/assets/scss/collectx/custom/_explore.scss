@@ -52,6 +52,10 @@
   .description {
     position: relative;
 
+    .caret { 
+      right: 16px;
+    }
+
     h3 {
       color: white;
       font-size: 24px;

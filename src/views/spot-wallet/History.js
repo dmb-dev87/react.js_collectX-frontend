@@ -5,8 +5,8 @@ import Loading from "../../components/Utils/Loader"
 import btnSearch from "../../assets/img/search.png";
 
 // reactstrap components
-import { Table,  Row,  Col } from "reactstrap";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Table,  Row,  Col , Input } from "reactstrap";
+import { Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 
 
 // core components
@@ -49,11 +49,10 @@ class History extends React.Component {
                     <Tab disabled className="react-tabs__tab--selected fiat">Fiat</Tab>
                   </TabList>
                 </Col>
-                <Col xl="7" lg="12" sm="12" className="search-button-container">
-                  <Row className="search-button">                    
-                    <div className="search-title">
-                      <img alt='...' src={btnSearch}/>
-                      Search History</div>                        
+                <Col md="3" className="search-button-container">
+                  <Row className="search">
+                    <Input placeholder="Search History" className="input" />
+                    <img src="/search.png" alt="logo" className="icon-search" />
                   </Row>
                 </Col>                
               </Row>

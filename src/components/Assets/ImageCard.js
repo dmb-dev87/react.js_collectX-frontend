@@ -22,6 +22,7 @@ class ImageCard extends React.Component {
               />
           </div>
           <div className="card-image-div-description">
+            <h2>{title}</h2>
             <h2>{name}</h2>
             <h2>{content}</h2>
           </div>

@@ -1,8 +1,10 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { startGetMarkets } from "../../actions/markets"
+
 
 // reactstrap components
 import {
@@ -191,24 +193,32 @@ class AdminNavbar extends React.Component {
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-navbar" right tag="ul">
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">
-                        Balance
-                      </DropdownItem>
+                      <Link to="/spot-wallet/balance">
+                        <DropdownItem className="nav-item">
+                          Balance                        
+                        </DropdownItem>
+                      </Link>
+                    </NavLink>
+                    <NavLink tag="li">                      
+                      <Link to="/spot-wallet/deposit">
+                        <DropdownItem className="nav-item">
+                          Deposit
+                        </DropdownItem>
+                      </Link>
                     </NavLink>
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">
-                        Deposit
-                      </DropdownItem>
+                      <Link to="/spot-wallet/withdraw">    
+                        <DropdownItem className="nav-item">                      
+                          Withdraw
+                        </DropdownItem>
+                      </Link>
                     </NavLink>
                     <NavLink tag="li">
-                      <DropdownItem className="nav-item">
-                        Withdraw
-                      </DropdownItem>
-                    </NavLink>
-                    <NavLink tag="li">
-                      <DropdownItem className="nav-item">
+                      <Link to="/spot-wallet/history">   
+                        <DropdownItem className="nav-item">
                         History
-                      </DropdownItem>
+                        </DropdownItem>
+                      </Link>
                     </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>

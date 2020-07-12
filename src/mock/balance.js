@@ -47,7 +47,7 @@ const balance = [{
     {
         id: 5,
         asset: 'TCR',
-        assetName: 'ty Cobb Rookie Card',
+        assetName: 'Ty Cobb Rookie Card',
         balance: '9,857.03USD',
         value: '$9,857.03',
         action: 'Trade',

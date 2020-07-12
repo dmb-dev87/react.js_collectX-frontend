@@ -14,7 +14,7 @@
         justify-content: space-between;
         button {
           width: 142px;
-          height: 40px;
+          padding: 0px;
           margin-right: 30px;
           align-items: center;
           justify-content: center;
@@ -289,5 +289,9 @@
   .deposit .paymentmethods .visa-card button, .deposit .paymentmethods .hbs-card button {
     font-size: 12px !important;
     width: 60px;
+  }
+
+  .deposit h2 {
+    font-size: 32px;
   }
 }

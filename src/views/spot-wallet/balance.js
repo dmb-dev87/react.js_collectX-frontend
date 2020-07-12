@@ -2,8 +2,9 @@ import React from "react";
 import { connect } from 'react-redux';
 //nodejs library that concatenates clsses
 import classNames from "classnames"
-import { startGetBalance } from "../../actions/balance"
-import Loading from "../../components/Utils/Loader"
+import { startGetBalance } from "../../actions/balance";
+import { Link } from "react-router-dom";
+import Loading from "../../components/Utils/Loader";
 
 //reactstrap components
 import {
@@ -58,14 +59,18 @@ class Balance extends React.Component {
                     <h2>Balance</h2>
                   </Col>
                   <Col md="8" className="header-button">
-                    <Button className="shape1">
-                      <img src={ require("assets/img/deposit/arrow_down.png") } alt="ok" className="arrow_icon"/>
-                      <span className="withdraw-deposit-font">Deposit</span>
-                    </Button>
-                    <Button className="shape2">
-                      <img src={ require("assets/img/deposit/arrow_up.png") } alt="ok" className="arrow_icon"/>
-                      <span className="withdraw-deposit-font">Withdraw</span>
-                    </Button>
+                    <Link to="/spot-wallet/deposit">
+                      <Button className="shape1">
+                        <img src={ require("assets/img/deposit/arrow_down.png") } alt="ok" className="arrow_icon"/>
+                        <span className="withdraw-deposit-font">Deposit</span>
+                      </Button>
+                    </Link>                    
+                    <Link to="/spot-wallet/withdraw">
+                      <Button className="shape2">
+                          <img src={ require("assets/img/deposit/arrow_up.png") } alt="ok" className="arrow_icon"/>
+                          <span className="withdraw-deposit-font">Withdraw</span>
+                      </Button>
+                    </Link>
                   </Col>
                   <Col md="12">
                     <h6 className="estimate-balance">Estimated Balance:</h6>
@@ -141,8 +146,8 @@ class Balance extends React.Component {
                               <td>{item.balance}</td>
                               <td>{item.assetName}</td>
                               <td>{item.value}</td>
-                              <td><a className="td-a-trade" href="#">{item.action}</a></td>
-                              <td><a className="td-detail" href="#">{item.detail}</a></td>
+                              <td><Link className="td-a-trade" to="/MJRTrade">{item.action}</Link></td>
+                              <td><Link className="td-detail" to="/assets/detail">{item.detail}</Link></td>
                               <td></td>
                               <td></td>
                             </tr>

@@ -80,7 +80,6 @@ class Sidebar extends React.Component {
                                   to={prop.path + item.path}
                                   className="nav-link"
                                   activeClassName="active"
-                                  onClick={this.props.toggleSidebar}
                                 >
                                   <p>{item.name}</p>
                                 </NavLink>

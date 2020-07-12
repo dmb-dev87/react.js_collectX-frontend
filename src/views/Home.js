@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 import {startGetNews, startGetActiveMarkets} from "../actions/general";
+import { Link } from "react-router-dom";
 import Loading from "../components/Utils/Loader"
 import News from "../components/Dashboard/News"
 import ActiveMarkets from "../components/Dashboard/ActiveMarkets"
@@ -61,7 +62,9 @@ class Home extends React.Component {
                 <Col lg="12">
                   <Card className="card-plain dashboard-banner">
                     <CardBody>
-                      <img src={require("assets/img/dashboard-banner.png")}></img>                      
+                      <Link to="/spot-wallet/balance">
+                      <img src={require("assets/img/dashboard-banner.png")}></img>
+                      </Link>                      
                     </CardBody>
                   </Card>
                 </Col>

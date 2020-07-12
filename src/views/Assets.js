@@ -39,12 +39,12 @@ class Assets extends React.Component {
             this.props.isExploresLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
           }                    
           <Row>
-            <Col xl="4" lg="12">
+            <Col xl="3" lg="12">
               <div className="image-row-card">
                 <ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Machael Jordan"} content={"Rookie Card"}></ImageCard>
               </div>
             </Col>
-            <Col xl="8" lg="12">
+            <Col xl="9" lg="12">
               <div className="chart-row-card">
                 <ChartCard data={[500, 540, 500, 580, 600, 453, 492, 540, 568, 610, 700, 630]} />
               </div>

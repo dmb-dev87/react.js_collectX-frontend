@@ -33,7 +33,7 @@ class Footer extends React.Component {
                   <dl className="footer-menu">
                     <h1>Learn</h1>
                     <dt><a href="#">How it works</a></dt>
-                    <dt><a href="#">Why 1,000 Tokens</a></dt>
+                    <dt><a href="#">Why 100 Tokens</a></dt>
                     <dt><a href="#">Buy Bitcoin</a></dt>
                     <dt><a href="#">Sell Asset To CollectX</a></dt>
                   </dl>

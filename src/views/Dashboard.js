@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 import {startGetNews, startGetActiveMarkets} from "../actions/general";
+import { Link } from "react-router-dom";
 import Loading from "../components/Utils/Loader"
 import News from "../components/Dashboard/News"
 import ActiveMarkets from "../components/Dashboard/ActiveMarkets"
@@ -76,7 +77,9 @@ class Dashboard extends React.Component {
                       </Row>
                     </CardHeader>
                     <CardBody>
+                      <Link to="/spot-wallet/balance">
                       <img src={require("assets/img/dashboard-chart.png")}></img>
+                      </Link>
                     </CardBody>
                   </Card>
                 </Col>

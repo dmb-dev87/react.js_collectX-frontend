@@ -64,8 +64,8 @@
 
   .titlepad {
     .shape1 {
-      width: 140px;
-      height: 40px;
+      width: 124px;
+      padding: 0px;
       align-items: center;
       justify-content: center;
       display: flex;
@@ -74,8 +74,6 @@
       border: 2px solid #42DDB3;
       border-radius: 25px;
       opacity: 1;
-      font-size: 16px;
-      padding-left: 60px;
 
       .withdraw-deposit-font {
         text-align: left;
@@ -89,7 +87,7 @@
 
       .arrow_icon {
         width: 20px;
-        margin-left: -10px;
+        margin-left: 8px;
       }
     }
   }
@@ -408,6 +406,10 @@
 
   .withdraw .paymentmethods .sec h2 {
     font-size: 28px;
+  }
+
+  .withdraw .titlepad h2 {
+    font-size: 32px;
   }
 
   .withdraw .paymentmethods .visa-card .card-text, .withdraw .paymentmethods .hbs-card .card-text {

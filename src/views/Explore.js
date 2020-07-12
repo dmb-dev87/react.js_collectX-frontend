@@ -17,6 +17,7 @@ class Explore extends React.Component {
     this.props.startGetExplores();
     this.state = {
       explores: [],
+      button_status: 0,
     };
   }
 
@@ -55,7 +56,7 @@ class Explore extends React.Component {
             <Button>NBA</Button>
             <Button>MLB</Button>
             <Button>NFL</Button>
-            <Button>Pokeman</Button>
+            <Button>Pokemon</Button>
             <Button>Stamps</Button>
           </Row>
           <Row className="card-list">

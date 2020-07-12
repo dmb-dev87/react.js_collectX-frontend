@@ -29,7 +29,7 @@
   
     .header .header-button .shape1 {     
       width: 124px;
-      height: 40px;
+      padding: 0px;
       align-items: center;
       justify-content: center;
       display: flex;
@@ -40,8 +40,7 @@
       opacity: 1;
     }
     .header .header-button .shape2 {
-      width: 142px;
-      height: 40px;
+      width: 142px;padding: 0px;
       margin-left: 15px;
       align-items: center;
       justify-content: center;
@@ -262,7 +261,7 @@
           margin-bottom: 10px;
         }
         .search { 
-          margin-bottom: 10px;
+          height: 20px;
           margin-top: 20px;
         }
       } 
@@ -280,5 +279,7 @@
       display: none;
     }
   }
+
   
+
 }

@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -29,7 +30,9 @@ class ActiveMarkets extends React.Component {
         <CardBody>
           {
             activeMarkets && activeMarkets.map((item) => (
+              <Link to="/MJRTrade">
               <ActiveCard data={item} key={item.id}></ActiveCard>
+              </Link>
             ))
           }
           <Button className="more-button">See More Markets</Button>

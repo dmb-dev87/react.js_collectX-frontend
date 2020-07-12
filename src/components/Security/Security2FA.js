@@ -15,7 +15,7 @@ class Security2FA extends React.Component {
         </Row>
         <Row>
           <p className="description">
-            These are two great ways to enhance security on your account. It's easy to set up and you'll be glade you did.
+            These are two great ways to enhance security on your account. It's easy to set up and you'll be glad you did.
           </p>
         </Row>
         <Row>

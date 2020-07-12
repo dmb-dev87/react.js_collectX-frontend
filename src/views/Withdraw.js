@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { startGetNews, startGetActiveMarkets } from "../actions/general";
+import { Link } from "react-router-dom";
 import Loading from "../components/Utils/Loader"
 import WithdrawUSD from "../components/Withdraw/WithdrawUSD"
 import WithdrawPaymentMethods from "../components/Withdraw/WithdrawPaymentMethods"
@@ -28,10 +28,12 @@ class Withdraw extends React.Component {
           }
           <Row className="titlepad">
             <h2>Withdraw</h2>
+            <Link to="/spot-wallet/deposit">
             <Button className="shape1">
               <img src={ require("assets/img/deposit/arrow_down.png") } alt="ok" className="arrow_icon"/> 
               <span className="withdraw-deposit-font">Deposit</span>
             </Button>
+            </Link>
           </Row>
           <Row className="estimated">
             <div>
