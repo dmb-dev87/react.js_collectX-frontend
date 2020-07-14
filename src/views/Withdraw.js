@@ -45,10 +45,10 @@ class Withdraw extends React.Component {
             </div>
           </Row>
           <Row className="payment">
-            <Col xl="6" lg="6" sm="12">
+            <Col xl="6" lg="12" sm="12">
               <WithdrawUSD />
             </Col>
-            <Col xl="6" lg="6" sm="12">
+            <Col xl="6" lg="12" sm="12">
               <WithdrawPaymentMethods />
             </Col>
           </Row>

@@ -48,8 +48,8 @@ class AssetMJRTrade extends React.Component {
                 <div className="sub-field">Last Price:<span className="sub-value">$126.318</span></div>           
                 <div className="sub-field">24h High:<span className="sub-value">$128.941</span></div>
                 <div className="sub-field ">24h Low:<span className="sub-value color-blue">$121.349</span></div>
-                <div className="sub-field ">24h Vol:<span className="sub-value color-white">$95,281.45</span></div>
-                <Col>
+                <div className="sub-field">24h Vol:<span className="sub-value color-white">$95,281.45</span></div>
+                <Col className="sub-field">
                   <Row className="sub-value-small">$126,318.94</Row>
                   <Row className="sub-value-small-desc">MARKET CAP</Row>
                 </Col>
@@ -58,7 +58,7 @@ class AssetMJRTrade extends React.Component {
           </Row>
 
           <Row>
-            <Col sm="3" lg="3" xl="3">
+            <Col sm="12" lg="12" xl="3">
               <div >
                 <div className="image-row-card">                  
                   <ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Machael Jordan"} content={"Rookie Card"}></ImageCard>
@@ -68,7 +68,7 @@ class AssetMJRTrade extends React.Component {
                 </div>
               </div>
             </Col>            
-            <Col sm="6" lg="6" xl="6">
+            <Col sm="12" lg="12" xl="6">
               <Row>
                 <Col>
                   <MJRChartCard ></MJRChartCard>
@@ -80,7 +80,7 @@ class AssetMJRTrade extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col sm="3" lg="3" xl="3">
+            <Col sm="12" lg="12" xl="3">
                 <OrdersTableCard></OrdersTableCard>
             </Col>
           </Row>

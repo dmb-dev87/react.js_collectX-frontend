@@ -15,6 +15,10 @@
         padding: 98px 10px 0px 10px !important;
     }
 
+    .card {
+        margin-bottom: 20px;
+    }
+
     .header {
         height: 140px;
         width: 100%;
@@ -44,7 +48,7 @@
 
     .card-image {
         align-items: center;
-        height: 470px;
+        height: 440px;
         border-radius: 20px;
         border: 1px solid #ffffff1a;
         background-color: #11112f 0% 0% no-repeat padding-box;
@@ -155,6 +159,45 @@
 .assets-mjr-trade {
     margin-top: 70px;
     display: block;
+
+    .MuiSlider-marked {
+        margin-bottom: 50px;
+        margin-left: -20px;
+    }
+
+    .MuiSlider-rail {
+        height: 15px;
+        border-radius: 5px;
+        background: #21214C;
+    }
+
+    .MuiSlider-track {
+        height: 15px;
+        border-radius: 5px;
+        background: #21214C;
+        background: linear-gradient(-90deg, #7953e2 0%, #42ddb3 100%);
+    }
+
+    .MuiSlider-thumb {
+        width: 20px;
+        height: 20px;  
+        margin-top: -2px; 
+        background: linear-gradient(-90deg, #7953e2 0%, #42ddb3 100%);
+    }
+
+    .MuiSlider-markLabel {
+        top: 50px;
+        color: white;
+    }
+
+    .MuiSlider-mark {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px !important;
+        margin-top: -2px;
+        margin-left: -6px;
+        opacity: 1 !important;
+    }
 
     .header-MJR {
         margin-left: 10px;
@@ -651,13 +694,13 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     .sub-value-small {
         margin-top: 30px;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     .assets .header h3 {
         font-size: 18px;
     }
@@ -672,5 +715,10 @@
 
     .assets .card-chart .card-chart-header .card-chart-title-left {
         font-size: 22px;
+    }
+
+    .assets-mjr-trade .header-MJR .sub-field.col div {
+        margin-left: 0px;
+        margin-top: 0px;
     }
 }

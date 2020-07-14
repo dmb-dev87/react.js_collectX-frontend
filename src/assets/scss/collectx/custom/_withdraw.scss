@@ -256,6 +256,10 @@
   }
 
   .payment {
+    >div {      
+      margin-bottom: 20px;
+    }
+    
     button {
       font-size: 24px;
     }

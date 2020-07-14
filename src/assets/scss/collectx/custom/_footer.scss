@@ -74,7 +74,7 @@
 
   .line {
     margin-top: 20px;
-    width: 140px;
+    width: 160px;
     height: 4px;
     background: transparent linear-gradient(270deg, #7953E2 0%, #42DDB3 100%) 0% 0% no-repeat padding-box;
     border-radius: 10px;
@@ -176,7 +176,7 @@
   }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 1200px){
   .footer {
     text-align: center;
     .copyright {

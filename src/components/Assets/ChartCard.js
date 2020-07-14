@@ -8,7 +8,9 @@ import {
   CardTitle,
   Row,
   Col,
+  Button,
 } from "reactstrap";
+import { Link } from 'react-router-dom';
 
 const chartColor = '#FFFFFF';
 
@@ -152,7 +154,7 @@ class ChartCard extends React.Component{
               <button className="btn-karma-type1">Instant Buy</button>
               <button className="btn-karma-type2">Instant Sell</button>
               <div className="btn-karma-type3-bg"><div className="btn-karma-type3">Live market</div></div>
-              </> : <button className="btn-karma-type4">1.39 MJR</button>
+              </> : <Link to="/spot-wallet"><Button className="btn-karma-type4">1.39 MJR</Button></Link>
           }
         </CardBody>
       </Card>

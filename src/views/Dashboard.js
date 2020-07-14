@@ -56,7 +56,7 @@ class Dashboard extends React.Component {
             this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
           }
           <Row>
-            <Col className="dashboard-left" xl="8" lg="12">
+            <Col className="dashboard-left" xl="8" lg="12" xs="12">
               <Row>
                 <Col lg="12">
                   <Card className="card-plain dashboard-banner">
@@ -88,7 +88,7 @@ class Dashboard extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col className="dashboard-right">
+            <Col className="dashboard-right" xl="4" lg="12" xs="12">
               <News news={this.state.news} />
             </Col>
           </Row>

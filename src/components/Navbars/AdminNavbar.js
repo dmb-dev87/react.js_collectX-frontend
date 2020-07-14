@@ -107,7 +107,9 @@ class AdminNavbar extends React.Component {
                 </button>
               </div>
               <NavbarBrand href="#" onClick={e => e.preventDefault()}>
-                <img alt="..." src={require("assets/img/collectx-logo.svg")} style={{width: '150px'}} />
+                <Link to="/home">
+                <img alt="..." src={require("assets/img/collectx.png")} style={{width: '150px'}} />
+                </Link>
                 <Collapse navbar isOpen={this.state.collapseOpen}>
                   <Nav navbar>
                     <UncontrolledDropdown nav>
@@ -122,7 +124,7 @@ class AdminNavbar extends React.Component {
                           <div className="triangle-down"></div>
                         </div>
                       </DropdownToggle>
-                      <DropdownMenu className="dropdown-navbar" right tag="ul">
+                      <DropdownMenu className="dropdown-navbar" right tag="ul" className="market_menu">
                         <NavLink tag="li" style={{padding: 0}}>
                           <DropdownItem className="nav-item">
                             <Row>

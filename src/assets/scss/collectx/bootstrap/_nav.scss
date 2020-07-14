@@ -11,6 +11,10 @@
   list-style: none;
 }
 
+.market_menu .nav-link button {
+  cursor: default;
+}
+
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
@@ -22,6 +26,10 @@
   // Disabled state lightens text
   &.disabled {
     color: $nav-link-disabled-color;
+  }
+
+  button {
+    cursor: pointer;
   }
 }
 

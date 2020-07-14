@@ -1,4 +1,10 @@
 
+.card {
+  border: 1px solid #8080804f !important;
+  .card {
+    border: none !important;
+  }
+}
 
 .navbar {
   padding: 10px 30px 10px 15px;
@@ -186,7 +192,7 @@
 
     div.markets {
       position: absolute;
-      top: -2px;
+      top: -7px;
       left: 185px;
 
       h2 {
@@ -448,6 +454,7 @@
           .dropdown{
             margin: 5px 0;
             .nav-link{
+              cursor: pointer;
               padding-bottom: 0;
             }
             .dropdown-menu{
@@ -638,7 +645,7 @@
   }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 1200px){
   .navbar[class*='navbar-toggleable-'] .container{
       margin-left: 0;
       margin-right: 0;

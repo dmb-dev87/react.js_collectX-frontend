@@ -42,10 +42,10 @@ class Deposit extends React.Component {
             </div>
           </Row>
           <Row className="payment">
-            <Col xl="6" lg="6" lg="12">
+            <Col xl="6" lg="12">
               <USD />
             </Col>
-            <Col xl="6" lg="6" lg="12">
+            <Col xl="6" lg="12">
               <PaymentMethods />
             </Col>
           </Row>

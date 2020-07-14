@@ -1,8 +1,9 @@
 /*eslint-disable*/
 import React from "react";
 // used for making the prop types of this component
-import PropTypes from "prop-types";
-import Slider from 'rc-slider'
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
 
 // reactstrap components
 import {
@@ -13,6 +14,37 @@ import {
   Col,
   Button,
 } from "reactstrap";
+
+function valuetext(value) {
+  return `${value}%`;
+}
+
+function valueLabelFormat(value) {
+  return marks.findIndex((mark) => mark.value === value) + 1;
+}
+
+const marks = [  
+  {
+    value: 0,
+    label: '0%',
+  },
+  {
+    value: 25,
+    label: '25%',
+  },
+  {
+    value: 50,
+    label: '50%',
+  },
+  {
+    value: 75,
+    label: '75%',
+  },
+  {
+    value: 100,
+    label: '100%',
+  },
+];
 
 class OrderPriceCard extends React.Component {
 
@@ -74,9 +106,17 @@ class OrderPriceCard extends React.Component {
               <Row>
                 <Col></Col>
                 <Col className="col-9">
-                  <div className="slidecontainer">
+                  <Slider
+                    defaultValue={20}
+                    getAriaValueText={valuetext}
+                    aria-labelledby="discrete-slider-custom"
+                    step={10}
+                    valueLabelDisplay="auto"
+                    marks={marks}
+                  />
+                  {/* <div className="slidecontainer">
                     <input class="slider" type="range" min="1" max="100" id="myRange" onInput={() => this.onInput()}/>
-                  </div>
+                  </div> */}
                 </Col>
               </Row>
               <Row>
@@ -121,9 +161,15 @@ class OrderPriceCard extends React.Component {
               <Row>
                 <Col className="col-3"></Col>
                 <Col className="col-9">
-                  <div className="slidecontainer">
-                    <input type="range" min="1" max="100" class="slider" id="myRange" />
-                  </div>
+                  
+                  <Slider
+                      defaultValue={20}
+                      getAriaValueText={valuetext}
+                      aria-labelledby="discrete-slider-custom"
+                      step={10}
+                      valueLabelDisplay="auto"
+                      marks={marks}
+                    />
                 </Col>
               </Row>
               <Row>

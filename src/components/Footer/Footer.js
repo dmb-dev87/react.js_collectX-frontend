@@ -15,7 +15,7 @@ class Footer extends React.Component {
             <div className="footer-content">
               <div className="angery">
                 <div className="footer-menu">
-                  <img alt="..." src={require("assets/img/collectx-logo.svg")} style={{width: '160px'}} />
+                  <img alt="..." src={require("assets/img/collectx.png")} style={{width: '160px'}} />
                   <div class="line"></div>
                 </div>
                 <div>
