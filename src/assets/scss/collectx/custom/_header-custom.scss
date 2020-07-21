@@ -9,10 +9,9 @@
         margin-left: 15px;
 
         > h2 {
-            margin-top: 50px;
-            margin-left: 40px;
-            font-weight: 700;
-            color: #131232;
+            margin-top: 50px !important;
+            margin-left: 40px !important;
+            color: #131232 !important;
             margin-bottom: 10px;
             font-size: 36px;
         }
@@ -108,7 +107,7 @@
     
 
     #card_overflow {
-        margin-top: -180px;
+        margin-top: -130px;
         padding-left: 40px;
         padding-right: 30px;
 
@@ -216,7 +215,6 @@
         padding: 50px 0px 0px 0px !important;
     }
     .referandearn #card_overflow {
-        margin-top: -150px;
         padding: 0px 10px;
     }
 
@@ -225,7 +223,7 @@
     }
 
     .referandearn .header > h4, .referandearn .header > h2 {
-        margin-left: 20px;
+        margin-left: 20px !important;
     }
 
     .referandearn #card_overflow .card #stats_custom h4 {

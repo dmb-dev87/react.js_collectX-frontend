@@ -36,6 +36,12 @@
 .modal-dialog {
   position: relative;
   width: auto;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important ;
   margin: $modal-dialog-margin;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
@@ -46,7 +52,7 @@
     transform: translate(0, -25%);
   }
   .modal.show & {
-    transform: translate(0, 0);
+    transform: translate(0, 0) !important;
   }
 }
 
@@ -65,17 +71,21 @@
 
 // Actual modal
 .modal-content {
+  height: 98%;
+  width: 30%;
+  min-width: 300px;
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
   // counteract the pointer-events: none; in the .modal-dialog
   pointer-events: auto;
-  background-color: $modal-content-bg;
-  background-clip: padding-box;
+  background: #11112F 0% 0% no-repeat padding-box;
   border: $modal-content-border-width solid $modal-content-border-color;
-  @include border-radius($modal-content-border-radius);
-  @include box-shadow($modal-content-box-shadow-xs);
+  box-shadow: 0px 3px 20px #00000029;
+  border: 1px solid #FFFFFF26 !important;
+  border-radius: 25px;
+  opacity: 1;
   // Remove focus outline from opened modal
   outline: 0;
 }
@@ -88,11 +98,11 @@
   bottom: 0;
   left: 0;
   z-index: $zindex-modal-backdrop;
-  background-color: $modal-backdrop-bg;
+  background: #11112F 0% 0% no-repeat padding-box;
 
   // Fade for backdrop
   &.fade { opacity: 0; }
-  &.show { opacity: $modal-backdrop-opacity; }
+  &.show { opacity: 0.9; }
 }
 
 // Modal header
@@ -125,7 +135,7 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: $modal-inner-padding;
+  padding: 0px;
 }
 
 // Footer (for actions)

@@ -1,45 +1,72 @@
-/*eslint-disable*/
+
 import React from "react";
-// used for making the prop types of this component
-import PropTypes from "prop-types";
-
-// reactstrap components
-import { Container,
-  Card,
-  CardBody,
-  Button,
-} from "reactstrap";
-
+import { Card, CardBody, Button, CardHeader, CardFooter } from "reactstrap";
 import { Link } from "react-router-dom";
 
-class StampCard extends React.Component {
-  render() {
-    const {image, title, content, percent} = this.props;
-    return (
-      <Card className="card-image">
-        <CardBody className="card-image-body">
-          <div className="card-image-div-image">
-            <img alt="..." src={image} />
-          </div>
-          <div className="card-image-div-description">
-            <h2>{content}</h2>
-            <h2>{title}</h2>
-          </div>
-          <div className="card-image-div-btn">
-            <Link to="/MJRTrade">
-              {percent < 0 ?
-                <Button className="negotive">{percent}%</Button> :
-                <Button className="positive">+{percent}%</Button>
-              }
-            </Link>
-            <Link to="/assets/detail">
-              <Button>Detail</Button>
-            </Link>
-          </div>
-        </CardBody>
-      </Card>
-    );
-  }
+
+export default class StampCardStyle1 extends React.Component {
+    render() {
+        const { image, title, content, percent, type } = this.props;
+        return (
+            <Card className="stamp-card style-1 text-center">
+                <CardHeader>  
+                    <div> {type}
+                    { percent < 0 ? 
+                        <span className="negotive">{percent}%<div></div></span>: 
+                        <span className="positive">+{percent}%<div></div></span> 
+                    }
+                    </div> 
+                </CardHeader>
+                <CardBody className="justify-content-center">
+                    <img alt="..." src={image} />
+                </CardBody>
+                <CardFooter>
+                    <div className="description">
+                        <h2>{content}</h2>
+                        <h2>{title}</h2>
+                    </div>
+                    <Link to="/MJRTrade">
+                        <Button className="buy">Buy</Button>
+                    </Link>
+                    <Link to="/assets/detail">
+                        <Button className="detail">Detail</Button>
+                    </Link>
+                </CardFooter>
+            </Card>
+        );
+    }
 }
 
-export default StampCard;
+export class StampCardStyle2 extends React.Component {
+    render() {
+        const { image, title, content, percent, type, selected } = this.props;
+        return (
+            <Card className={selected == 0 ? 'stamp-card style-2 text-center selected' : 'stamp-card style-2 text-center unselected'}>
+                <CardHeader>  
+                    <div> {type}
+                    { percent < 0 ? 
+                        <span className="negotive">{percent}%<div></div></span>: 
+                        <span className="positive">+{percent}%<div></div></span> 
+                    }
+                    </div> 
+                </CardHeader>
+                <CardBody className="justify-content-center">
+                    <img alt="..." src={image} />
+                </CardBody>
+                <CardFooter>
+                    <div className="description">
+                        <h2>{content}</h2>
+                        <h2>{title}</h2>
+                    </div>
+                    <Link to="/MJRTrade">
+                        <Button className="buy">Buy</Button>
+                    </Link>
+                    <Link to="/assets/detail">
+                        <Button className="price">{percent} {type}</Button>
+                    </Link>
+                </CardFooter>
+            </Card>
+        );
+    }
+}
+

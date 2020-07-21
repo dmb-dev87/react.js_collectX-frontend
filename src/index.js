@@ -18,17 +18,17 @@ const store = configStore();
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={hist}>
-      <Switch>
-        <Route path="/home" render={props => <HomeLayout {...props} />} />
-        <Route path="/MJRTrade" render={props => <HomeLayout {...props} />} />
-        <Route path="/login" render={props => <LoginLayout {...props} />} />
-        <Route path="/register" render={props => <LoginLayout {...props} />} />
-        <Route path="/" render={props => <AdminLayout {...props} />} />
-        <Redirect from="/" to="/admin" />
-      </Switch>
-    </Router>
-  </Provider>,
-  document.getElementById("root")
+    <Provider store={store}>
+        <Router history={hist}>
+            <Switch>
+                <Route path="/home" render={props => <HomeLayout {...props} />} />
+                <Route path="/MJRTrade" render={props => <HomeLayout {...props} />} />
+                <Route path="/login" render={props => <LoginLayout {...props} />} />
+                <Route path="/register" render={props => <LoginLayout {...props} />} />
+                <Route path="/" render={props => <AdminLayout {...props} />} />
+                <Redirect from="/" to="/admin" />
+            </Switch>
+        </Router>
+    </Provider>,
+    document.getElementById("root")
 );

@@ -8,28 +8,20 @@
             padding: 0px !important;
             img {                
                 width: 100%;
+                height: 261px;
             }
         }
     }
 
-    .dashboard-banner-bellow {
-        width: 100%;
-        margin-right: 0px;
-        margin-left: 0px;
-        > div:first-child {
-            padding-left: 0px;
-        }
+    .portfolio { 
+        background-size: cover;
+        background-image: url("../../../img/porftolio_img.png");
 
-        > div {
-            padding: 0px;
-            padding-left: 15px;
-        }
+        .card-header { 
+            position: relative;
 
-        .portfolio .card-body  {
-            padding: 0px;
-            img {                
-               width: 100%;
-               padding-bottom: 20px;
+            .card-title::after { 
+                left: 26px;
             }
         }
     }
@@ -46,39 +38,14 @@
             padding: 0px !important;
             img {                
                 width: 100%;
-            }
-        }
-    }
-
-    .dashboard-banner-bellow {
-        width: 100%;
-        margin-right: 0px;
-        margin-left: 0px;
-        > div:first-child {
-            padding-left: 0px;
-        }
-
-        > div {
-            padding: 0px;
-            padding-left: 15px;
-        }
-
-        .portfolio .card-body  {
-            padding: 0px;
-            img {                
-               width: 100%;
-               padding-bottom: 20px;
+                height: 261px;
             }
         }
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    .dashboard, .home {
-        .dashboard-banner-bellow {
-            > div { 
-                padding-left: 0px;
-            }
-        }
-    }
+@media only screen and (max-width: 800px) {
+   .dashboard-pic2 { 
+       height: 120px !important;
+   }
 }

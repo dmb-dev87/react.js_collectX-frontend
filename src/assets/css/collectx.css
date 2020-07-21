@@ -11306,7 +11306,8 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 
 .modal.show .modal-dialog {
   -webkit-transform: translate(0, 30%);
-  transform: translate(0, 30%); }
+  transform: translate(0, 30%); 
+}
 
 code {
   color: #f3a4b5; }

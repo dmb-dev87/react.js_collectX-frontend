@@ -1,5 +1,4 @@
 // Core
-
 @import "collectx/custom/functions";
 @import "collectx/bootstrap/functions";
 
@@ -9,8 +8,7 @@
 @import "collectx/custom/mixins";
 @import "collectx/bootstrap/mixins";
 
- // Bootstrap components
-
+// Bootstrap components
 @import "collectx/bootstrap/root";
 @import "collectx/bootstrap/reboot";
 @import "collectx/bootstrap/type";
@@ -44,49 +42,47 @@
 @import "collectx/bootstrap/utilities";
 @import "collectx/bootstrap/print";
 
- // Custom components
+// Custom components
+@import "collectx/custom/alerts.scss";
+@import "collectx/custom/badges.scss";
+@import "collectx/custom/buttons.scss";
+@import "collectx/custom/dropdown.scss";
+@import "collectx/custom/footer.scss";
+@import "collectx/custom/forms.scss";
+@import "collectx/custom/images.scss";
+@import "collectx/custom/header-custom.scss";
+@import "collectx/custom/modal.scss";
+@import "collectx/custom/navbar.scss";
+@import "collectx/custom/type.scss";
+@import "collectx/custom/tables.scss";
+@import "collectx/custom/checkboxes-radio.scss";
+@import "collectx/custom/fixed-plugin.scss";
+@import "collectx/custom/sidebar-and-main-panel.scss";
+@import "collectx/custom/misc.scss";
+@import "collectx/custom/input-group.scss";
+@import "collectx/custom/security.scss";
+@import "collectx/custom/withdraw.scss";
+@import "collectx/custom/leaderboard.scss";
+@import "collectx/custom/login.scss";
+@import "collectx/custom/deposit.scss";
+@import "collectx/custom/balance.scss";
+@import "collectx/custom/discussion.scss";
+@import "collectx/custom/dashboard.scss";
+@import "collectx/custom/explore.scss";
+@import "collectx/custom/history.scss";
+@import "collectx/custom/profile.scss";
+@import "collectx/custom/global.scss";
+@import "collectx/custom/global_responsive.scss";
 
- @import "collectx/custom/alerts.scss";
- @import "collectx/custom/badges.scss";
- @import "collectx/custom/buttons.scss";
- @import "collectx/custom/dropdown.scss";
- @import "collectx/custom/footer.scss";
- @import "collectx/custom/forms.scss";
- @import "collectx/custom/images.scss";
- @import "collectx/custom/header-custom.scss";
- @import "collectx/custom/modal.scss";
- @import "collectx/custom/navbar.scss";
- @import "collectx/custom/type.scss";
- @import "collectx/custom/tables";
- @import "collectx/custom/checkboxes-radio";
- @import "collectx/custom/fixed-plugin";
- @import "collectx/custom/sidebar-and-main-panel.scss";
- @import "collectx/custom/misc.scss";
- @import "collectx/custom/input-group.scss";
- @import "collectx/custom/_security.scss";
- @import "collectx/custom/_withdraw.scss";
- @import "collectx/custom/leaderboard.scss";
- @import "collectx/custom/login";
- @import "collectx/custom/deposit.scss";
- @import "collectx/custom/balance.scss";
- @import "collectx/custom/discussion";
- @import "collectx/custom/dashboard";
- @import "collectx/custom/explore";
- @import "collectx/custom/history.scss";
-
-
- // Vendor / Plugins
-
+// Vendor / Plugins
 @import "collectx/custom/vendor/plugin-perfect-scrollbar.scss";
 @import "collectx/custom/vendor/plugin-react-notification-alert.scss";
 
 // light mode
-
 @import "collectx/custom/white-content.scss";
 
 // Cards
-
-@import 'collectx/custom/card';
+@import "collectx/custom/card";
 @import "collectx/custom/cards/card-chart";
 @import "collectx/custom/cards/card-map";
 @import "collectx/custom/cards/card-user";
