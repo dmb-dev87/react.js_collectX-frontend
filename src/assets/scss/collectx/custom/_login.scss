@@ -92,6 +92,12 @@ $bg-img: url("../../../img/login/background.png");
             box-shadow: none;
             margin: 0px;
 
+            .card-body {
+                .tab-content { 
+                    margin-left: 15px;
+                }
+            }
+
             @include media-breakpoint-up(sm) {
                 width: 461px;
                 height: 426px;
@@ -104,7 +110,7 @@ $bg-img: url("../../../img/login/background.png");
                 letter-spacing: 0px;
                 color: #ffffff;
                 opacity: 1;
-                padding-left: 15px;
+                padding-left: 20px;
 
                 @include media-breakpoint-up(sm) {
                     font-size: 47px;
@@ -161,6 +167,11 @@ $bg-img: url("../../../img/login/background.png");
 
             .tab-content .tab-pane {
                 margin-top: 48px;
+                display: none !important;
+
+                &.active { 
+                    display: block !important;
+                }
 
                 .login-form .row {
                     margin-top: 24px;

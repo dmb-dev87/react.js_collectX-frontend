@@ -93,11 +93,7 @@ class LoginNavbar extends React.Component {
                                 </button>
                             </div>
                             <NavbarBrand href="#" onClick={e => e.preventDefault()}>
-                                <img alt="..." src={require("assets/img/collectx-logo.svg")} style={{ width: '150px' }} />
-                                <div className="markets">
-                                    <h2>Markets</h2>
-                                    <div className="triangle-down"></div>
-                                </div>
+                                <img alt="..." src={require("assets/img/collectx.png")} style={{ width: '150px' }} />
                             </NavbarBrand>
                         </div>
                         <button

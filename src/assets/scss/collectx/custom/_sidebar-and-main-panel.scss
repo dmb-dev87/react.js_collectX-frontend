@@ -190,7 +190,7 @@
             background: #1b1a43;
 
             p {
-                font-weight: 800;
+                font-weight: 700;
             }
 
             &:before {
@@ -199,7 +199,7 @@
                 height: 42px;
                 width: 14px;
                 top: 0px;
-                left: -5px;
+                left: -7px;
                 background: #7953e2;
                 border-radius: 40px;
             }
@@ -247,7 +247,7 @@
                     position: absolute;
                     left: 80px;
                     top: 8px;
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 16px;
                 }
 
@@ -306,10 +306,31 @@
 
                 li {
                     height: 62px;
+                    padding-top: 10px;
                     position: relative;
+                    
                     a { 
-                        margin-top: 0px;      
-                        line-height: unset !important;              
+                        margin-top: 0px;    
+                        padding-top: 0px;  
+                        line-height: unset !important;        
+                        position: unset;       
+                        &::before { 
+                            top: 10px !important;
+                        }                 
+                        p { 
+                            position: unset;
+                            margin-left: 80px;
+                            line-height: 42px;
+                            margin-top: 0px;
+                        }
+                    }
+
+                    &:last-child { 
+                        height: 52px;
+                    }
+
+                    &:first-child { 
+                        margin-top: 15px;
                     }
                 }
 

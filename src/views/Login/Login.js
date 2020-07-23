@@ -5,6 +5,7 @@ import LogoImage from "../../components/Login/LogoImage";
 
 // reactstrap components
 import {Row, Col,} from "reactstrap";
+import Scroller from "components/Explore/Scroller";
 
 class Login extends React.Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class Login extends React.Component {
     render() {
         return (
             <>
+                <Scroller/>
                 <div className="content-fluid login">
                     <Row>
                         <Col xl="5" id="form-part">

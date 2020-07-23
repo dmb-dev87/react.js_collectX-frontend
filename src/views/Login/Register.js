@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Loading from "../../components/Utils/Loader";
 import LoginForm from "../../components/Login/LoginForm";
 import LogoImage from "../../components/Login/LogoImage";
+import Scroller from "components/Explore/Scroller";
 
 // reactstrap components
 import {
@@ -26,7 +27,8 @@ class Register extends React.Component {
     }
     render() {
         return (
-            <>
+            <>            
+                <Scroller/>
                 <div className={this.props.fluid ? "content-fluid login" : "content login"}>
                     {
                         this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />

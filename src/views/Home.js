@@ -8,6 +8,7 @@ import ActiveMarkets from "../components/Dashboard/ActiveMarkets";
 import HomeChartCard from "../components/Assets/HomeChartCard";
 
 import {Card, CardBody, Row, Col} from "reactstrap";
+import Scroller from "components/Explore/Scroller";
 
 class Home extends React.Component {
     constructor(props) {
@@ -29,28 +30,21 @@ class Home extends React.Component {
     render() {
         return (
             <>
+                <Scroller/>
                 <div className={this.props.fluid ? "content-fluid home" : "content home"}>
                     {
                         this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
                     }
                     <Row>
                         <Col xl="9" lg="7">
-                            <Card className="card-plain dashboard-banner">
-                                <CardBody>
-                                    <Link to="/spot-wallet/balance">
-                                        <img src={require("assets/img/dashboard_pic2.png")} className="dashboard-pic2"></img>
-                                    </Link>
-                                </CardBody>
-                            </Card>
+                            <Link to="/spot-wallet/balance">
+                                <img src={require("assets/img/dashboard_pic2.png")} className="dashboard-pic2 dashboard-banner"></img>
+                            </Link>
                         </Col>
                         <Col xl="3" lg="5">
-                            <Card className="card-plain dashboard-banner">
-                                <CardBody>
-                                    <Link to="/spot-wallet/balance">
-                                        <img src={require("assets/img/dashboard_pic1.png")}></img>
-                                    </Link>
-                                </CardBody>
-                            </Card>
+                            <Link to="/spot-wallet/balance">
+                                <img src={require("assets/img/dashboard_pic1.png")} className="dashboard-banner"></img>
+                            </Link>
                         </Col>
                     </Row>
                     <Row>

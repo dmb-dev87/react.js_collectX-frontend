@@ -77,7 +77,7 @@ class AssetMJRTrade extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="col-width-291px">
+                        <Col className="col-width-363px">
                             <OrdersTableCard></OrdersTableCard>
                         </Col>
                     </Row>

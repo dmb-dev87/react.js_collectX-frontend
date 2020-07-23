@@ -41,18 +41,24 @@
     }
 
     .dropdown-menu {
-        top: 64px !important;
-        background: #181c33;
+        top: 60px !important;
+        left: 18px !important;
         border-bottom-left-radius: 20px;
+        border-top: none !important;
         border-bottom-right-radius: 20px;
-        -webkit-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
-        -moz-box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
-        box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.2);
+        background: #171734 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 20px #FFFFFF1A;
+        border: 1px solid #FFFFFF26;
 
         .dropdown-item {
             color: white;
             font-size: 16px;
             font-weight: 600;
+
+            img { 
+                margin-right: 18px;
+                margin-left: -10px;
+            }
         }
     }
 
@@ -69,7 +75,7 @@
             height: 40px;
             border-radius: 50%;
             background: linear-gradient(to right, #43d9b4, #7854e1);
-            padding: 2px;
+            padding: 1px;
         }
 
         div {
@@ -94,7 +100,7 @@
             h2 {
                 font-size: 12px;
                 margin-top: 8px;
-                font-weight: 800;
+                font-weight: 700;
                 color: grey;
             }
         }
@@ -123,9 +129,7 @@
     }
 
     .dropdown {
-        position: relative;
-        color: white;
-        width: 120px;
+        color: transparent;
         h2 {
             font-size: 16px;
             font-weight: 600;
@@ -194,8 +198,8 @@
 
         div.markets {
             position: absolute;
-            top: -7px;
-            left: 185px;
+            top: -3px;
+            left: 60px;
 
             h2 {
                 line-height: 40px;
@@ -209,7 +213,7 @@
 
         .dropdown-menu {
             top: 50px !important;
-            left: 184px !important;
+            left: 55px !important;
             min-width: 375px;
             height: 330px;
             padding: 0px;

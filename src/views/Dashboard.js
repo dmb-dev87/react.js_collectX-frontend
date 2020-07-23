@@ -6,10 +6,9 @@ import DonutChart from 'react-donut-chart';
 import Loading from "../components/Utils/Loader";
 import News from "../components/Dashboard/News";
 import ActiveMarkets from "../components/Dashboard/ActiveMarkets";
-import { HomeChartCard2 } from "../components/Assets/HomeChartCard";
 
-// reactstrap components
 import {Card, CardHeader, CardBody, CardTitle, Row, Col} from "reactstrap";
+import Scroller from "components/Explore/Scroller";
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -30,33 +29,26 @@ class Dashboard extends React.Component {
     }
     render() {
         return (
-            <>
+            <>            
+                <Scroller/>
                 <div className={this.props.fluid ? "content-fluid dashboard" : "content dashboard"}>
                     {
                         this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
                     }
-                    <Row>
-                        <Col xl="8" lg="7">
-                            <Card className="card-plain dashboard-banner">
-                                <CardBody>
-                                    <Link to="/spot-wallet/balance">
-                                        <img src={require("assets/img/dashboard_pic2.png")} className="dashboard-pic2"></img>
-                                    </Link>
-                                </CardBody>
-                            </Card>
+                    <Row className="justify-content-center">
+                        <Col>                            
+                            <Link to="/spot-wallet/balance">
+                                <img src={require("assets/img/dashboard_pic2.png")} className="dashboard-pic2 dashboard-banner"></img>
+                            </Link>
                         </Col>
-                        <Col xl="4" lg="5">
-                            <Card className="card-plain dashboard-banner">
-                                <CardBody>
-                                    <Link to="/spot-wallet/balance">
-                                        <img src={require("assets/img/dashboard_pic1.png")}></img>
-                                    </Link>
-                                </CardBody>
-                            </Card>
+                        <Col className="col-width-363px">
+                            <Link to="/spot-wallet/balance">
+                                <img src={require("assets/img/dashboard_pic1.png")} className="dashboard-banner"></img>
+                            </Link>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xl="8" lg="7">
+                    <Row className="justify-content-center">
+                        <Col>
                             <Row className="justify-content-center">
                                 <Col className="col-width-363px">                                    
                                     <Card className="card-plain portfolio">
@@ -95,7 +87,7 @@ class Dashboard extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xl="4" lg="5">
+                        <Col className="col-width-363px">
                             <News news={this.state.news} />
                         </Col>
                     </Row>

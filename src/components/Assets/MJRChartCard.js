@@ -4,19 +4,19 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // reactstrap components
-import { 
-  Card,
+import {
+    Card,
 } from "reactstrap";
 
 class MJRChartCard extends React.Component {
-  render() {
-    const {image, title, name, content} = this.props;
-    return (
-      <Card className="card-plain mjr-chart-card">
-        <img src={require("assets/img/mjrtrade.png")} />
-      </Card>
-    );
-  }
+    render() {
+        const { image, title, name, content } = this.props;
+        return (
+            <Card className="card-plain mjr-chart-card">
+                <img src={require("assets/img/mjrtrade.png")} />
+            </Card>
+        );
+    }
 }
 
 export default MJRChartCard;

@@ -24,9 +24,9 @@ class Profile extends React.Component {
                         <Card>
                             <CardBody>
                                 <Row>
-                                    <Col md="6" className="photo">
+                                    <Col xl="6" lg="12" md="12" className="photo">
                                         <Button>Edit</Button>
-                                        <img alt="..." src={require("assets/img/a1.png")} />
+                                        <img alt="..." src={require("assets/img/avatars/dallas.png")} />
                                         <div>
                                             <h2>Dallasrushing</h2>
                                             <h3>Dallas Rushing</h3>
@@ -42,22 +42,22 @@ class Profile extends React.Component {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col md="6" className="badges">
+                                    <Col xl="6" lg="12" md="12" className="badges">
                                         <h2>Badges</h2>
                                         <Row>
-                                            <Col md="auto">
+                                            <Col md="2" xs="4">
                                                 <div className="style-1"></div>
                                             </Col>
-                                            <Col md="auto">
+                                            <Col md="2" xs="4">
                                                 <div className="style-2"></div>
                                             </Col>
-                                            <Col md="auto">
+                                            <Col md="2" xs="4">
                                                 <div className="style-3"></div>
                                             </Col>
-                                            <Col md="auto">
+                                            <Col md="2" xs="4">
                                                 <div className="style-4"></div>
                                             </Col>
-                                            <Col md="auto">
+                                            <Col md="2" xs="4">
                                                 <div className="style-5">+8</div>
                                             </Col>
                                         </Row>
@@ -67,13 +67,53 @@ class Profile extends React.Component {
                         </Card>
                     </Row>
                     <Row className="profile-bottom">
-                        <Col md="6">
+                        <Col xl="6" lg="12" md="12" className="weekly-challenges">
+                            <Card>
+                                <CardHeader>
+                                    <h2>Weekly Challenges</h2>
+                                </CardHeader>
+                                <CardBody>
+                                    <Row>
+                                        <Col className="style-1"></Col>
+                                        <Col>
+                                            <div>
+                                                <h3>Make 5 Trades</h3>
+                                                <p>XP 240<span>/300</span></p><div></div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className="style-2"></Col>
+                                        <Col>
+                                            <div>
+                                                <h3>Refer 3 Friends</h3>
+                                                <p>XP 100<span>/300</span></p><div className="purple-color"></div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className="style-3"></Col>
+                                        <Col>
+                                            <div>
+                                                <h3>Get 1% Of A card</h3>
+                                                <p>XP 164<span>/300</span></p><div className="green-color"></div>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Button>Reach Level 9 To Open Up A Pack</Button>
+                                    </Row>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col xl="6" lg="12" md="12">
                             <Card>
                                 <CardHeader>
                                     <h2>Daily Trade Activity</h2>
                                     <Dropdown isOpen={this.state.dropdownOpen} toggle={() => {this.setState({dropdownOpen: !this.state.dropdownOpen})}}>
+                                        
                                         <DropdownToggle caret>
-                                            Weekly
+                                            Weekly 
                                         </DropdownToggle>
                                         <DropdownMenu>
                                             <DropdownItem>Daily</DropdownItem>
@@ -87,42 +127,7 @@ class Profile extends React.Component {
                                 </CardBody>
                             </Card>
                         </Col>
-                        <Col md="6" className="weekly-challenges">
-                            <Card>
-                                <CardHeader>
-                                    <h2>Weekly Challenges</h2>
-                                </CardHeader>
-                                <CardBody>
-                                    <Row>
-                                        <Col className="style-1"></Col>
-                                        <Col>
-                                            <div>
-                                                <h3>Make 5 Trades</h3>
-                                                <p>80%</p><div></div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col className="style-2"></Col>
-                                        <Col>
-                                            <div>
-                                                <h3>Refer 3 Friends</h3>
-                                                <p>33%</p><div className="purple-color"></div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col className="style-3"></Col>
-                                        <Col>
-                                            <div>
-                                                <h3>Acquire 1% Of a card</h3>
-                                                <p>64%</p><div className="green-color"></div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </CardBody>
-                            </Card>
-                        </Col>
+                       
                     </Row>
                 </div>
             </>

@@ -24,7 +24,7 @@ class Explore extends React.Component {
 
         return (
             <>
-                <Scroller explores = {explores_features}></Scroller>
+                <Scroller/>
                 <div className={this.props.fluid ? "content-fluid explore" : "content explore"}>
                     {
                         this.props.isExploresLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />

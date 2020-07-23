@@ -48,6 +48,11 @@ class Sidebar extends React.Component {
                 spot_wallet: true
             })
         }
+        if (matchPath(path, '/community')) {
+            this.setState({
+                community: true
+            })
+        }
     };
 
     render() {
@@ -59,6 +64,9 @@ class Sidebar extends React.Component {
                         {routes.map((prop, key) => {
                             if (prop.redirect) return null;
                             if (prop.layout !== '/admin') return null;
+                            if (prop.path == '/profile') return null;
+                            if (prop.path == '/security') return null;
+                            if (prop.path == '/refer-earn') return null;
 
                             return (
                                 <li
@@ -68,7 +76,7 @@ class Sidebar extends React.Component {
                                     }
                                     key={key}
                                     onClick={() => this.linkOnClick(prop.path)}
-                                >
+                                >   
                                     <NavLink
                                         to={prop.path}
                                         className="nav-link"
@@ -90,7 +98,7 @@ class Sidebar extends React.Component {
                                             </p>
                                         </div>
                                         {
-                                            (Array.isArray(prop.subRoutes) && (this.state.assets || this.state.spot_wallet)) && (
+                                            (Array.isArray(prop.subRoutes) && (this.state.community ||this.state.assets || this.state.spot_wallet)) && (
                                                 <ul className="submenu">
                                                     {
                                                         prop.subRoutes.map((item, index) => (
@@ -102,9 +110,7 @@ class Sidebar extends React.Component {
                                                                 key={index}
                                                             >
                                                                 <NavLink to={prop.path + item.path} className="nav-link" activeClassName="active">
-                                                                    <div className="nav-item-set">
-                                                                        <p>{item.name}</p>
-                                                                    </div>
+                                                                    <p>{item.name}</p>                                                                    
                                                                 </NavLink>
                                                             </li>
                                                         ))

@@ -10,11 +10,19 @@ import Discussion from "views/Discussion";
 import Home from "views/Home.js";
 import AssetMJRTrade from "views/AssetMJRTrade";
 import Profile from "views/Profile";
+import LeaderboardRoutes from "layouts/Admin/LeaderboardRoutes";
 
 var routes = [
     {
+        path: "/dashboard",
+        name: "Dashboard",
+        img: require("assets/img/menus/dashboard.svg"),
+        component: Dashboard,
+        layout: "/admin"
+    },
+    {
         path: "/assets",
-        name: "Assets",
+        name: "Collectibles",
         img: require("assets/img/menus/assets.svg"),
         subRoutes: [
             {
@@ -24,7 +32,7 @@ var routes = [
             },
             {
                 path: "/my-assets",
-                name: "My Assets",
+                name: "My Collection",
                 layout: "/admin"
             },
         ],
@@ -33,17 +41,9 @@ var routes = [
         layout: "/admin"
     },
     {
-        path: "/dashboard",
-        name: "Dashboard",
-        img: require("assets/img/menus/dashboard.svg"),
-        component: Dashboard,
-        layout: "/admin"
-    },
-    {
         path: "/spot-wallet",
-        name: "Spot Wallet",
+        name: "Wallet",
         img: require("assets/img/menus/spotwallet.png"),
-        navicon_wallet: true,
         component: SpotWalletRoutes,
         subRoutes: [
             {
@@ -70,9 +70,27 @@ var routes = [
         layout: "/admin"
     },
     {
+        path: "/community",
+        name: "Community",
+        img: require("assets/img/menus/leaderboard.svg"),
+        component: LeaderboardRoutes,
+        subRoutes: [
+            {
+                path: "/discussion",
+                name: "Discussion",
+                layout: "/admin"
+            },
+            {
+                path: "/leaderboard",
+                name: "Leaderboard",
+                layout: "/admin"
+            }
+        ],
+        layout: "/admin"
+    },
+    {
         path: "/refer-earn",
         name: "Refer & Earn",
-        img: require("assets/img/menus/referandearn.svg"),
         component: Referandearn,
         layout: "/admin"
     },
@@ -80,21 +98,6 @@ var routes = [
         path: "/security",
         name: "Security",
         component: Security,
-        img: require("assets/img/menus/security.svg"),
-        layout: "/admin"
-    },
-    {
-        path: "/discussion",
-        name: "Discussion",
-        component: Discussion,
-        img: require("assets/img/menus/discussion.svg"),
-        layout: "/admin"
-    },
-    {
-        path: "/leaderboard",
-        name: "Leaderboard",
-        img: require("assets/img/menus/leaderboard.svg"),
-        component: Leaderboard,
         layout: "/admin"
     },
     {

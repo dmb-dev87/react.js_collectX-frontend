@@ -27,7 +27,9 @@ class OrdersTableCard extends React.Component {
                             </ButtonGroup>
                         </Col>
                         <Col>
-                            <input type="text" type="number" />
+                            <div class="rt-input-input">
+                                <input type="number"  min="1" max="9" defaultValue="3"/>
+                            </div> 
                         </Col>
                     </Row>
                 </CardHeader>
