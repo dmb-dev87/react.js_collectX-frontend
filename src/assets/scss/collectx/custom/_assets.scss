@@ -1,6 +1,6 @@
 .assets {
     @media screen and (min-width: 992px) {
-        padding: 98px 30px 30px 290px !important;
+        padding: 98px 30px 30px 242px !important;
     }
 
     @media screen and (max-width: 991px) {
@@ -14,13 +14,12 @@
     .header {
         height: 140px;
         width: 100%;
-        margin-bottom: 20px;
         position: relative;
 
         > h2 {
             color: #ffffff;
             vertical-align: middle;
-            margin-top: 30px;
+            margin-top: 0px;
             margin-left: 15px;
             text-align: left;
             font-size: 38px;
@@ -30,6 +29,7 @@
         h3 {
             margin-top: -15px;
             margin-left: 15px;
+            margin-bottom: 10px;
             color: white;
             font-size: 20px;
             font-weight: 600;
@@ -146,7 +146,7 @@
 }
 
 .content-fluid.assets-mjr-trade {
-    padding: 38px 50px 50px 50px !important;
+    padding: 30px 50px 50px 50px !important;
 }
 
 .assets-mjr-trade {

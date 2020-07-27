@@ -36,29 +36,30 @@ class Explore extends React.Component {
                         <Col xl="6" lg="12" xs="12">
                             <h3>Discover Rare Collectibles On CollectX</h3>
                         </Col>
-                        <Col xl="6" lg="12" xs="12">
-                            <div className="btn-drop">
-                                Highest Price
-                                <b className="caret d-none d-lg-block d-xl-block custom-pos"></b>
-                            </div>
-                        </Col>
+                        {/* <Col xl="6" lg="12" xs="12">
+                            
+                        </Col> */}
                     </Row>
                     <Row className="button-group">
                         <Button>All Collections</Button>
                         <Button>NBA</Button>
                         <Button>MLB</Button>
                         <Button>NFL</Button>
-                        <Button>Pokemon</Button>
-                        <Button>Stamps</Button>
+                        {/* <Button>Pokemon</Button>
+                        <Button>Stamps</Button> */}
                     </Row>
                     
                     <div className="explore_title">Featured</div>
-                    <Row className="card-list">
+                    <Row className="card-list high-button-custom">
                         {
                             explores_features && explores_features.map((explore, key) => {
                                 return (
                                     <Col className="justify-content-center" md="auto" key={key}>
                                         <StampCardStyle1 image={explore.image} title={explore.title} percent={explore.percent} content={explore.content} type={explore.type} />
+                                        <div className="btn-drop">
+                                            Highest Price
+                                            <b className="caret d-none d-lg-block d-xl-block custom-pos"></b>
+                                        </div>
                                     </Col>
                                 );
                             })

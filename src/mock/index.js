@@ -5,6 +5,7 @@ import { explores_features, explores_new_era_card, explores_1990, explores_1980,
 import { myAssets } from './myAsset';
 import { balance } from './balance';
 import { markets } from './markets';
+import { auth } from './auth';
 
 export {
     news,
@@ -16,4 +17,5 @@ export {
     balance,
     markets,
     history,
+    auth,
 };

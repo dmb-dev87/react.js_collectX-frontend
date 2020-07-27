@@ -1,5 +1,5 @@
 .discussion {
-    padding: 67px 0px 0px 260px !important;
+    padding: 67px 0px 0px 226px !important;
 
     height: 100%;
 
@@ -23,7 +23,7 @@
     }
 
     #list-panel {
-        padding: 10px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
 
         .topiclist::-webkit-scrollbar {
             width: 0px;
@@ -32,7 +32,7 @@
 
         .topiclist {
             background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
-            height: calc(100vh - 77px);
+            height: calc(100vh - 67px);
             border: 1px solid #8080804f;
             top: 0;
             background-size: cover;
@@ -177,7 +177,7 @@
     }
 
     #content-panel {
-        padding: 10px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
 
         .create-topic {
             @media screen and (min-width: 1200px) {
@@ -230,7 +230,7 @@
         .chat-right {
             width: 10%;
             background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
-            height: calc(100vh - 77px);
+            height: calc(100vh - 67px);
             border: 1px solid #8080804f;
             top: 0;
             background-size: cover;
@@ -246,7 +246,7 @@
         .chat-panel {
             // position: relative;
             background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
-            height: calc(100vh - 77px);
+            height: calc(100vh - 67px);
             border: 1px solid #8080804f;
             top: 0;
             background-size: cover;

@@ -35,32 +35,30 @@ class Home extends React.Component {
                     {
                         this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
                     }
-                    <Row>
-                        <Col xl="9" lg="7">
+                    <Row className="justify-content-center">
+                        <Col className="custom_col_left">
                             <Link to="/spot-wallet/balance">
-                                <img src={require("assets/img/dashboard_pic2.png")} className="dashboard-pic2 dashboard-banner"></img>
+                                <img src={require("assets/img/dashboard_pic3.png")} className="dashboard-pic2 dashboard-banner"></img>
                             </Link>
                         </Col>
-                        <Col xl="3" lg="5">
+                        <Col className="custom_col_right">
                             <Link to="/spot-wallet/balance">
                                 <img src={require("assets/img/dashboard_pic1.png")} className="dashboard-banner"></img>
                             </Link>
                         </Col>
                     </Row>
                     <Row>
-                        <Col xl="9" lg="7">
-                            <Row>
-                                <Col xl="5" lg="12">
-                                    <div className="chart-row-card">
-                                        <HomeChartCard data={[390, 400, 410, 430, 470, 500, 530, 560, 590, 610, 640, 670]} />
-                                    </div>
+                        <Col className="custom_col_left">
+                            <Row className="justify-content-center">
+                                <Col>
+                                    <HomeChartCard data={[390, 400, 410, 430, 470, 500, 530, 560, 590, 610, 640, 670]} />
                                 </Col>
-                                <Col xl="7" lg="12">
+                                <Col>
                                     <ActiveMarkets activeMarkets={this.state.activeMarkets} />
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xl="3" lg="5">
+                        <Col>
                             <News news={this.state.news} />
                         </Col>
                     </Row>

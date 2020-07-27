@@ -1,6 +1,7 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -112,8 +113,12 @@ class LoginNavbar extends React.Component {
                         </button>
                         <Collapse navbar isOpen={this.state.collapseOpen}>
                             <Nav className="ml-auto" navbar>
-                                <button className="btn btn-login">Log in</button>
-                                <button className="btn btn-register">Register</button>
+                                <Link to="/login">
+                                    <button className="btn btn-login">Log in</button>
+                                </Link>
+                                <Link to="/register">
+                                    <button className="btn btn-register">Register</button>
+                                </Link>
                             </Nav>
                         </Collapse>
                     </Container>

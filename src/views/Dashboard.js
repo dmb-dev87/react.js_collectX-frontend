@@ -36,19 +36,19 @@ class Dashboard extends React.Component {
                         this.props.isNewsLoading && <Loading type="Oval" color="#00BFFF" height="80" width="80" />
                     }
                     <Row className="justify-content-center">
-                        <Col>                            
+                        <Col className="custom_col_left">                            
                             <Link to="/spot-wallet/balance">
-                                <img src={require("assets/img/dashboard_pic2.png")} className="dashboard-pic2 dashboard-banner"></img>
+                                <img src={require("assets/img/dashboard_pic3.png")} className="dashboard-pic2 dashboard-banner"></img>
                             </Link>
                         </Col>
-                        <Col className="col-width-363px">
+                        <Col className="custom_col_right">
                             <Link to="/spot-wallet/balance">
                                 <img src={require("assets/img/dashboard_pic1.png")} className="dashboard-banner"></img>
                             </Link>
                         </Col>
                     </Row>
                     <Row className="justify-content-center">
-                        <Col>
+                        <Col className="custom_col_left">
                             <Row className="justify-content-center">
                                 <Col className="col-width-363px">                                    
                                     <Card className="card-plain portfolio">
@@ -87,7 +87,7 @@ class Dashboard extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="col-width-363px">
+                        <Col>
                             <News news={this.state.news} />
                         </Col>
                     </Row>

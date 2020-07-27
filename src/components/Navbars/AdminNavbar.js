@@ -3,7 +3,10 @@ import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
-import { startGetMarkets } from "../../actions/markets"
+import { startGetMarkets } from "../../actions/markets";
+import { startGetAuth } from "../../actions/auth";
+
+
 
 
 // reactstrap components
@@ -82,13 +85,15 @@ class AdminNavbar extends React.Component {
             modalSearch: !this.state.modalSearch
         });
     };
+
+    handleLogin = () => {
+        this.props.startGetAuth(false);
+    }
+
     render() {
         return (
             <>
-                <Navbar
-                    className={classNames("navbar-absolute position-fixed")}
-                    expand="lg"
-                >
+                <Navbar className={classNames("navbar-absolute position-fixed")} expand="lg">
                     <Container fluid>
                         <div className="navbar-wrapper">
                             <div
@@ -266,9 +271,9 @@ class AdminNavbar extends React.Component {
                                             <DropdownItem className="nav-item"><img src={require("assets/img/menus/referandearn.svg")}/>Referral</DropdownItem>
                                             </Link>
                                         </NavLink>
-                                        <NavLink tag="li">
+                                        <NavLink tag="li" onClick={this.handleLogin}>
                                             <Link to="/login">
-                                            <DropdownItem className="nav-item"><img src={require("assets/img/menus/logout.svg")}/>Log Out</DropdownItem>
+                                                <DropdownItem className="nav-item"><img src={require("assets/img/menus/logout.svg")}/>Log Out</DropdownItem>
                                             </Link>
                                         </NavLink>
                                     </DropdownMenu>
@@ -304,11 +309,13 @@ class AdminNavbar extends React.Component {
 const mapStateToProps = (state) => {
     return {
         markets: state.markets.markets,
+        auth: state.auth.auth,
     };
 }
 
 const mapDispatchToProps = (dispatch) => ({
     startGetMarkets: () => dispatch(startGetMarkets()),
+    startGetAuth: (auth) => dispatch(startGetAuth(auth)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminNavbar);

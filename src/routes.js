@@ -18,7 +18,8 @@ var routes = [
         name: "Dashboard",
         img: require("assets/img/menus/dashboard.svg"),
         component: Dashboard,
-        layout: "/admin"
+        layout: "/admin",
+        auth: false,
     },
     {
         path: "/assets",
@@ -38,7 +39,8 @@ var routes = [
         ],
         component: AssetsRoutes,
         navicon_assets: true,
-        layout: "/admin"
+        layout: "/admin",
+        auth: true,
     },
     {
         path: "/spot-wallet",
@@ -67,7 +69,8 @@ var routes = [
                 layout: "/admin"
             }
         ],
-        layout: "/admin"
+        layout: "/admin",
+        auth: true,
     },
     {
         path: "/community",
@@ -86,7 +89,8 @@ var routes = [
                 layout: "/admin"
             }
         ],
-        layout: "/admin"
+        layout: "/admin",        
+        auth: false,
     },
     {
         path: "/refer-earn",
@@ -104,7 +108,8 @@ var routes = [
         path: "/home",
         name: "Home",
         component: Home,
-        layout: "/home"
+        layout: "/admin",
+        auth: false,
     },
     {
         path: "/login",

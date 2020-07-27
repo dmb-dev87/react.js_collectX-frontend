@@ -5,16 +5,16 @@ const Scroller = () => {
     const [key, setKey] = useState(1);
 
     const scrolling = useSpring({
-        from: { transform: "translate(100%, 0)" },
+        from: { transform: "translate(0%, 0)" },
         to: { transform: "translate(-100%, 0)" },
-        config: { duration: 20000 },
+        config: { duration: 250000 },
         reset: true,
         onRest: () => {
             setKey(key + 1);
         }
     });
 
-    const explores = [ 
+    let explores = [ 
         {
             id: 1,
             percent: 2.48,
@@ -43,7 +43,7 @@ const Scroller = () => {
         {
             id: 6,
             percent: 2.57,
-            type: "WCT",
+            type: "PGR",
         },
         {
             id: 7,
@@ -53,29 +53,26 @@ const Scroller = () => {
         {
             id: 8,
             percent: -21.93,
-            type: "WCT",
+            type: "MJR",
         },
         {
             id: 9,
             percent: 8.14,
-            type: "WCT",
+            type: "MJR",
         },
         {
             id: 10,
             percent: 7.34,
             type: "WCT",
-        },
-        {
-            id: 11,
-            percent: 6.48,
-            type: "WCT",
-        },
-        {
-            id: 12,
-            percent: 2.22,
-            type: "WCT",
         }
     ]
+
+    explores = explores.concat(explores);
+    explores = explores.concat(explores);
+    explores = explores.concat(explores);
+    explores = explores.concat(explores);
+    explores = explores.concat(explores);
+    explores = explores.concat(explores);
     
     return (
         <div key={key} className="scroller">

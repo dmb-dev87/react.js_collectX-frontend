@@ -67,6 +67,7 @@ class Sidebar extends React.Component {
                             if (prop.path == '/profile') return null;
                             if (prop.path == '/security') return null;
                             if (prop.path == '/refer-earn') return null;
+                            if (prop.path == '/home') return null;
 
                             return (
                                 <li

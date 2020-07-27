@@ -2,11 +2,14 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
+import LoginNavbar from "components/Navbars/LoginNavbar.js";
 
 // core components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import { startGetAuth } from "../../actions/auth";
+import { connect } from 'react-redux';
 
 import routes from "routes.js";
 
@@ -59,6 +62,11 @@ class Admin extends React.Component {
     };
     getRoutes = routes => {
         return routes.map((prop, key) => {
+            if (this.props.location.pathname == prop.path && prop.auth && !this.props.auth) {
+                return (
+                    <Redirect to="/login" />
+                )
+            }
             if (prop.layout === "/admin") {
                 return (
                     <Route
@@ -102,15 +110,23 @@ class Admin extends React.Component {
                         ref="mainPanel"
                         data={this.state.backgroundColor}
                     >
-                        <AdminNavbar
+                        {
+                        this.props.auth ?
+                            <AdminNavbar
+                                {...this.props}
+                                brandText={this.getBrandText(this.props.location.pathname)}
+                                toggleSidebar={this.toggleSidebar}
+                                sidebarOpened={this.state.sidebarOpened}
+                            />
+                        :
+                        <LoginNavbar
                             {...this.props}
                             brandText={this.getBrandText(this.props.location.pathname)}
-                            toggleSidebar={this.toggleSidebar}
-                            sidebarOpened={this.state.sidebarOpened}
                         />
+                        }
                         <Switch>
-                            {this.getRoutes(routes)}
-                            <Redirect from="*" to="/dashboard" />
+                            {this.getRoutes(routes)} 
+                            <Redirect from="*" to="/home" />
                         </Switch>
                         {// we don't want the Footer to be rendered on map page
                             this.props.location.pathname.indexOf("discussion") !== -1 ? null : (
@@ -123,4 +139,15 @@ class Admin extends React.Component {
     }
 }
 
-export default Admin;
+const mapStateToProps = (state) => {
+    return {
+        auth: state.auth.auth,
+    };
+}
+
+const mapDispatchToProps = (dispatch) => ({
+    startGetAuth: (auth) => dispatch(startGetAuth(auth)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Admin);
+

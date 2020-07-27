@@ -47,7 +47,7 @@ class MyAsset extends React.Component {
                 }
                 <Row>
                     <div className="header">
-                        <h2>My Assets</h2>
+                        <h2>My Collection</h2>
                         <h3>An Overview Of Your Unique Collection</h3>
                         <ButtonGroup variant="text" color="primary" aria-label="text primary button group" className="myasset-display-mode">
                             <Button onClick={() => {this.setState({displayMode: 0})}} className={getDisplayModeClass("chart-mode", 0)}><div></div></Button>

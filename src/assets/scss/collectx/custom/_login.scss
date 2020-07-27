@@ -2,7 +2,7 @@ $bg-img: url("../../../img/login/background.png");
 
 .login.content-fluid {
     min-height: 100vh !important;
-    padding: 84px 0px 0px 0px !important;
+    padding: 60px 0px 0px 0px !important;
 }
 
 .login {
@@ -13,7 +13,7 @@ $bg-img: url("../../../img/login/background.png");
     }
     
     > div {
-        height: calc(100vh - 84px);
+        height: calc(100vh - 60px);
         margin: 0px;
     }
 

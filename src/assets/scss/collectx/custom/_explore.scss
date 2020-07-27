@@ -43,17 +43,25 @@
         }
     }
 
-    .description {
+    .high-button-custom {
         position: relative;
 
-        .caret {
-            right: 16px;
+        .justify-content-center:last-child { 
+            .btn-drop { 
+                display: block !important;
+            }
         }
 
-        h3 {
-            color: white;
-            font-size: 20px;
-            font-weight: 600;
+        .caret{
+            width: 0;
+            height: 0;
+            vertical-align: middle;
+            border-top: 4px dashed;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+            margin-top: -5px;
+            margin-left: 0px;
+            margin-right: 10px;
         }
 
         .btn-drop {
@@ -70,13 +78,33 @@
             font-size: 14px;
             font-weight: 600;
             color: #ffffff;
-            left: 200px;
+            right: 0px;
+            top: -150px;
             position: absolute;
+            display: none;
         }
+
+    }
+
+    .description {
+        position: relative;
+
+        .caret {
+            right: 16px;
+        }
+
+        h3 {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        
     }
 
     .button-group {
         margin-bottom: 30px;
+        margin-left: 0px;
 
         > button {
             background: #24204a 0% 0% no-repeat padding-box;

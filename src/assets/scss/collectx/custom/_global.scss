@@ -31,7 +31,7 @@
 .btn-group.myasset-display-mode{
     position: absolute;
     right: 20px;
-    bottom: -15px;
+    bottom: 6px;
 
     button:hover, button:focus, button:active, button:visited {
         box-shadow: none;
@@ -193,7 +193,7 @@
     h2 {
         color: white;
         vertical-align: middle;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 15px;
         text-align: left;
         font-size: 38px;
@@ -204,7 +204,7 @@
 .scroller {
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    width: 1000%;
     background: #11112F;
     z-index: 2000;
     height: 53px;
