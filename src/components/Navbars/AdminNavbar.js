@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { startGetMarkets } from "../../actions/markets";
 import { startGetAuth } from "../../actions/auth";
+import MarketCard from "../../components/Dashboard/MarketCard";
+import { startGetActiveMarkets } from "../../actions/general";
 
-
-
-
-// reactstrap components
 import {
     Button,
     Collapse,
@@ -34,11 +32,13 @@ class AdminNavbar extends React.Component {
     constructor(props) {
         super(props);
         this.props.startGetMarkets();
+        this.props.startGetActiveMarkets();
         this.state = {
             collapseOpen: false,
             modalSearch: false,
             color: "bg-dark",
             markets: [],
+            activeMarkets: [],
         };
     }
     componentDidMount() {
@@ -46,7 +46,8 @@ class AdminNavbar extends React.Component {
     }
     componentWillReceiveProps(nextProps) {
         this.setState({
-            markets: nextProps.markets
+            markets: nextProps.markets,
+            activeMarkets: nextProps.activeMarkets
         })
     }
     componentWillUnmount() {
@@ -112,7 +113,7 @@ class AdminNavbar extends React.Component {
                                 </button>
                             </div>
                             <NavbarBrand href="#" onClick={e => e.preventDefault()}>
-                                <Link to="/home">
+                                <Link to="/dashboard">
                                     <img alt="..." src={require("assets/img/collectx.png")} style={{ width: '150px' }} className="logo"/>
                                 </Link>                                
                             </NavbarBrand>
@@ -128,43 +129,21 @@ class AdminNavbar extends React.Component {
                                                 <div className="triangle-down"></div>
                                             </div>
                                         </DropdownToggle>
-                                        <DropdownMenu className="dropdown-navbar" right tag="ul" className="market_menu">
-                                            <NavLink tag="li" style={{ padding: 0 }}>
-                                                <DropdownItem className="nav-item">
-                                                    <Row>
-                                                        <img className="img-icon" src={require("assets/img/markets-icon.png")} ></img>
-                                                        <h2 className="unit-icon">USD</h2>
-                                                    </Row>
-                                                </DropdownItem>
-                                            </NavLink>
-                                            <NavLink tag="li" style={{ padding: 0 }}>
-                                                <DropdownItem className="nav-item table-body">
-                                                    <Table className="table-border custom_scroll" responsive>
-                                                        <thead>
-                                                            <tr>
-                                                                <td>Pair</td>
-                                                                <td>Price</td>
-                                                                <td>Change</td>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {
-                                                                this.state.markets.map((item, index) => (
-                                                                    <tr className="tr-field-bgcolor" key={index}>
-                                                                        <td><h2>{item.pair}</h2></td>
-                                                                        <td><h2>{item.price}</h2></td>
-                                                                        {(index % 2 == 0) ?
-                                                                            <td><h2 className="color-green">{item.change}</h2></td>
-                                                                            :
-                                                                            <td><h2 className="color-red">{item.change}</h2></td>
-                                                                        }
-                                                                    </tr>
-                                                                ))
-                                                            }
-                                                        </tbody>
-                                                    </Table>
-                                                </DropdownItem>
-                                            </NavLink>
+                                        <DropdownMenu className="dropdown-navbar" right tag="ul" className="market-menu">
+                                            <Row className="market-header">
+                                                <Col md="6">Pair</Col>
+                                                <Col md="3">Price</Col>
+                                                <Col md="3">Change</Col>
+                                            </Row>                
+                                            <Row className="market-content"> 
+                                            {
+                                                this.state.activeMarkets && this.state.activeMarkets.map((item, key) => (
+                                                    <Link to="/MJRTrade" key={key}>
+                                                        <MarketCard data={item} key={item.id}></MarketCard>
+                                                    </Link>
+                                                ))
+                                            }     
+                                            </Row>                                                                   
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
                                 </NavbarBrand>
@@ -310,12 +289,14 @@ const mapStateToProps = (state) => {
     return {
         markets: state.markets.markets,
         auth: state.auth.auth,
+        activeMarkets: state.general.activeMarkets,
     };
 }
 
 const mapDispatchToProps = (dispatch) => ({
     startGetMarkets: () => dispatch(startGetMarkets()),
     startGetAuth: (auth) => dispatch(startGetAuth(auth)),
+    startGetActiveMarkets: () => dispatch(startGetActiveMarkets()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AdminNavbar);

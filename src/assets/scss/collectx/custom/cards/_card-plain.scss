@@ -161,3 +161,56 @@
         }
     }
 }
+
+.card-market {
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .card-body {
+        padding: 0px;
+        background: #17173E 0% 0% no-repeat padding-box !important;
+        border-radius: 10px;
+
+        .row {
+            padding-top: 10px; 
+            padding-bottom: 10px;
+            height: 69px;
+        }
+
+        .avatar {
+            width: 49px;
+            height: 49px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-bottom: 0px;
+        }
+
+        .col-md-6 { 
+            padding-left: 25px;
+            display: flex;
+
+            p { 
+                font-size: 16px;
+                line-height: 49px;
+                font-weight: 700;
+                color: white;
+                padding-left: 15px;                
+                margin-bottom: 0px;
+            }
+        }
+
+        .col-md-3 { 
+            padding: 0px;
+            font-size: 16px;
+            line-height: 49px;
+            font-weight: 700;
+            color: #60D0B2;
+            p { 
+                font-size: 16px;
+                line-height: 49px;
+                font-weight: 700;
+                color: white;
+            }
+        }
+    }
+}

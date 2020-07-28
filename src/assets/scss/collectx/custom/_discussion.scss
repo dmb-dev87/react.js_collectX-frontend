@@ -73,17 +73,17 @@
 
                 .input-group {
                     margin: 0px;
-                    padding: 15px;
+                    padding: 15px 25px;
 
                     .input-group-prepend {
                         .input-group-text {
-                            background: #707082 0% 0% no-repeat padding-box;
+                            background: #242440 0% 0% no-repeat padding-box;
                             border: 1px solid #ffffff26;
                             border-right: none;
                             border-radius: 50px;
                             border-top-right-radius: unset;
                             border-bottom-right-radius: unset;
-
+                            padding-left: 20px;
                             i {
                                 color: #ffffff;
                                 opacity: 1;
@@ -92,16 +92,19 @@
                     }
 
                     .form-control {
-                        background: #707082 0% 0% no-repeat padding-box;
+                        background: #242440 0% 0% no-repeat padding-box;
                         border: 1px solid #ffffff26;
                         border-left: none;
                         border-radius: 50px;
-                        color: #ffffff;
+                        color: #ffffff;                        
                         opacity: 1;
                         border-top-left-radius: unset;
                         border-bottom-left-radius: unset;
                         padding: 0px 0px 0px 10px;
-                        font-size: 0.875rem;
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-weight: 600;
+                        padding-left: 20px;
                     }
                 }
             }
@@ -228,7 +231,7 @@
         }
 
         .chat-right {
-            width: 10%;
+            width: 60px;
             background: linear-gradient(0deg, #11112f 0%, #11112f 100%);
             height: calc(100vh - 67px);
             border: 1px solid #8080804f;
@@ -390,25 +393,26 @@
                 height: 60px;
 
                 .chat-input {
-                    margin: 10px 10px 15px 30px;
+                    margin: 20px 10px 15px 30px;
                     padding: 0px 0px 0px 15px;
-                    height: 27px;
+                    height: 34px;
                     background-color: #10102f;
                     box-sizing: unset;
+                    border: 2px solid #FFFFFF;
                     box-shadow: none;
-                    border: 3px solid #7953e2;
                     border-radius: 20px;
                     width: 75%;
                     text-align: left;
                     color: #ffffff;
+                    font-size: 14px;
                     opacity: 1;
                 }
 
                 img {
                     padding: 10px;
-                    height: 49px;
-                    width: 49px;
-                    margin-top: 2px;
+                    height: 56px;
+                    width: 56px;
+                    margin-top: 10px;
                 }
             }
         }

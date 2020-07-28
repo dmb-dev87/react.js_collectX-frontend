@@ -17,7 +17,7 @@ var routes = [
         path: "/dashboard",
         name: "Dashboard",
         img: require("assets/img/menus/dashboard.svg"),
-        component: Dashboard,
+        component: Home,
         layout: "/admin",
         auth: false,
     },

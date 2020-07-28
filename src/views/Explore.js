@@ -55,7 +55,7 @@ class Explore extends React.Component {
                             explores_features && explores_features.map((explore, key) => {
                                 return (
                                     <Col className="justify-content-center" md="auto" key={key}>
-                                        <StampCardStyle1 image={explore.image} title={explore.title} percent={explore.percent} content={explore.content} type={explore.type} />
+                                        <StampCardStyle1 image={explore.image} title={explore.title} percent={explore.percent} content={explore.content} type={explore.type} detail={explore.detail} />
                                         <div className="btn-drop">
                                             Highest Price
                                             <b className="caret d-none d-lg-block d-xl-block custom-pos"></b>

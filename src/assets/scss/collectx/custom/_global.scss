@@ -655,7 +655,7 @@
 }
 
 .dropdown-menu { 
-    background: #171734 0% 0% no-repeat padding-box;
+    background: #10102D 0% 0% no-repeat padding-box;
 
     &::before { 
         color: #171734;
@@ -666,4 +666,69 @@
         font-size: 16px;
         font-weight: 600;
     }    
+}
+
+.market-menu {  
+    background: #11112F !important;
+
+    .market-header  { 
+        margin-left: 16px;
+        margin-right: 16px;
+        div {         
+            font-size: 16px;
+            line-height: 49px;
+            font-weight: 600;
+            color: #FFFFFF;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: left;
+        }
+
+        .col-md-3:last-child { 
+            padding-left: 10px;
+        }
+    }    
+
+    .market-content { 
+        margin-left: 10px;
+        margin-right: 0px;
+        padding-right: 8px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 270px;
+        border-top: 1px ridge #ffffff29;
+        margin-top: -4px;
+        padding-top: 10px;
+
+        .card {
+            border: none !important;
+        }
+
+        a { 
+            width: 100%;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
 }

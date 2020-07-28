@@ -13,7 +13,7 @@ class ActiveMarkets extends React.Component {
                 <CardHeader>
                     <Row>
                         <Col className="text-left">
-                            <CardTitle tag="h2">Active Markets</CardTitle>
+                            <CardTitle tag="h2">Biggest Movers</CardTitle>
                         </Col>
                     </Row>
                 </CardHeader>

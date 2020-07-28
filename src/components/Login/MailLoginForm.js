@@ -67,7 +67,7 @@ class MailLoginForm extends React.Component {
                         <button className="btn btn-login" onClick={this.handleLogin}>Log In</button>
                     </Col>
                 </Row>
-            </div>) : <Redirect to="/home" />
+            </div>) : <Redirect to="/dashboard" />
         );
     }
 }

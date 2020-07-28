@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default class StampCardStyle1 extends React.Component {
     render() {
-        const { image, title, content, percent, type } = this.props;
+        const { image, title, content, percent, type, detail } = this.props;
         return (
             <Card className="stamp-card style-1 text-center">
                 <CardHeader>  
@@ -29,7 +29,11 @@ export default class StampCardStyle1 extends React.Component {
                         <Button className="buy">Buy</Button>
                     </Link>
                     <Link to="/assets/detail">
-                        <Button className="detail">Detail</Button>
+                        <Button className="detail"> 
+                            {   
+                                detail ? <> {detail} </> : "Detail"
+                            }
+                        </Button>
                     </Link>
                 </CardFooter>
             </Card>
