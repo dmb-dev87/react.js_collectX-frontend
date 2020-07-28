@@ -7,6 +7,7 @@ import ChartCard from "../components/Assets/ChartCard";
 import AssetSpecCard from "../components/Assets/AssetSpecCard";
 import GalleryCard from "../components/Assets/GalleryCard";
 import ModalCard from "../components/Assets/ModalCard";
+import {useLocation, withRouter} from "react-router-dom";
 
 import {
     Row,
@@ -52,7 +53,8 @@ class Assets extends React.Component {
     render() {
 
         const { modalType, toggleModal } = this.state;
-
+        const { location } = this.props;     
+        
         return (
             <>
                 <div className={this.props.fluid ? "content-fluid assets" : "content assets"}>
@@ -61,11 +63,15 @@ class Assets extends React.Component {
                     }
                     <ModalCard modalType={modalType} modal={toggleModal} changeToggleModal={this.changeToggleModal} changeToggleTab={this.changeToggleTab}/>
                     <Row className="justify-content-center">                        
-                        <Col className="col-width-291px">                            
-                            <ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Michael Jordan"} content={"Rookie Card"}></ImageCard>                            
+                        <Col className="col-width-291px">         
+                            {
+                                location.image ? <ImageCard image={location.image} title={"'86 Fleer"} name={location.name} content={location.content}></ImageCard>                            
+                                :<ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Michael Jordan"} content={"Rookie Card"}></ImageCard>                            
+                            }                   
+                            
                         </Col>
                         <Col>
-                            <ChartCard data={[500, 540, 500, 580, 600, 453, 492, 540, 568, 610, 700, 630]} type={true} changeModalType={this.changeModalType}/>
+                            <ChartCard data={[470, 430, 410, 430, 570, 700, 630, 560, 590, 610, 640, 670]} type={true} changeModalType={this.changeModalType}/>
                         </Col>
                     </Row>
                     <Row>
@@ -93,4 +99,4 @@ const mapDispatchToProps = (dispatch) => ({
     startGetExplores: () => dispatch(startGetExplores()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Assets);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter (Assets));

@@ -28,7 +28,7 @@ export default class StampCardStyle1 extends React.Component {
                     <Link to="/MJRTrade">
                         <Button className="buy">Buy</Button>
                     </Link>
-                    <Link to="/assets/detail">
+                    <Link to={{ pathname: '/assets/detail', image: image, name: content, content: title }}>
                         <Button className="detail"> 
                             {   
                                 detail ? <> {detail} </> : "Detail"
