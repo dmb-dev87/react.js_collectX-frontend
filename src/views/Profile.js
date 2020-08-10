@@ -110,14 +110,12 @@ class Profile extends React.Component {
                             <Card>
                                 <CardHeader>
                                     <h2>Daily Trade Activity</h2>
-                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={() => {this.setState({dropdownOpen: !this.state.dropdownOpen})}}>
-                                        
+                                    <Dropdown isOpen={this.state.dropdownOpen} toggle={() => {this.setState({dropdownOpen: !this.state.dropdownOpen})}}>                                        
                                         <DropdownToggle caret>
                                             Weekly 
                                         </DropdownToggle>
                                         <DropdownMenu>
                                             <DropdownItem>Daily</DropdownItem>
-                                            <DropdownItem>Weekly</DropdownItem>
                                             <DropdownItem>Monthly</DropdownItem>
                                         </DropdownMenu>
                                     </Dropdown>

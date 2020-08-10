@@ -140,7 +140,7 @@
 
         .triangle-down {
             position: absolute;
-            top: 24px;
+            top: 25px;
             left: 80px;
         }
     }
@@ -196,24 +196,21 @@
             width: 50px;
         }
 
-        div.markets {
-            position: absolute;
-            top: -3px;
-            left: 60px;
-
+        .markets-dropdown {
+            margin-bottom: 28px;
+            position: relative;
             h2 {
                 line-height: 40px;
             }
-
             .triangle-down {
-                left: 84px;
-                top: 16px;
+                left: 90px;
+                top: 25px;
             }
         }
 
         .dropdown-menu {
-            top: 45px !important;
-            left: 55px !important;
+            top: 79px !important;
+            left: 14px !important;
             min-width: 375px;
             height: 330px;
             padding: 0px;

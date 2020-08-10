@@ -25,7 +25,7 @@ export default class StampCardStyle1 extends React.Component {
                         <h2>{content}</h2>
                         <h2>{title}</h2>
                     </div>
-                    <Link to="/MJRTrade">
+                    <Link to={{ pathname: '/MJRTrade', image: image, name: content, content: title }}>
                         <Button className="buy">Buy</Button>
                     </Link>
                     <Link to={{ pathname: '/assets/detail', image: image, name: content, content: title }}>
@@ -62,10 +62,10 @@ export class StampCardStyle2 extends React.Component {
                         <h2>{content}</h2>
                         <h2>{title}</h2>
                     </div>
-                    <Link to="/MJRTrade">
+                    <Link to={{ pathname: '/MJRTrade', image: image, name: content, content: title }}>
                         <Button className="buy">Buy</Button>
                     </Link>
-                    <Link to="/assets/detail">
+                    <Link to={{ pathname: '/assets/detail', image: image, name: content, content: title }}>
                         <Button className="price">{percent} {type}</Button>
                     </Link>
                 </CardFooter>

@@ -43,47 +43,66 @@
         }
     }
 
-    .high-button-custom {
-        position: relative;
+    .drop-down-group {     
+        position: relative; 
 
-        .justify-content-center:last-child { 
-            .btn-drop { 
-                display: block !important;
+        .dropdown {            
+            position: absolute;
+            left: 1000px;
+            top: 25px;
+        }
+
+        @media only screen and (max-width: 1440px) {
+            .dropdown {            
+                position: absolute;
+                left: 765px;
+                top: 25px;
             }
         }
 
-        .caret{
-            width: 0;
-            height: 0;
-            vertical-align: middle;
-            border-top: 4px dashed;
-            border-right: 4px solid transparent;
-            border-left: 4px solid transparent;
-            margin-top: -5px;
-            margin-left: 0px;
-            margin-right: 10px;
+        @media only screen and (max-width: 1200px) {
+            .dropdown {            
+                position: absolute;
+                left: 630px;
+                top: 40px;
+            }
         }
-
-        .btn-drop {
-            height: 40px;
+        
+        .dropdown-toggle {           
+            background: #11112F 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 20px #00000029;
+            border: 1px solid #8080804f;
+            font-size: 16px;
+            border-radius: 5px;
             width: 160px;
-            background: #24204a 0% 0% no-repeat padding-box;
-            box-shadow: 0px 3px 10px #00000029;
-            border: 2px solid #ffffff26;
-            border-radius: 25px;
-            opacity: 1;
-            padding: 8px 20px;
-            padding-right: 30px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 600;
-            color: #ffffff;
-            right: 20px;
-            top: -150px;
-            position: absolute;
-            display: none;
+            height: 42px;
+            padding: 0px 30px 0px 20px;
+            margin: 0px; 
+            z-index: 1001;
+        }
+        
+        .dropdown-toggle:after {
+            content: "";
+            vertical-align: 0.105em !important;
+            margin-left: 10px !important;
         }
 
+        .dropdown-menu { 
+            border: 1px solid #8080804f;
+            margin-top: -10px;
+            z-index: 1000;
+            font-size: 16px !important;
+            width: 160px;
+            min-width: 115px !important;
+
+            button { 
+                padding: 5px 0px 5px 20px;
+            }
+
+            &::before { 
+                display: none;
+            }
+        }
     }
 
     .description {
@@ -98,8 +117,6 @@
             font-size: 20px;
             font-weight: 600;
         }
-
-        
     }
 
     .button-group {

@@ -34,7 +34,10 @@ const options = {
         yAxes: [{
             display: 0,
             ticks: {
-                display: false
+                display: false,
+                beginAtZero: true,
+                min: 300,
+                max: 750    
             },
             gridLines: {
                 zeroLineColor: "transparent",
@@ -57,7 +60,7 @@ const options = {
         }]
     },
     layout: {
-        padding: { left: 0, right: 0, top: 15, bottom: 0 }
+        padding: { left: 0, right: 0, top: 10, bottom: 0 }
     }
 };
 
@@ -79,9 +82,10 @@ class ChartCard extends React.Component {
             gradientStroke.addColorStop(0, '#80b6f4');
             gradientStroke.addColorStop(1, chartColor);
 
-            var gradientFill = ctx.createLinearGradient(89.44225, 460.13763, 0, 0);
+            var gradientFill = ctx.createLinearGradient(69.44225, 460.13763, 0, 0);
             gradientFill.addColorStop(0, "rgba(121, 83, 226, 0)");
             gradientFill.addColorStop(1, "rgba(17, 17, 47, 1)");
+
             return {
                 labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 datasets: [{
@@ -91,12 +95,12 @@ class ChartCard extends React.Component {
                     pointBorderColor: "#FFF",
                     pointBackgroundColor: "#FFF",
                     pointBorderWidth: 2,
-                    pointHoverRadius: 4,
-                    pointHoverBorderWidth: 1,
-                    pointRadius: 10,
+                    pointHoverRadius: 12,                
+                    pointHoverBorderWidth: 6,
+                    pointRadius: 8,
                     fill: true,
                     backgroundColor: gradientFill,
-                    borderWidth: 7,
+                    borderWidth: 6,
                     data: data
                 }]
             }
@@ -110,8 +114,8 @@ class ChartCard extends React.Component {
                 let _stroke = ctx.stroke;
                 ctx.stroke = function () {
                     ctx.save();
-                    ctx.shadowColor = '#42DDB3';
-                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = '#42ffb3';
+                    ctx.shadowBlur = 35;
                     ctx.shadowOffsetX = 0;
                     ctx.shadowOffsetY = 0;
                     _stroke.apply(this, arguments)
@@ -153,7 +157,7 @@ class ChartCard extends React.Component {
                         <h1 className="card-chart-title-right font-color-price">$126,318.49</h1>
                     </Row>
                 </CardHeader>
-                <CardBody className="card-body-no-padding">
+                <CardBody className="card-body-no-padding chart-custom-background">
                     <Line data={con_data} options={options} width={100} height={100} />
                     {
                         type ? <>

@@ -82,7 +82,7 @@ class OrderPriceCard extends React.Component {
                         <Col lg="6" md="12" sm="12">
                             <Row>
                                 <Col className="col-6"><h5 className="title">Buy MMR</h5></Col>
-                                <Col className="col-6"><h6 className="align-right">$1,2584.15</h6></Col>
+                                <Col className="col-6"><h6 className="align-right">$1,2584.15 USD</h6></Col>
                             </Row>
                             {this.state.orderprice ?
                                 <Row>
@@ -107,10 +107,10 @@ class OrderPriceCard extends React.Component {
                                 <Col></Col>
                                 <Col className="col-9">
                                     <Slider
-                                        defaultValue={20}
+                                        defaultValue={0}
                                         getAriaValueText={valuetext}
                                         aria-labelledby="discrete-slider-custom"
-                                        step={10}
+                                        step={1}
                                         valueLabelDisplay="auto"
                                         marks={marks}
                                     />                                    
@@ -159,10 +159,10 @@ class OrderPriceCard extends React.Component {
                                 <Col className="col-3"></Col>
                                 <Col className="col-9">
                                     <Slider
-                                        defaultValue={20}
+                                        defaultValue={0}
                                         getAriaValueText={valuetext}
                                         aria-labelledby="discrete-slider-custom"
-                                        step={10}
+                                        step={1}
                                         valueLabelDisplay="auto"
                                         marks={marks}
                                     />

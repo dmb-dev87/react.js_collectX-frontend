@@ -150,9 +150,88 @@
     padding: 30px 50px 50px 50px !important;
 }
 
+// .chart-custom-background { 
+//     background: linear-gradient(to bottom, #11112f, #281f57 60%, #141334);
+// }
+
 .assets-mjr-trade {
-    margin-top: 70px;
+    margin-top: 65px;
     display: block;
+
+    
+    .dropdown-toggle:after {
+        content: "";
+        vertical-align: 0.105em !important;
+    }
+
+    .dropdown {            
+        position: absolute;
+        right: 25px;
+        top: 7px;
+    }
+
+    .dropdown-toggle { 
+        background: #11112F 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 20px #00000029;
+        border: 1px solid #8080804f;
+        width: 85px;
+        height: 22px;
+        padding: 0px 10px 0px 10px;
+        font-size: 9px;
+        font-weight: 600;
+        margin: 0px;
+        z-index: 1001;
+
+        &:active { 
+            background: #11112F 0% 0% no-repeat padding-box !important;
+            box-shadow: 0px 3px 20px #00000029 !important;
+            border: 1px solid #8080804f !important;
+        }
+
+        &::after { 
+            margin-left: 5px !important;            
+            border-top: 0.4em solid;
+            border-right: 0.4em solid transparent;
+            border-bottom: 0;
+            border-left: 0.4em solid transparent;
+        }
+    }
+
+    .show > .btn-secondary.dropdown-toggle { 
+        background: #11112F 0% 0% no-repeat padding-box;
+        border: 1px solid #8080804f;
+    }
+
+    .dropdown .dropdown-menu { 
+        border: 1px solid #8080804f;
+        
+        border-radius: 5px;
+        margin-top: -10px;
+        min-width: 0rem;
+        z-index: 1000;
+        
+        button { 
+            padding: 2px 22px 2px 10px;     
+            font-size: 9px !important;
+            font-weight: 600;       
+        }
+
+        &::before { 
+            color: white;
+            top: -6px;
+            display: none;
+        }
+
+        .dropdown-item {             
+            font-size: 12px;
+        }
+    }
+
+    >.justify-content-center { 
+        > div { 
+            margin-top: 20px;
+        }
+    }
 
     .MuiSlider-marked {
         margin-bottom: 50px;
@@ -199,7 +278,7 @@
 
     .header-MJR {
         margin-left: 10px;
-        margin-bottom: 35px;
+        margin-bottom: 10px;
 
         .mjr-title {
             position: relative;
@@ -253,9 +332,11 @@
         }
 
         .sub-field.col {
-            position: absolute;
-            right: 0px;
-            width: unset;
+            float: right;
+            display: grid;
+            // position: absolute;
+            // right: 0px;
+            // width: unset;
         }
 
         .sub-value-small {
@@ -375,8 +456,14 @@
     }
 
     .mjr-chart-card {
-        border: 1px solid #ffffff1a;
+        border: none !important;
+        background-color: transparent;
         border-radius: 15px;
+        min-height: 500px;
+
+        article { 
+            height: 500px !important; 
+        }
     }
 
     .order-price-card {
@@ -443,9 +530,9 @@
 
         h6 {
             font-size: 13px !important;
-            line-height: 47px;
+            line-height: 46px;
             color: white;
-            font-weight: 400 !important;
+            font-weight: 500 !important;
             float: left;
         }
 
@@ -464,7 +551,6 @@
         }
 
         .align-right {
-            padding-top: 3px;
             float: right !important;
             line-height: unset;
         }
@@ -655,6 +741,7 @@
         content: attr(data-checked);
     }
     .can-toggle label .can-toggle__switch:before {
+        cursor: pointer;
         content: attr(data-checked);
         position: absolute;
         border: 2px solid #7953e2;
@@ -662,6 +749,7 @@
         text-align: center;
     }
     .can-toggle label .can-toggle__switch:after {
+        cursor: pointer;
         content: attr(data-unchecked);
         position: absolute;
         z-index: 5;
@@ -729,11 +817,13 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1317px) {
     .sub-value-small {
         margin-top: 30px;
     }
+}
 
+@media only screen and (max-width: 1200px) {   
     .assets .header h3 {
         font-size: 18px;
     }
@@ -751,15 +841,14 @@
         margin-top: 0px;
     }
 
-    .col-width-291px {
-        margin-top: 20px;
-    }
-
     .content-fluid.assets-mjr-trade {
         padding: 28px 15px 90px 15px !important;
     }
 
     .assets-mjr-trade .header-MJR .sub-field {
+        &.col { 
+            text-align: right;
+        }
         text-align: left;
         flex: unset;
     }

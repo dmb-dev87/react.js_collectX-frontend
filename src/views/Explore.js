@@ -4,7 +4,7 @@ import Loading from "../components/Utils/Loader"
 import StampCardStyle1  from "../components/Explore/StampCard";
 import Scroller from "../components/Explore/Scroller";
 
-import { Row, Col, Button } from "reactstrap";
+import { Row, Col, Button, Dropdown,  DropdownToggle,  DropdownItem, DropdownMenu } from "reactstrap";
 import { connect } from 'react-redux';
 
 import { startGetExplores } from "../actions/explore";
@@ -12,9 +12,10 @@ import { startGetExplores } from "../actions/explore";
 class Explore extends React.Component {
     constructor(props) {
         super(props);
-        this.props.startGetExplores();
+        this.props.startGetExplores();        
         this.state = {
             button_status: 0,
+            dropdownOpen: false
         };
     }
 
@@ -36,17 +37,20 @@ class Explore extends React.Component {
                         <Col xl="6" lg="12" xs="12">
                             <h3>Discover Rare Collectibles On CollectX</h3>
                         </Col>
-                        {/* <Col xl="6" lg="12" xs="12">
-                            
-                        </Col> */}
                     </Row>
-                    <Row className="button-group">
+                    <Row className="button-group drop-down-group">
                         <Button>All Collections</Button>
                         <Button>NBA</Button>
                         <Button>MLB</Button>
                         <Button>NFL</Button>
-                        {/* <Button>Pokemon</Button>
-                        <Button>Stamps</Button> */}
+                        <Dropdown isOpen={this.state.dropdownOpen} toggle={() => {this.setState({dropdownOpen: !this.state.dropdownOpen})}}>                                        
+                            <DropdownToggle caret>
+                                Highest Price 
+                            </DropdownToggle>
+                            <DropdownMenu>
+                                <DropdownItem>Lowest Price</DropdownItem>
+                            </DropdownMenu>
+                        </Dropdown>
                     </Row>
                     
                     <div className="explore_title">Featured</div>
@@ -55,11 +59,7 @@ class Explore extends React.Component {
                             explores_features && explores_features.map((explore, key) => {
                                 return (
                                     <Col className="justify-content-center" md="auto" key={key}>
-                                        <StampCardStyle1 image={explore.image} title={explore.title} percent={explore.percent} content={explore.content} type={explore.type} detail={explore.detail} />
-                                        <div className="btn-drop">
-                                            Highest Price
-                                            <b className="caret d-none d-lg-block d-xl-block custom-pos"></b>
-                                        </div>
+                                        <StampCardStyle1 image={explore.image} title={explore.title} percent={explore.percent} content={explore.content} type={explore.type} detail={explore.detail} />                                        
                                     </Col>
                                 );
                             })

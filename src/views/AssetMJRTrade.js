@@ -10,6 +10,9 @@ import OrderPriceCard from "../components/Assets/OrderPriceCard";
 import OrdersTableCard from "../components/Assets/OrdersTableCard";
 import RecentOrdersCard from "../components/Assets/RecentOrdersCard";
 
+import { Link } from "react-router-dom";
+import {useLocation, withRouter} from "react-router-dom";
+
 // reactstrap components
 import {
     Row,
@@ -33,6 +36,9 @@ class AssetMJRTrade extends React.Component {
         })
     }
     render() {
+        
+        const { location } = this.props;     
+        console.log(location);
         return (
             <>
                 <div className="content-fluid assets-mjr-trade">
@@ -50,8 +56,8 @@ class AssetMJRTrade extends React.Component {
                                 <div className="sub-field ">24h Low:<span className="sub-value color-blue">$121.349</span></div>
                                 <div className="sub-field">24h Vol:<span className="sub-value color-white">$95,281.45</span></div>
                                 <Col className="sub-field">
-                                    <Row className="sub-value-small">$126,318.94</Row>
-                                    <Row className="sub-value-small-desc">MARKET CAP</Row>
+                                    <span className="sub-value-small">$126,318.94</span>
+                                    <span className="sub-value-small-desc">MARKET CAP</span>
                                 </Col>
                             </Row>
                         </Col>
@@ -59,7 +65,12 @@ class AssetMJRTrade extends React.Component {
                     <Row className="justify-content-center"c>
                         <Col className="col-width-291px">
                             <div className="justify-content-center">
-                                <ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Michael Jordan"} content={"Rookie Card"}></ImageCard>
+                                <Link to={{ pathname: '/assets/detail', image: location.image, name: location.name, content: location.content }}>
+                                {   
+                                    location.image ? <ImageCard image={location.image} title={"'86 Fleer"} name={location.name} content={location.content}></ImageCard>                            
+                                    :<ImageCard image={require("assets/img/card1.png")} title={"'86 Fleer"} name={"Michael Jordan"} content={"Rookie Card"}></ImageCard>                            
+                                }     
+                                </Link>                                          
                             </div>
                             <div className="justify-content-center">
                                 <RecentOrdersCard></RecentOrdersCard>
@@ -77,7 +88,7 @@ class AssetMJRTrade extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="col-width-363px">
+                        <Col className="col-width-291px">
                             <OrdersTableCard></OrdersTableCard>
                         </Col>
                     </Row>
@@ -98,4 +109,4 @@ const mapDispatchToProps = (dispatch) => ({
     startGetExplores: () => dispatch(startGetExplores()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AssetMJRTrade);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter (AssetMJRTrade) );

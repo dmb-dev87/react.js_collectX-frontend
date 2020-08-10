@@ -3,16 +3,17 @@ import React from "react";
 
 // reactstrap components
 import {
-    Row,
-    Card,
-    CardHeader,
-    CardBody,
-    Col,
-    ButtonGroup, 
-    Button
+    Row, Card, CardHeader, CardBody, Col, ButtonGroup, Button, Dropdown,  DropdownToggle,  DropdownItem, DropdownMenu
 } from "reactstrap";
 
-class OrdersTableCard extends React.Component {
+class OrdersTableCard extends React.Component {    
+    constructor(props) {
+        super(props);
+        this.state = {
+            dropdownOpen: false
+        }
+    };
+
     render() {
         const { image, title, name, content } = this.props;
         return (
@@ -27,9 +28,15 @@ class OrdersTableCard extends React.Component {
                             </ButtonGroup>
                         </Col>
                         <Col>
-                            <div class="rt-input-input">
-                                <input type="number"  min="1" max="9" defaultValue="3"/>
-                            </div> 
+                            <Dropdown isOpen={this.state.dropdownOpen} toggle={() => {this.setState({dropdownOpen: !this.state.dropdownOpen})}}>                                        
+                                <DropdownToggle caret>
+                                    3 Decimals 
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem>2 Decimals</DropdownItem>
+                                    <DropdownItem>1 Decimals</DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
                         </Col>
                     </Row>
                 </CardHeader>

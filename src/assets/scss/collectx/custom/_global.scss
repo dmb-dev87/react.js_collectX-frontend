@@ -733,3 +733,11 @@
         }
     }
 }
+
+.navbar-toggler#navigation{
+    display: none;
+}
+
+.navbar-toggle.d-inline { 
+    display: none !important;
+}

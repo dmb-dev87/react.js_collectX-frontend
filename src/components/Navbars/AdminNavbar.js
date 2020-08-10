@@ -38,7 +38,7 @@ class AdminNavbar extends React.Component {
             modalSearch: false,
             color: "bg-dark",
             markets: [],
-            activeMarkets: [],
+            activeMarkets: this.props.activeMarkets,
         };
     }
     componentDidMount() {
@@ -121,13 +121,12 @@ class AdminNavbar extends React.Component {
                                 <NavbarBrand>
                                     <UncontrolledDropdown nav>
                                         <DropdownToggle
+                                            className="markets-dropdown"
                                             data-toggle="dropdown"
                                             nav
                                         >
-                                            <div className="markets">
-                                                <h2>Markets</h2>
-                                                <div className="triangle-down"></div>
-                                            </div>
+                                            <h2>Markets</h2>
+                                            <div className="triangle-down"></div>
                                         </DropdownToggle>
                                         <DropdownMenu className="dropdown-navbar" right tag="ul" className="market-menu">
                                             <Row className="market-header">

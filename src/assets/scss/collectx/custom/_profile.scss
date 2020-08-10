@@ -160,30 +160,31 @@
 
         .style-1 { 
             background: #3e3d59 0% 0% no-repeat padding-box;     
-            background-image: url("../../../img/profile/star.svg");  
+            background-image: url("../../../img/profile/goat.svg");  
             background-position: center;     
         }
 
         .style-2 { 
             background: #414152 0% 0% no-repeat padding-box; 
-            background-image: url("../../../img/profile/crown.svg"); 
+            background-image: url("../../../img/profile/bball.svg"); 
             background-position: center;     
         }
 
         .style-3 { 
             background: #292541 0% 0% no-repeat padding-box;
-            background-image: url("../../../img/profile/goat.svg"); 
+            background-image: url("../../../img/profile/guard.svg"); 
             background-position: center;     
         }
 
         .style-4 { 
-            background: transparent linear-gradient(180deg, #42DDB3 0%, #7953E2 100%) 0% 0% no-repeat padding-box; 
+            background: #292541 0% 0% no-repeat padding-box;
+            background-image: url("../../../img/profile/circled.svg"); 
             background-position: center;     
         }
 
         .style-5 { 
             background: #11112F 0% 0% no-repeat padding-box;
-            border: 2px solid #FFFFFF26; 
+            border: 2px solid white; 
             line-height: 80px;
             text-align: center;
             font-size: 28px;
@@ -193,7 +194,6 @@
     }
     
     .profile-bottom {        
-
         .card {             
             border-radius: 25px; 
         }
@@ -219,15 +219,33 @@
             top: 25px;
         }
 
+        .dropdown-menu { 
+            border: 1px solid #8080804f;
+            margin-top: -10px;
+            z-index: 1000;
+            width: 115px;
+            min-width: 115px !important;
+
+            button { 
+                padding: 5px 0px 5px 20px;
+            }
+
+            &::before { 
+                display: none;
+            }
+        }
+
         .dropdown-toggle { 
             background: #11112F 0% 0% no-repeat padding-box;
             box-shadow: 0px 3px 20px #00000029;
-            border: 1px solid #FFFFFF26;
-            border-radius: 25px;
+            border: 1px solid #8080804f;
+            border-radius: 5px;
             width: 115px;
             height: 32px;
             padding: 0px 30px 0px 20px;
             margin: 0px; 
+            z-index: 1001;
+            font-size: 16px;
 
             &::after { 
                 margin-left: 10px !important;
@@ -242,19 +260,19 @@
 
         .style-1 {                         
             background: #282541 0% 0% no-repeat padding-box;
-            background-image: url("../../../img/profile/goat.svg"); 
+            background-image: url("../../../img/profile/maketrade.svg"); 
             background-position: center;  
         }
 
         .style-2 { 
-            background: #262543 0% 0% no-repeat padding-box;
+            background: #9778ff42 0% 0% no-repeat padding-box;
             background-image: url("../../../img/profile/add-group.svg"); 
             background-position: center;
         }
 
         .style-3 { 
             background: #252843 0% 0% no-repeat padding-box;
-            background-image: url("../../../img/profile/goat.svg"); 
+            background-image: url("../../../img/profile/getpercent.svg"); 
             background-position: center;
         }
 

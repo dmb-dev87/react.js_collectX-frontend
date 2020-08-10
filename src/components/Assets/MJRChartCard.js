@@ -1,7 +1,6 @@
 /*eslint-disable*/
 import React from "react";
-// used for making the prop types of this component
-import PropTypes from "prop-types";
+import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
 // reactstrap components
 import {
@@ -9,11 +8,20 @@ import {
 } from "reactstrap";
 
 class MJRChartCard extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
-        const { image, title, name, content } = this.props;
+        // const { image, title, name, content } = this.props;
         return (
             <Card className="card-plain mjr-chart-card">
-                <img src={require("assets/img/mjrtrade.png")} />
+                <TradingViewWidget
+                    symbol="NASDAQ:AAPL"
+                    theme={Themes.DARK}
+                    locale="fr"
+                    autosize
+                />
             </Card>
         );
     }
