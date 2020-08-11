@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="Group_1897" data-name="Group 1897" transform="translate(-264 -395)">
+    <rect id="Rectangle_2350" data-name="Rectangle 2350" width="80" height="80" rx="25" transform="translate(264 395)" fill="#ff7895" opacity="0.4"/>
+    <rect id="Rectangle_2373" data-name="Rectangle 2373" width="24" height="24" rx="12" transform="translate(282 433)" fill="#ff7895"/>
+    <rect id="Rectangle_2374" data-name="Rectangle 2374" width="24" height="24" rx="12" transform="translate(302 413)" fill="#ff7895"/>
+    <g id="share" transform="translate(285 401.004)">
+      <g id="Group_866" data-name="Group 866" transform="translate(0 15.997)">
+        <path id="Path_1234" data-name="Path 1234" d="M15.254,19.228l-3.081-3.081a.514.514,0,0,0-.877.364v1.54h-.513A10.783,10.783,0,0,0,0,28.834v1.027a.514.514,0,0,0,.513.513H2.567a.514.514,0,0,0,.513-.513V28.834a7.7,7.7,0,0,1,7.7-7.7H11.3v1.54a.514.514,0,0,0,.877.364l3.081-3.081A.515.515,0,0,0,15.254,19.228Z" transform="translate(0 -15.997)" fill="#ff7895"/>
+      </g>
+    </g>
+    <g id="share-2" data-name="share" transform="translate(322.404 470.375) rotate(180)">
+      <g id="Group_866-2" data-name="Group 866" transform="translate(0 15.997)">
+        <path id="Path_1234-2" data-name="Path 1234" d="M15.254,19.228l-3.081-3.081a.514.514,0,0,0-.877.364v1.54h-.513A10.783,10.783,0,0,0,0,28.834v1.027a.514.514,0,0,0,.513.513H2.567a.514.514,0,0,0,.513-.513V28.834a7.7,7.7,0,0,1,7.7-7.7H11.3v1.54a.514.514,0,0,0,.877.364l3.081-3.081A.515.515,0,0,0,15.254,19.228Z" transform="translate(0 -15.997)" fill="#ff7895"/>
+      </g>
+    </g>
+  </g>
+</svg>

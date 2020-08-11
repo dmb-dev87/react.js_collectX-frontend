@@ -188,29 +188,34 @@
         padding-bottom: 0.3125rem;
         color: $white;
         margin-left: 17px;
-        margin-top: 3px;
-
         font-size: $font-paragraph;
+
+        .dropdown { 
+            height: 69px;   
+            display: inline-block;
+            vertical-align: middle;         
+        }
 
         img {
             width: 50px;
         }
 
         .markets-dropdown {
-            margin-bottom: 28px;
             position: relative;
+            height: 69px;
+
             h2 {
-                line-height: 40px;
+                line-height: 53px;
             }
             .triangle-down {
                 left: 90px;
-                top: 25px;
+                top: 32px;
             }
         }
 
         .dropdown-menu {
-            top: 79px !important;
-            left: 14px !important;
+            top: 61px !important;
+            right: -10px !important;
             min-width: 375px;
             height: 330px;
             padding: 0px;
