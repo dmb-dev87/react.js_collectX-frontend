@@ -63,7 +63,7 @@ class AssetMJRTrade extends React.Component {
                         </Col>
                     </Row>
                     <Row className="justify-content-center"c>
-                        <Col className="col-width-291px">
+                        <Col className="mjr-side">
                             <div className="justify-content-center">
                                 <Link to={{ pathname: '/assets/detail', image: location.image, name: location.name, content: location.content }}>
                                 {   
@@ -88,7 +88,7 @@ class AssetMJRTrade extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col className="col-width-291px">
+                        <Col className="mjr-side">
                             <OrdersTableCard></OrdersTableCard>
                         </Col>
                     </Row>

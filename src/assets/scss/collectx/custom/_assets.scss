@@ -150,14 +150,17 @@
     padding: 30px 50px 50px 50px !important;
 }
 
-// .chart-custom-background { 
-//     background: linear-gradient(to bottom, #11112f, #281f57 60%, #141334);
-// }
-
 .assets-mjr-trade {
     margin-top: 65px;
     display: block;
 
+    .mjr-side { 
+        flex: 0 0 291px;
+
+        @media screen and (max-width: 1200px) {
+            flex: 0 0 100%;
+        }
+    }
     
     .dropdown-toggle:after {
         content: "";
